@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */; };
+		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
+		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
+		5AD129E817B23B0B00094D01 /* DrinksContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E717B23B0B00094D01 /* DrinksContainer.m */; };
+		5AD129EE17B8D38400094D01 /* MoneyAmount.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129ED17B8D38400094D01 /* MoneyAmount.m */; };
+		5AD129F117B9094700094D01 /* Withdraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129F017B9094400094D01 /* Withdraw.m */; };
+		5AD129F417BA47B200094D01 /* CoffeeMachineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129F317BA47B100094D01 /* CoffeeMachineState.m */; };
+		5AD3361617C4A5DD001F65DE /* InsufficientAmountFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3361417C4A5DB001F65DE /* InsufficientAmountFlow.m */; };
+		5AD3361717C4A5DD001F65DE /* InsufficientAmountFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3361517C4A5DB001F65DE /* InsufficientAmountFlow.xib */; };
+		5AD3361B17C4A66B001F65DE /* OrderFinalizeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */; };
+		5AD3361C17C4A66B001F65DE /* OrderFinalizeFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */; };
+		5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */; };
+		5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */; };
+		5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999517CE26B0007E5EB7 /* coffee.jpg */; };
+		5ADBFE3517B11A77005B7B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3417B11A77005B7B91 /* UIKit.framework */; };
+		5ADBFE3717B11A77005B7B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3617B11A77005B7B91 /* Foundation.framework */; };
+		5ADBFE3917B11A77005B7B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3817B11A77005B7B91 /* CoreGraphics.framework */; };
+		5ADBFE3F17B11A77005B7B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE3D17B11A77005B7B91 /* InfoPlist.strings */; };
+		5ADBFE4117B11A77005B7B91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4017B11A77005B7B91 /* main.m */; };
+		5ADBFE4517B11A77005B7B91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4417B11A77005B7B91 /* AppDelegate.m */; };
+		5ADBFE4717B11A77005B7B91 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4617B11A77005B7B91 /* Default.png */; };
+		5ADBFE4917B11A77005B7B91 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4817B11A77005B7B91 /* Default@2x.png */; };
+		5ADBFE4B17B11A77005B7B91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4A17B11A77005B7B91 /* Default-568h@2x.png */; };
+		5ADBFE4E17B11A77005B7B91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4D17B11A77005B7B91 /* ViewController.m */; };
+		5ADBFE5117B11A77005B7B91 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4F17B11A77005B7B91 /* ViewController.xib */; };
+		5ADBFE5A17B12C7F005B7B91 /* PaymentFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */; };
+		5ADBFE5B17B12C7F005B7B91 /* PaymentFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
+		5AD129E017B23AAE00094D01 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
+		5AD129E117B23AAE00094D01 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
+		5AD129E617B23B0B00094D01 /* DrinksContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinksContainer.h; sourceTree = "<group>"; };
+		5AD129E717B23B0B00094D01 /* DrinksContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinksContainer.m; sourceTree = "<group>"; };
+		5AD129EC17B8D38300094D01 /* MoneyAmount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyAmount.h; sourceTree = "<group>"; };
+		5AD129ED17B8D38400094D01 /* MoneyAmount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyAmount.m; sourceTree = "<group>"; };
+		5AD129EF17B9094200094D01 /* Withdraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Withdraw.h; sourceTree = "<group>"; };
+		5AD129F017B9094400094D01 /* Withdraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Withdraw.m; sourceTree = "<group>"; };
+		5AD129F217BA47B000094D01 /* CoffeeMachineState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeMachineState.h; sourceTree = "<group>"; };
+		5AD129F317BA47B100094D01 /* CoffeeMachineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeMachineState.m; sourceTree = "<group>"; };
+		5AD3361317C4A5DA001F65DE /* InsufficientAmountFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsufficientAmountFlow.h; sourceTree = "<group>"; };
+		5AD3361417C4A5DB001F65DE /* InsufficientAmountFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsufficientAmountFlow.m; sourceTree = "<group>"; };
+		5AD3361517C4A5DB001F65DE /* InsufficientAmountFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsufficientAmountFlow.xib; sourceTree = "<group>"; };
+		5AD3361817C4A665001F65DE /* OrderFinalizeFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFinalizeFlow.h; sourceTree = "<group>"; };
+		5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFinalizeFlow.m; sourceTree = "<group>"; };
+		5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFinalizeFlow.xib; sourceTree = "<group>"; };
+		5AD7997C17CCC1A8007E5EB7 /* AdministrationFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdministrationFlow.h; sourceTree = "<group>"; };
+		5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdministrationFlow.m; sourceTree = "<group>"; };
+		5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdministrationFlow.xib; sourceTree = "<group>"; };
+		5AD7999517CE26B0007E5EB7 /* coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coffee.jpg; sourceTree = "<group>"; };
+		5ADBFE3117B11A77005B7B91 /* CoffeeMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADBFE3417B11A77005B7B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5ADBFE3617B11A77005B7B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5ADBFE3817B11A77005B7B91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoffeeMachine-Info.plist"; sourceTree = "<group>"; };
+		5ADBFE3E17B11A77005B7B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5ADBFE4017B11A77005B7B91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5ADBFE4217B11A77005B7B91 /* CoffeeMachine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeMachine-Prefix.pch"; sourceTree = "<group>"; };
+		5ADBFE4317B11A77005B7B91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5ADBFE4417B11A77005B7B91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5ADBFE4617B11A77005B7B91 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5ADBFE4817B11A77005B7B91 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5ADBFE4A17B11A77005B7B91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5ADBFE4C17B11A77005B7B91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5ADBFE4D17B11A77005B7B91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5ADBFE5017B11A77005B7B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5ADBFE5717B12C7F005B7B91 /* PaymentFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentFlow.h; sourceTree = "<group>"; };
+		5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentFlow.m; sourceTree = "<group>"; };
+		5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentFlow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ADBFE2E17B11A77005B7B91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADBFE3517B11A77005B7B91 /* UIKit.framework in Frameworks */,
+				5ADBFE3717B11A77005B7B91 /* Foundation.framework in Frameworks */,
+				5ADBFE3917B11A77005B7B91 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C75960917C4D3180013211A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AD129DD17B23A7700094D01 /* Coin.h */,
+				5AD129DE17B23A7700094D01 /* Coin.m */,
+				5AD129E017B23AAE00094D01 /* Drink.h */,
+				5AD129E117B23AAE00094D01 /* Drink.m */,
+				5AD129E617B23B0B00094D01 /* DrinksContainer.h */,
+				5AD129E717B23B0B00094D01 /* DrinksContainer.m */,
+				5AD129EC17B8D38300094D01 /* MoneyAmount.h */,
+				5AD129ED17B8D38400094D01 /* MoneyAmount.m */,
+				5AD129EF17B9094200094D01 /* Withdraw.h */,
+				5AD129F017B9094400094D01 /* Withdraw.m */,
+				5AD129F217BA47B000094D01 /* CoffeeMachineState.h */,
+				5AD129F317BA47B100094D01 /* CoffeeMachineState.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5ADBFE2817B11A77005B7B91 = {
+			isa = PBXGroup;
+			children = (
+				5ADBFE3A17B11A77005B7B91 /* CoffeeMachine */,
+				5ADBFE3317B11A77005B7B91 /* Frameworks */,
+				5ADBFE3217B11A77005B7B91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ADBFE3217B11A77005B7B91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ADBFE3117B11A77005B7B91 /* CoffeeMachine.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ADBFE3317B11A77005B7B91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ADBFE3417B11A77005B7B91 /* UIKit.framework */,
+				5ADBFE3617B11A77005B7B91 /* Foundation.framework */,
+				5ADBFE3817B11A77005B7B91 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5ADBFE3A17B11A77005B7B91 /* CoffeeMachine */ = {
+			isa = PBXGroup;
+			children = (
+				3C75960917C4D3180013211A /* Model */,
+				5ADBFE4317B11A77005B7B91 /* AppDelegate.h */,
+				5ADBFE4417B11A77005B7B91 /* AppDelegate.m */,
+				5ADBFE4C17B11A77005B7B91 /* ViewController.h */,
+				5ADBFE4D17B11A77005B7B91 /* ViewController.m */,
+				5ADBFE4F17B11A77005B7B91 /* ViewController.xib */,
+				5AD3361317C4A5DA001F65DE /* InsufficientAmountFlow.h */,
+				5AD3361417C4A5DB001F65DE /* InsufficientAmountFlow.m */,
+				5AD3361517C4A5DB001F65DE /* InsufficientAmountFlow.xib */,
+				5AD7997C17CCC1A8007E5EB7 /* AdministrationFlow.h */,
+				5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */,
+				5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */,
+				5ADBFE5717B12C7F005B7B91 /* PaymentFlow.h */,
+				5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */,
+				5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */,
+				5AD3361817C4A665001F65DE /* OrderFinalizeFlow.h */,
+				5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */,
+				5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */,
+				5ADBFE3B17B11A77005B7B91 /* Supporting Files */,
+			);
+			path = CoffeeMachine;
+			sourceTree = "<group>";
+		};
+		5ADBFE3B17B11A77005B7B91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD7999517CE26B0007E5EB7 /* coffee.jpg */,
+				5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */,
+				5ADBFE3D17B11A77005B7B91 /* InfoPlist.strings */,
+				5ADBFE4017B11A77005B7B91 /* main.m */,
+				5ADBFE4217B11A77005B7B91 /* CoffeeMachine-Prefix.pch */,
+				5ADBFE4617B11A77005B7B91 /* Default.png */,
+				5ADBFE4817B11A77005B7B91 /* Default@2x.png */,
+				5ADBFE4A17B11A77005B7B91 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ADBFE3017B11A77005B7B91 /* CoffeeMachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ADBFE5417B11A77005B7B91 /* Build configuration list for PBXNativeTarget "CoffeeMachine" */;
+			buildPhases = (
+				5ADBFE2D17B11A77005B7B91 /* Sources */,
+				5ADBFE2E17B11A77005B7B91 /* Frameworks */,
+				5ADBFE2F17B11A77005B7B91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeMachine;
+			productName = PickerViewTest;
+			productReference = 5ADBFE3117B11A77005B7B91 /* CoffeeMachine.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ADBFE2917B11A77005B7B91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = graci;
+			};
+			buildConfigurationList = 5ADBFE2C17B11A77005B7B91 /* Build configuration list for PBXProject "CoffeeMachine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5ADBFE2817B11A77005B7B91;
+			productRefGroup = 5ADBFE3217B11A77005B7B91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ADBFE3017B11A77005B7B91 /* CoffeeMachine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ADBFE2F17B11A77005B7B91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADBFE3F17B11A77005B7B91 /* InfoPlist.strings in Resources */,
+				5ADBFE4717B11A77005B7B91 /* Default.png in Resources */,
+				5ADBFE4917B11A77005B7B91 /* Default@2x.png in Resources */,
+				5ADBFE4B17B11A77005B7B91 /* Default-568h@2x.png in Resources */,
+				5ADBFE5117B11A77005B7B91 /* ViewController.xib in Resources */,
+				5ADBFE5B17B12C7F005B7B91 /* PaymentFlow.xib in Resources */,
+				5AD3361717C4A5DD001F65DE /* InsufficientAmountFlow.xib in Resources */,
+				5AD3361C17C4A66B001F65DE /* OrderFinalizeFlow.xib in Resources */,
+				3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */,
+				5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */,
+				5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ADBFE2D17B11A77005B7B91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADBFE4117B11A77005B7B91 /* main.m in Sources */,
+				5ADBFE4517B11A77005B7B91 /* AppDelegate.m in Sources */,
+				5ADBFE4E17B11A77005B7B91 /* ViewController.m in Sources */,
+				5ADBFE5A17B12C7F005B7B91 /* PaymentFlow.m in Sources */,
+				5AD129DF17B23A7700094D01 /* Coin.m in Sources */,
+				5AD129E217B23AAE00094D01 /* Drink.m in Sources */,
+				5AD129E817B23B0B00094D01 /* DrinksContainer.m in Sources */,
+				5AD129EE17B8D38400094D01 /* MoneyAmount.m in Sources */,
+				5AD129F117B9094700094D01 /* Withdraw.m in Sources */,
+				5AD129F417BA47B200094D01 /* CoffeeMachineState.m in Sources */,
+				5AD3361617C4A5DD001F65DE /* InsufficientAmountFlow.m in Sources */,
+				5AD3361B17C4A66B001F65DE /* OrderFinalizeFlow.m in Sources */,
+				5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5ADBFE3D17B11A77005B7B91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADBFE3E17B11A77005B7B91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5ADBFE4F17B11A77005B7B91 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADBFE5017B11A77005B7B91 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ADBFE5217B11A77005B7B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5ADBFE5317B11A77005B7B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ADBFE5517B11A77005B7B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoffeeMachine/CoffeeMachine-Prefix.pch";
+				INFOPLIST_FILE = "CoffeeMachine/CoffeeMachine-Info.plist";
+				PRODUCT_NAME = CoffeeMachine;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5ADBFE5617B11A77005B7B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoffeeMachine/CoffeeMachine-Prefix.pch";
+				INFOPLIST_FILE = "CoffeeMachine/CoffeeMachine-Info.plist";
+				PRODUCT_NAME = CoffeeMachine;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ADBFE2C17B11A77005B7B91 /* Build configuration list for PBXProject "CoffeeMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADBFE5217B11A77005B7B91 /* Debug */,
+				5ADBFE5317B11A77005B7B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ADBFE5417B11A77005B7B91 /* Build configuration list for PBXNativeTarget "CoffeeMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADBFE5517B11A77005B7B91 /* Debug */,
+				5ADBFE5617B11A77005B7B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ADBFE2917B11A77005B7B91 /* Project object */;
+}
