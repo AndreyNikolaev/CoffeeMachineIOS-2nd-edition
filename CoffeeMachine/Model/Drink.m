@@ -41,5 +41,17 @@
 {
     return [self copy];
 }
+-(BOOL)isEqual:(Drink *)other
+{
+    if([self.name isEqualToString:other.name] && self.price == other.price)
+        return YES;
+    else return NO;
+}
 
+- (NSUInteger)hash {
+    NSUInteger hash = 0;
+    hash += self.name.hash;
+    hash += self.price;
+    return hash;
+}
 @end

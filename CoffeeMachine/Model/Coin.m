@@ -40,5 +40,15 @@
 - (NSComparisonResult)compare:(Coin *)otherObject{
     return [[NSNumber numberWithInt:self.value] compare:[NSNumber numberWithInt:otherObject.value]];
 }
-
+-(BOOL)isEqual:(Coin *)other
+{
+    if(self.value == other.value)
+        return YES;
+    else return NO;
+}
+- (NSUInteger)hash { // mey not correct
+    NSUInteger hash = 0;
+    hash += self.value;
+    return hash;
+}
 @end

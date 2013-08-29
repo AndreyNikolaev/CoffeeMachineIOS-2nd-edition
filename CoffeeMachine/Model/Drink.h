@@ -13,6 +13,7 @@
 @property (strong) NSString *name;
 @property NSUInteger price;
 -(NSString*)description;
-
+- (BOOL)isEqual:(Drink*)other;
+- (NSUInteger)hash;
 @end
 

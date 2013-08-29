@@ -14,6 +14,6 @@
 
 @property int value;
 - (NSComparisonResult)compare:(Coin *)otherObject;
-
-
+- (BOOL)isEqual:(Coin*)other;
+- (NSUInteger)hash;
 @end
