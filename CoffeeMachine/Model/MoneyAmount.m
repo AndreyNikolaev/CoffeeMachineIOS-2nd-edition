@@ -130,7 +130,7 @@
 }
 -(void)getCoins:(Coin *)coin :(int)count{
     int availableCoins=[self.coins[coin] intValue];
-    if(availableCoins > count){
+    if(availableCoins >= count){
         int totalCount = availableCoins - count;
         [self.coins setObject:[NSNumber numberWithInteger:totalCount] forKey:(id)coin];
     }
@@ -173,11 +173,11 @@
 
     coinLev.value=100;
 
-    [self addCoin:coinLev amount:10];
-    [self addCoin:coinFifty amount:10];
-    [self addCoin:coinTwenty amount:10];
-    [self addCoin:coinTen amount:10];
-    [self addCoin:coinFive amount:10];
+    [self addCoin:coinLev amount:1];
+    [self addCoin:coinFifty amount:1];
+    [self addCoin:coinTwenty amount:1];
+    [self addCoin:coinTen amount:1];
+    [self addCoin:coinFive amount:1];
     
     
     

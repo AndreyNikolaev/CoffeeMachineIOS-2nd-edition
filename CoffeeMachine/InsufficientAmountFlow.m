@@ -47,23 +47,23 @@
 
 - (IBAction)switchToFinalizeFlow:(id)sender {
     
-    OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
+    OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]init];
     orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
     orderFinalizeFlow.willGetDrink=YES;
-    [self presentViewController: orderFinalizeFlow animated:YES completion:nil];
+    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
 }
 
 - (IBAction)switchToDrinkListFlow:(id)sender {
-    OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
+    OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]init];
     orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
     orderFinalizeFlow.willGetDrink=NO;
-    [self presentViewController: orderFinalizeFlow animated:YES completion:nil];
+    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
 }
 
 @end
