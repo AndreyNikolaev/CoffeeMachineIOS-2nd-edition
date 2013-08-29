@@ -173,11 +173,11 @@
 
     coinLev.value=100;
 
-    [self addCoin:coinLev amount:10];
-    [self addCoin:coinFifty amount:10];
-    [self addCoin:coinTwenty amount:10];
-    [self addCoin:coinTen amount:10];
-    [self addCoin:coinFive amount:10];
+    [self addCoin:coinLev amount:1];
+    [self addCoin:coinFifty amount:1];
+    [self addCoin:coinTwenty amount:1];
+    [self addCoin:coinTen amount:1];
+    [self addCoin:coinFive amount:1];
     
     
     
