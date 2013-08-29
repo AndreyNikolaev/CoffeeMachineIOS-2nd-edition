@@ -128,25 +128,4 @@
         }
     }
 }
-
--(void)loadFromPlist
-{
-    int i=0;
-     Drink *setedDrink=[[Drink alloc]init];
-     NSString *pathDrinks = [[NSBundle mainBundle] pathForResource:@"dataDrinks" ofType:@"plist"];
-     NSString *pathDrinksAmounts = [[NSBundle mainBundle] pathForResource:@"dataDrinksAmounts" ofType:@"plist"];
-     NSDictionary *dictDrinks = [[NSDictionary alloc] initWithContentsOfFile:pathDrinks];
-    NSDictionary *amountsDict = [[NSDictionary alloc]initWithContentsOfFile:pathDrinksAmounts];
-     NSArray* drinksAmounts = [[NSArray alloc]init];
-    drinksAmounts = [amountsDict allValues];
-
-     for (NSString *drink in [dictDrinks allKeys]) {
-         setedDrink.name = drink;
-         setedDrink.price = [dictDrinks[drink] integerValue];
-         [self addDrink:setedDrink quantity:[[drinksAmounts objectAtIndex:i] integerValue ]];
-     
-         i++;
-    }
-
-}
 @end

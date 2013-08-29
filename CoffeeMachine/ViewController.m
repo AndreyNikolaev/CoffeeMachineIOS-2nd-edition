@@ -39,16 +39,14 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
-    //[drinks setSomeDrinks];
-    [drinks loadFromPlist];
+    [drinks setSomeDrinks];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount setSomeCoins];
     
     if (self.coffeeMachineState == nil) {
         self.coffeeMachineState=[[CoffeeMachineState alloc]init];
         [self.coffeeMachineState setCurrentDrinksAmount:drinks];
-       self.coffeeMachineState.coins = moneyAmount;
-       
+        self.coffeeMachineState.coins = moneyAmount;
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
    
