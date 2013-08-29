@@ -201,7 +201,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399474218.302559"
+=======
+         timestampString = "399474319.517522"
+>>>>>>> 5e121c9397984b5c03499c8b321c0a7981e8dbcb
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "51"
@@ -214,11 +218,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
-         timestampString = "399458438.849317"
+         timestampString = "399469217.280457"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
          landmarkName = "-backToDrinkListFlow:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -253,7 +257,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399474218.302559"
+=======
+         timestampString = "399474319.517522"
+>>>>>>> 5e121c9397984b5c03499c8b321c0a7981e8dbcb
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "158"

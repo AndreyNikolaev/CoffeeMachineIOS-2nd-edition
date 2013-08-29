@@ -27,11 +27,11 @@
     self.title=@"Administrator report";
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
     soldDrinks=self.coffeeMachineState.currentDrinksAmount;
-    //[soldDrinks setSomeDrinks];
     MoneyAmount *mAmount = [[MoneyAmount alloc]init];
     mAmount=self.coffeeMachineState.coins;
-    //[mAmount setSomeCoins];
-
+        
+   
+  
    _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
     self.drinksSold = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
 }
