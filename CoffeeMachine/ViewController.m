@@ -39,7 +39,8 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
-    [drinks setSomeDrinks];
+    //[drinks setSomeDrinks];
+    [drinks loadDrinksFromPlist];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount setSomeCoins];
     

@@ -62,7 +62,7 @@
     else {
         self.drinkLbl.text=@"Take your money";
         self.changeLbl.text=userCoins.description;
-        [coffeeMachineState.coins add:change];
+        //[coffeeMachineState.coins add:change];
     }
     
 }
