@@ -53,7 +53,7 @@
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
     orderFinalizeFlow.willGetDrink=YES;
-    [self.navigationController popToViewController:orderFinalizeFlow animated:YES];
+    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
 }
 
 - (IBAction)switchToDrinkListFlow:(id)sender {
@@ -63,7 +63,7 @@
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
     orderFinalizeFlow.willGetDrink=NO;
-    [self.navigationController popToViewController:orderFinalizeFlow animated:YES];
+    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
 }
 
 @end
