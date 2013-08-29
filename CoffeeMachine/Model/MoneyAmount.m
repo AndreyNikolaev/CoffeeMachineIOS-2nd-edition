@@ -130,7 +130,7 @@
 }
 -(void)getCoins:(Coin *)coin :(int)count{
     int availableCoins=[self.coins[coin] intValue];
-    if(availableCoins > count){
+    if(availableCoins >= count){
         int totalCount = availableCoins - count;
         [self.coins setObject:[NSNumber numberWithInteger:totalCount] forKey:(id)coin];
     }
