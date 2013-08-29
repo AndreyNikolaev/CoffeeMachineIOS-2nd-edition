@@ -64,9 +64,15 @@
     else {
         self.drinkLbl.text=@"Take your money";
         self.changeLbl.text=userCoins.description;
+<<<<<<< HEAD
+        //[coffeeMachineState.coins add:change];
+    }
+    
+=======
        // [coffeeMachineState.coins add:change];
             
             }
+>>>>>>> 5e121c9397984b5c03499c8b321c0a7981e8dbcb
 }
 
 - (IBAction)backToDrinkListFlow:(id)sender {
