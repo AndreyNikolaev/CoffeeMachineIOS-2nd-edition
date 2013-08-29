@@ -101,7 +101,7 @@
         if (amount >0 && (amount - coin.value >= 0)){
             possibleCoinsToGet = amount / coin.value;
              totalAvailFromThisType = [self.coins[coin] intValue];
-            //totalAvailFromThisType = coi
+           
                   
             if (totalAvailFromThisType >= possibleCoinsToGet) {
                 [requestedCoins add:coin :possibleCoinsToGet];
@@ -143,7 +143,7 @@
     //stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat:@"%dst X ",coin.value]];
         
     //stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat: @"%@; ",coins[coin]]];
-stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat:@"%dst X %d ",coin.value, [self.coins[coin] intValue]]];
+     stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat:@"%dst X %d ",coin.value, [self.coins[coin] intValue]]];
     }
     NSLog(@"description: %@",stringCoins);
        return stringCoins;
