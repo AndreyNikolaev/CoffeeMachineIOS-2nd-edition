@@ -12,6 +12,7 @@
 #import "MoneyAmount.h"
 #import "InsufficientAmountFlow.h"
 #import "ViewController.h"
+#import "AdministrationFlow.h"
 
 @interface OrderFinalizeFlow ()
 
@@ -24,6 +25,7 @@
 @synthesize coffeeMachineState;
 @synthesize userCoins;
 @synthesize willGetDrink;
+
 
 @synthesize  drinkLbl;
 @synthesize changeLbl;
@@ -62,9 +64,9 @@
     else {
         self.drinkLbl.text=@"Take your money";
         self.changeLbl.text=userCoins.description;
-        [coffeeMachineState.coins add:change];
-    }
-    
+       // [coffeeMachineState.coins add:change];
+            
+            }
 }
 
 - (IBAction)backToDrinkListFlow:(id)sender {

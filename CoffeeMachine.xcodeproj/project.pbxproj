@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */; };
+		5A3FAA7017CF7AA200EF61E6 /* coins.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A3FAA6F17CF7AA200EF61E6 /* coins.plist */; };
 		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
 		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
 		5AD129E817B23B0B00094D01 /* DrinksContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E717B23B0B00094D01 /* DrinksContainer.m */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A3FAA6F17CF7AA200EF61E6 /* coins.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = coins.plist; sourceTree = "<group>"; };
 		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		5AD129E017B23AAE00094D01 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				5AD3361817C4A665001F65DE /* OrderFinalizeFlow.h */,
 				5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */,
 				5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */,
+				5A3FAA6F17CF7AA200EF61E6 /* coins.plist */,
 				5ADBFE3B17B11A77005B7B91 /* Supporting Files */,
 			);
 			path = CoffeeMachine;
@@ -243,6 +246,7 @@
 				3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */,
 				5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */,
 				5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */,
+				5A3FAA7017CF7AA200EF61E6 /* coins.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
