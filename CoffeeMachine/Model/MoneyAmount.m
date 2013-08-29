@@ -38,7 +38,14 @@
 
 }
 -(MoneyAmount *)add:(MoneyAmount*)mAmount {
-    
+    for(Coin* coin in [self.coins allKeys]){
+        for (Coin *updatedCoin in [mAmount.coins allKeys]) {
+            if ([updatedCoin isEqual:coin]) {
+                [self.coins setObject:@(1 + [self.coins[updatedCoin] intValue]) forKey:updatedCoin];
+                break;
+            }
+        }
+    }
     return self;
 }
 

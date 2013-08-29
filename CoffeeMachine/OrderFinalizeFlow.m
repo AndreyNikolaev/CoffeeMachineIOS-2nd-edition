@@ -57,6 +57,7 @@
        self.drinkLbl.text = self.selectedDrink.name;
        self.changeLbl.text = change.description;
         [coffeeMachineState.coins add:userCoins];
+        [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
     else {
         self.drinkLbl.text=@"Take your money";
@@ -67,6 +68,7 @@
 }
 
 - (IBAction)backToDrinkListFlow:(id)sender {
+    
         [self.navigationController popToRootViewControllerAnimated:YES];
 
 }
