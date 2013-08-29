@@ -21,6 +21,8 @@
 		5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */; };
 		5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */; };
 		5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999517CE26B0007E5EB7 /* coffee.jpg */; };
+		5AD7999817CF7886007E5EB7 /* dataDrinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999717CF7885007E5EB7 /* dataDrinks.plist */; };
+		5AD7999A17CF7AA5007E5EB7 /* dataDrinksAmounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999917CF7AA4007E5EB7 /* dataDrinksAmounts.plist */; };
 		5ADBFE3517B11A77005B7B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3417B11A77005B7B91 /* UIKit.framework */; };
 		5ADBFE3717B11A77005B7B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3617B11A77005B7B91 /* Foundation.framework */; };
 		5ADBFE3917B11A77005B7B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3817B11A77005B7B91 /* CoreGraphics.framework */; };
@@ -59,6 +61,8 @@
 		5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdministrationFlow.m; sourceTree = "<group>"; };
 		5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdministrationFlow.xib; sourceTree = "<group>"; };
 		5AD7999517CE26B0007E5EB7 /* coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coffee.jpg; sourceTree = "<group>"; };
+		5AD7999717CF7885007E5EB7 /* dataDrinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataDrinks.plist; sourceTree = "<group>"; };
+		5AD7999917CF7AA4007E5EB7 /* dataDrinksAmounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataDrinksAmounts.plist; sourceTree = "<group>"; };
 		5ADBFE3117B11A77005B7B91 /* CoffeeMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADBFE3417B11A77005B7B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5ADBFE3617B11A77005B7B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +107,8 @@
 				5AD129E117B23AAE00094D01 /* Drink.m */,
 				5AD129E617B23B0B00094D01 /* DrinksContainer.h */,
 				5AD129E717B23B0B00094D01 /* DrinksContainer.m */,
+				5AD7999717CF7885007E5EB7 /* dataDrinks.plist */,
+				5AD7999917CF7AA4007E5EB7 /* dataDrinksAmounts.plist */,
 				5AD129EC17B8D38300094D01 /* MoneyAmount.h */,
 				5AD129ED17B8D38400094D01 /* MoneyAmount.m */,
 				5AD129EF17B9094200094D01 /* Withdraw.h */,
@@ -243,6 +249,8 @@
 				3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */,
 				5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */,
 				5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */,
+				5AD7999817CF7886007E5EB7 /* dataDrinks.plist in Resources */,
+				5AD7999A17CF7AA5007E5EB7 /* dataDrinksAmounts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
