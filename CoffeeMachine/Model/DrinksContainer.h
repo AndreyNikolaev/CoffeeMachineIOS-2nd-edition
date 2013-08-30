@@ -23,4 +23,5 @@
 -(void)setSomeDrinks;
 -(DrinksContainer*)commit;
 -(NSMutableArray *)drinkNameAndQuantityToString;
+-(void)loadDrinksFromPlist;
 @end
