@@ -145,7 +145,25 @@
         [self addDrink:drink quantity:[[amounts objectAtIndex:i] integerValue ]];
         i++;
     }
-    
-    
 }
+
+-(void)saveDrinksToPlist
+    {
+        
+    
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
+        // write plist to disk
+        [self.drinks writeToFile:path atomically:YES];
+        
+        NSMutableDictionary *savedStock = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+        if( savedStock==nil ){
+            NSLog(@"failed to retrieve dictionary from disk");
+        }else{
+            NSLog(@"ARRAY; %@ ", savedStock);
+        }
+        
+    }
+
 @end
