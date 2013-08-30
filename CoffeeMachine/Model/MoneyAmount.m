@@ -131,7 +131,7 @@
 }
 -(void)getCoins:(Coin *)coin :(int)count{
     int availableCoins=[self.coins[coin] intValue];
-    if(availableCoins > count){
+    if(availableCoins >= count){
         int totalCount = availableCoins - count;
         [self.coins setObject:[NSNumber numberWithInteger:totalCount] forKey:(id)coin];
     }
@@ -192,6 +192,23 @@
     }
     
     return coinsAmount;
+}
+
+
+-(void)loadCoinsFromPlist
+{
+    int i=0;
+    Coin  *coin=[[Coin alloc]init];
+    NSString *pathCoinsAmounts = [[NSBundle mainBundle] pathForResource:@"CoinsAmounts" ofType:@"plist"];
+    NSDictionary *dictCoins = [[NSDictionary alloc] initWithContentsOfFile:pathCoinsAmounts];
+    NSArray* amounts=[[NSArray alloc]initWithArray:[dictCoins allValues]];
+    for(NSString *currentCoin in [dictCoins allKeys])
+    {
+        coin.value = currentCoin.integerValue;
+        [self addCoin:coin amount:[[amounts objectAtIndex:i] integerValue]];
+        i++;
+    }
+    
 }
 
 /*-(NSUInteger*)hashCode
