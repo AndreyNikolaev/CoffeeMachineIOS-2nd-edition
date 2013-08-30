@@ -151,17 +151,18 @@
     {
         
     
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+       NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
+        
+        
         // write plist to disk
         [self.drinks writeToFile:path atomically:YES];
-        
-        NSMutableDictionary *savedStock = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-        if( savedStock==nil ){
+                NSMutableDictionary *saved = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+        if( saved==nil ){
             NSLog(@"failed to retrieve dictionary from disk");
         }else{
-            NSLog(@"ARRAY; %@ ", savedStock);
+            NSLog(@"ARRAY; %@ ", saved);
         }
         
     }
