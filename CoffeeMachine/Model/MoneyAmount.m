@@ -197,10 +197,11 @@
 
 -(void)loadCoinsFromPlist
 {
+    NSString* sourcePath = [[NSBundle mainBundle] pathForResource:@"sourceData" ofType:@"plist"];
+    NSArray* sourceDataArray = [[NSArray alloc]initWithContentsOfFile:sourcePath];
     int i=0;
     Coin  *coin=[[Coin alloc]init];
-    NSString *pathCoinsAmounts = [[NSBundle mainBundle] pathForResource:@"CoinsAmounts" ofType:@"plist"];
-    NSDictionary *dictCoins = [[NSDictionary alloc] initWithContentsOfFile:pathCoinsAmounts];
+    NSDictionary *dictCoins = [[NSDictionary alloc] initWithDictionary:[sourceDataArray objectAtIndex:2]];
     NSArray* amounts=[[NSArray alloc]initWithArray:[dictCoins allValues]];
     for(NSString *currentCoin in [dictCoins allKeys])
     {
