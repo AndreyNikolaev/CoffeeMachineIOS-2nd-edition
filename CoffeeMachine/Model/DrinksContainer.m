@@ -130,12 +130,13 @@
 }
 -(void)loadDrinksFromPlist
 {
+    NSString* sourcePath = [[NSBundle mainBundle] pathForResource:@"sourceData" ofType:@"plist"];
+    NSArray* sourceDataArray = [[NSArray alloc]initWithContentsOfFile:sourcePath];
+    NSDictionary *dictDrinks = [[NSDictionary alloc]initWithDictionary:[sourceDataArray objectAtIndex:0]];
+    NSDictionary *dictDrinksAmounts = [[NSDictionary alloc]initWithDictionary:[sourceDataArray objectAtIndex:1]];
+    
     int i=0;
     Drink  *drink=[[Drink alloc]init];
-    NSString *pathDrinks = [[NSBundle mainBundle] pathForResource:@"drinksData" ofType:@"plist"];
-    NSString *pathDrinksAmount = [[NSBundle mainBundle] pathForResource:@"drinksAmountsData" ofType:@"plist"];
-    NSDictionary *dictDrinks = [[NSDictionary alloc] initWithContentsOfFile:pathDrinks];
-    NSDictionary *dictDrinksAmounts = [[NSDictionary alloc] initWithContentsOfFile:pathDrinksAmount];
     NSArray* amounts=[[NSArray alloc]initWithArray:[dictDrinksAmounts allValues]];
     for(NSString* currentDrink in [dictDrinks allKeys])
     {
