@@ -42,7 +42,8 @@
     //[drinks setSomeDrinks];
     [drinks loadDrinksFromPlist];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
-    [moneyAmount setSomeCoins];
+    //[moneyAmount setSomeCoins];
+    [moneyAmount loadCoinsFromPlist];
     
     if (self.coffeeMachineState == nil) {
         self.coffeeMachineState=[[CoffeeMachineState alloc]init];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */; };
+		5ACE4DA317D08B5B00421C5E /* CoinsAmounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ACE4DA217D08B5B00421C5E /* CoinsAmounts.plist */; };
 		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
 		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
 		5AD129E817B23B0B00094D01 /* DrinksContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E717B23B0B00094D01 /* DrinksContainer.m */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ACE4DA217D08B5B00421C5E /* CoinsAmounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CoinsAmounts.plist; path = ../CoinsAmounts.plist; sourceTree = "<group>"; };
 		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		5AD129E017B23AAE00094D01 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				5AD129ED17B8D38400094D01 /* MoneyAmount.m */,
 				5AD7999B17CF853A007E5EB7 /* drinksData.plist */,
 				5AD7999D17CF85CC007E5EB7 /* drinksAmountsData.plist */,
+				5ACE4DA217D08B5B00421C5E /* CoinsAmounts.plist */,
 				5AD129EF17B9094200094D01 /* Withdraw.h */,
 				5AD129F017B9094400094D01 /* Withdraw.m */,
 				5AD129F217BA47B000094D01 /* CoffeeMachineState.h */,
@@ -251,6 +254,7 @@
 				5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */,
 				5AD7999C17CF853A007E5EB7 /* drinksData.plist in Resources */,
 				5AD7999E17CF85CC007E5EB7 /* drinksAmountsData.plist in Resources */,
+				5ACE4DA317D08B5B00421C5E /* CoinsAmounts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
