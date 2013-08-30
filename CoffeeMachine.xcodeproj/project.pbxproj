@@ -22,6 +22,7 @@
 		5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */; };
 		5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999517CE26B0007E5EB7 /* coffee.jpg */; };
 		5AD799A017D09835007E5EB7 /* sourceData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999F17D09835007E5EB7 /* sourceData.plist */; };
+		5AD799A317D0C090007E5EB7 /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD799A217D0C090007E5EB7 /* FileReader.m */; };
 		5ADBFE3517B11A77005B7B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3417B11A77005B7B91 /* UIKit.framework */; };
 		5ADBFE3717B11A77005B7B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3617B11A77005B7B91 /* Foundation.framework */; };
 		5ADBFE3917B11A77005B7B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3817B11A77005B7B91 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdministrationFlow.xib; sourceTree = "<group>"; };
 		5AD7999517CE26B0007E5EB7 /* coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coffee.jpg; sourceTree = "<group>"; };
 		5AD7999F17D09835007E5EB7 /* sourceData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sourceData.plist; sourceTree = "<group>"; };
+		5AD799A117D0C090007E5EB7 /* FileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
+		5AD799A217D0C090007E5EB7 /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		5ADBFE3117B11A77005B7B91 /* CoffeeMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADBFE3417B11A77005B7B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5ADBFE3617B11A77005B7B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 				5AD129E117B23AAE00094D01 /* Drink.m */,
 				5AD129E617B23B0B00094D01 /* DrinksContainer.h */,
 				5AD129E717B23B0B00094D01 /* DrinksContainer.m */,
+				5AD799A117D0C090007E5EB7 /* FileReader.h */,
+				5AD799A217D0C090007E5EB7 /* FileReader.m */,
 				5AD129EC17B8D38300094D01 /* MoneyAmount.h */,
 				5AD129ED17B8D38400094D01 /* MoneyAmount.m */,
 				5AD7999F17D09835007E5EB7 /* sourceData.plist */,
@@ -270,6 +275,7 @@
 				5AD3361617C4A5DD001F65DE /* InsufficientAmountFlow.m in Sources */,
 				5AD3361B17C4A66B001F65DE /* OrderFinalizeFlow.m in Sources */,
 				5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */,
+				5AD799A317D0C090007E5EB7 /* FileReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

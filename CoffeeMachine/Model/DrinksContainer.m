@@ -8,6 +8,7 @@
 
 #import "DrinksContainer.h"
 #import "Drink.h"
+#import "FileReader.h"
 
 @implementation DrinksContainer
 
@@ -130,11 +131,10 @@
 }
 -(void)loadDrinksFromPlist
 {
-    NSString* sourcePath = [[NSBundle mainBundle] pathForResource:@"sourceData" ofType:@"plist"];
-    NSArray* sourceDataArray = [[NSArray alloc]initWithContentsOfFile:sourcePath];
-    NSDictionary *dictDrinks = [[NSDictionary alloc]initWithDictionary:[sourceDataArray objectAtIndex:0]];
-    NSDictionary *dictDrinksAmounts = [[NSDictionary alloc]initWithDictionary:[sourceDataArray objectAtIndex:1]];
-    
+    FileReader* file = [[FileReader alloc]init];
+    file.filePath = @"sourceData";
+    NSDictionary *dictDrinks = [[NSDictionary alloc]initWithDictionary:[file getDictAtIndex:0]];
+    NSDictionary *dictDrinksAmounts = [[NSDictionary alloc]initWithDictionary:[file getDictAtIndex:1]];
     int i=0;
     Drink  *drink=[[Drink alloc]init];
     NSArray* amounts=[[NSArray alloc]initWithArray:[dictDrinksAmounts allValues]];
