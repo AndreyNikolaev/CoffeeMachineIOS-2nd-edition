@@ -10,6 +10,7 @@
 #import "Coin.h"
 #import "Withdraw.h"
 #import "Drink.h"
+#import "FileReader.h"
 
 @implementation MoneyAmount
 
@@ -197,11 +198,11 @@
 
 -(void)loadCoinsFromPlist
 {
-    NSString* sourcePath = [[NSBundle mainBundle] pathForResource:@"sourceData" ofType:@"plist"];
-    NSArray* sourceDataArray = [[NSArray alloc]initWithContentsOfFile:sourcePath];
+    FileReader* file = [[FileReader alloc]init];
+    file.filePath = @"sourceData";
     int i=0;
     Coin  *coin=[[Coin alloc]init];
-    NSDictionary *dictCoins = [[NSDictionary alloc] initWithDictionary:[sourceDataArray objectAtIndex:2]];
+    NSDictionary *dictCoins = [[NSDictionary alloc] initWithDictionary:[file getDictAtIndex:2]];
     NSArray* amounts=[[NSArray alloc]initWithArray:[dictCoins allValues]];
     for(NSString *currentCoin in [dictCoins allKeys])
     {
@@ -212,25 +213,6 @@
     
 }
 
-/*-(NSUInteger*)hashCode
-{
-    return [coins hash];
-}
--(BOOL)equals:(id)obj
-{
-    if([self equals:obj])
-        return TRUE;
-    if(obj==nil)
-        return FALSE;
-    if([self class]!=[obj class])
-        return FALSE;
-    MoneyAmount* other=[[MoneyAmount alloc]init];
-    other=(id)obj;
-    if([coins isEqual:[other getCoins]])
-        return FALSE;
-    return TRUE;
-}
 
-*/
 
 @end
