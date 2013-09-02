@@ -305,26 +305,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/Model/DrinksContainer.m"
-         timestampString = "399804510.23063"
+         timestampString = "399817653.954689"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "171"
-         endingLineNumber = "171"
-         landmarkName = "@implementation DrinksContainer"
-         landmarkType = "3">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/Model/DrinksContainer.m"
-         timestampString = "399804510.23063"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "157"
-         endingLineNumber = "157"
-         landmarkName = "-saveDrinksToPlist"
-         landmarkType = "5">
+         startingLineNumber = "194"
+         endingLineNumber = "194">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

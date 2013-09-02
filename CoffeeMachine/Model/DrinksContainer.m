@@ -150,12 +150,25 @@
 -(void)saveDrinksToPlist
     {
         
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *docDir = [paths objectAtIndex:0];
-        NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
-        [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
-        //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+       /* NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+       NSString *docDir = [paths objectAtIndex:0];
+       NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
+    [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
+        
+        */
+       /* NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"set.plist"];
+        
+        NSMutableArray *myObject=[NSMutableArray array];
+        [myObject addObject:self.drinks];
+        
+        [NSKeyedArchiver archiveRootObject:myObject toFile:appFile];
+        */
+    //[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:self.drinks] forKey:@"mySavedArray"];
+        
+               //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+       /* NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
                 // write plist to disk
         [self.drinks writeToFile:path atomically:YES];
@@ -166,7 +179,7 @@
             NSLog(@"ARRAY; %@ ", saved);
         }
 
-        
+        */
     }
 
 
