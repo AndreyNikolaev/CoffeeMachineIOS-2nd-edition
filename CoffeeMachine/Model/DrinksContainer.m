@@ -147,7 +147,7 @@
     }
 }
 
--(void)saveDrinksToPlist
+/*-(void)saveDrinksToPlist
     {
         
     
@@ -165,6 +165,6 @@
             NSLog(@"ARRAY; %@ ", saved);
         }
         
-    }
+    }*/
 
 @end
