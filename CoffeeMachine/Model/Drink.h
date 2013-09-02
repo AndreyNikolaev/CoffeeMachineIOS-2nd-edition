@@ -11,7 +11,7 @@
 @interface Drink : NSObject <NSCopying, NSCoding>
 
 @property (strong) NSString *name;
-@property NSUInteger price;
+@property int price;
 -(NSString*)description;
 - (BOOL)isEqual:(Drink*)other;
 - (NSUInteger)hash;

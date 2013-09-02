@@ -154,7 +154,7 @@
         NSString *docDir = [paths objectAtIndex:0];
         NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
         [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
-     /*  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
                 // write plist to disk
@@ -165,7 +165,11 @@
         }else{
             NSLog(@"ARRAY; %@ ", saved);
         }
-       */ 
+
+        
     }
+
+
+
 
 @end

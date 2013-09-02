@@ -8,6 +8,7 @@
 
 #import "CoffeeMachineState.h"
 #import "DrinksContainer.h"
+#import "Drink.h"
 
 @implementation CoffeeMachineState
 @synthesize currentDrinksAmount;
@@ -54,6 +55,7 @@
     
     return currentDrinks;
 }
+
 
 
 @end
