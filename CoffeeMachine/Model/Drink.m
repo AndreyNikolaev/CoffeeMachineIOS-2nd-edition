@@ -54,4 +54,9 @@
     hash += self.price;
     return hash;
 }
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:self.name forKey:@"drinkName"];
+    [encoder encodeObject:[NSNumber numberWithInteger:self.price]forKey:@"drinkPrice"];
+}
+
 @end

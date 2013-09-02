@@ -150,13 +150,14 @@
 -(void)saveDrinksToPlist
     {
         
-    
-       NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *docDir = [paths objectAtIndex:0];
+        NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray", docDir];
+        [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
+     /*  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
-        
-        
-        // write plist to disk
+                // write plist to disk
         [self.drinks writeToFile:path atomically:YES];
                 NSMutableDictionary *saved = [NSMutableDictionary dictionaryWithContentsOfFile:path];
         if( saved==nil ){
@@ -164,7 +165,7 @@
         }else{
             NSLog(@"ARRAY; %@ ", saved);
         }
-        
+       */ 
     }
 
 @end
