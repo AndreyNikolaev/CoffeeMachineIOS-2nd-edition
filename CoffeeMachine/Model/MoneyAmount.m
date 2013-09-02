@@ -138,14 +138,10 @@
     }
 }
 
--(NSString*)description { //may not work fine !!!
+-(NSString*)description { 
     NSString* stringCoins=[[NSString alloc]init];
-   // Coin* coin=[[Coin alloc]init];
     for(Coin *coin in [self.coins allKeys]){
-    //stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat:@"%dst X ",coin.value]];
-        
-    //stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat: @"%@; ",coins[coin]]];
-     stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat:@"%dst X %d ",coin.value, [self.coins[coin] intValue]]];
+         stringCoins=[stringCoins stringByAppendingString:[NSString stringWithFormat:@"%dst X %d ",coin.value, [self.coins[coin] intValue]]];
     }
     NSLog(@"description: %@",stringCoins);
        return stringCoins;
