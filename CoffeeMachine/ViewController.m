@@ -41,7 +41,8 @@
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
     //[drinks setSomeDrinks];
     [drinks loadDrinksFromPlist];
-    [drinks saveDrinksToPlist];
+    //[drinks saveDrinksToPlist];
+    [drinks save:self.coffeeMachineState.currentDrinksAmount];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     //[moneyAmount setSomeCoins];
     [moneyAmount loadCoinsFromPlist];

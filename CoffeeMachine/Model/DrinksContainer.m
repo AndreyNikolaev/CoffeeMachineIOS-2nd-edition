@@ -149,6 +149,7 @@
 
 -(void)saveDrinksToPlist
     {
+<<<<<<< HEAD
         
        /* NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
        NSString *docDir = [paths objectAtIndex:0];
@@ -178,11 +179,48 @@
         }else{
             NSLog(@"ARRAY; %@ ", saved);
         }
+=======
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *docDir = [paths objectAtIndex:0];
+        NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
+        [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
+>>>>>>> 5addaa1ea649dfe7a20f32a921e7f9b1e2912f17
 
         */
     }
 
 
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:[self.drinks allKeys]  forKey:@"Drinks"];
+    [encoder encodeObject:[self.drinks allValues] forKey:@"Amounts"];
+}
 
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        [self.drinks setObject:[coder decodeObjectForKey:@"Amounts"] forKey:[coder decodeObjectForKey:@"Drinks"]];
+    }
+    return self;
+}
 
+- (void) save:(DrinksContainer*)drinksContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *path = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
+    NSMutableData* data=[[NSMutableData alloc] init];
+    if (data)
+    {
+        NSKeyedArchiver* archiver=[[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+        if (archiver)
+        {
+            [archiver encodeInt:1 forKey:@"Version"];
+            [archiver encodeObject:drinksContainer forKey:@"DrinksConainer"];
+            [archiver finishEncoding];
+            
+            [data writeToFile:path atomically:YES];
+            
+        }
+    }
+}
 @end

@@ -25,4 +25,7 @@
 -(NSMutableArray *)drinkNameAndQuantityToString;
 -(void)loadDrinksFromPlist;
 -(void)saveDrinksToPlist;
+- (void)encodeWithCoder:(NSCoder *)encoder;
+- (id)initWithCoder:(NSCoder *)coder;
+- (void) save:(DrinksContainer*)drinksContainer;
 @end

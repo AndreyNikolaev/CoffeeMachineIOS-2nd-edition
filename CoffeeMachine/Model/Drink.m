@@ -56,7 +56,16 @@
 }
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:self.name forKey:@"drinkName"];
-    [encoder encodeObject:[NSNumber numberWithInteger:self.price]forKey:@"drinkPrice"];
+    [encoder encodeObject:[NSNumber numberWithInteger:self.price] forKey:@"drinkPrice"];
+}
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        self.name = [coder decodeObjectForKey:@"drinkName"];
+        self.price = (int)[coder decodeObjectForKey:@"drinkPrice"];
+       
+    }
+    return self;
 }
 
 @end

@@ -15,5 +15,7 @@
 -(NSString*)description;
 - (BOOL)isEqual:(Drink*)other;
 - (NSUInteger)hash;
+- (void)encodeWithCoder:(NSCoder *)encoder;
+- (id)initWithCoder:(NSCoder *)coder;
 @end
 
