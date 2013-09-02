@@ -149,27 +149,46 @@
 
 -(void)saveDrinksToPlist
     {
-        
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *docDir = [paths objectAtIndex:0];
         NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
         [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
-        //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
-                // write plist to disk
-        [self.drinks writeToFile:path atomically:YES];
-                NSMutableDictionary *saved = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-        if( saved==nil ){
-            NSLog(@"failed to retrieve dictionary from disk");
-        }else{
-            NSLog(@"ARRAY; %@ ", saved);
-        }
 
         
     }
 
 
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:[self.drinks allKeys]  forKey:@"Drinks"];
+    [encoder encodeObject:[self.drinks allValues] forKey:@"Amounts"];
+}
 
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        [self.drinks setObject:[coder decodeObjectForKey:@"Amounts"] forKey:[coder decodeObjectForKey:@"Drinks"]];
+    }
+    return self;
+}
 
+- (void) save:(DrinksContainer*)drinksContainer
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *path = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
+    NSMutableData* data=[[NSMutableData alloc] init];
+    if (data)
+    {
+        NSKeyedArchiver* archiver=[[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+        if (archiver)
+        {
+            [archiver encodeInt:1 forKey:@"Version"];
+            [archiver encodeObject:drinksContainer forKey:@"DrinksConainer"];
+            [archiver finishEncoding];
+            
+            [data writeToFile:path atomically:YES];
+            
+        }
+    }
+}
 @end
