@@ -55,30 +55,7 @@
     
     return currentDrinks;
 }
--(void)toFile
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
-    
-    
-    NSString *error = [[NSString alloc]init];
-    error = @" ERROR";
-    NSData *mySerializedObject = [NSKeyedArchiver archivedDataWithRootObject:self.currentDrinksAmount];
-    NSData *xmlData = [NSPropertyListSerialization dataFromPropertyList:mySerializedObject
-                                                                 format:NSPropertyListXMLFormat_v1_0
-                                                       errorDescription:&error];
-    if( xmlData ) {
-        [xmlData writeToFile:path atomically:YES];
-    } else {
-        NSLog(error);
-        
-    }
-}
 
-- (void)encodeWithCoder:(NSCoder *)encoder {
-    [encoder encodeObject:self.currentDrinksAmount forKey:@"drinksAmount"];
-    [encoder encodeObject:self.coins forKey:@"coins"];
-}
+
 
 @end

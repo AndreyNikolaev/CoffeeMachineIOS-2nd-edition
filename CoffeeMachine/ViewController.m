@@ -41,7 +41,7 @@
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
     //[drinks setSomeDrinks];
     [drinks loadDrinksFromPlist];
-    //[drinks saveDrinksToPlist];
+    [drinks saveDrinksToPlist];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     //[moneyAmount setSomeCoins];
     [moneyAmount loadCoinsFromPlist];
@@ -52,7 +52,7 @@
         self.coffeeMachineState.coins = moneyAmount;
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
-   [self.coffeeMachineState toFile];
+ 
      
    	
 }
