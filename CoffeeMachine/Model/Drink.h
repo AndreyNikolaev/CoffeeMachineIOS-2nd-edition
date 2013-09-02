@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Drink : NSObject <NSCopying>
+@interface Drink : NSObject <NSCopying, NSCoding>
 
 @property (strong) NSString *name;
 @property int price;
