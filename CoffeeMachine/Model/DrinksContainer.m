@@ -162,4 +162,25 @@
     return drinksArray;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    //[encoder encodeObject:self.drinks  forKey:@"DrinksContainer"];
+    [encoder encodeObject:[self.drinks allKeys]forKey:@"Drinks"];
+    [encoder encodeObject:[self.drinks allValues] forKey:@"Amounts"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+    [self.drinks setObject:[coder decodeObjectForKey:@"Amounts"] forKey:[coder decodeObjectForKey:@"Drinks"]];
+       // self.drinks =[coder decodeObjectForKey:@"DrinksContainer"];
+    }
+    return self;
+}
+
+>>>>>>> 1c1e4939e8aa04eafef7aa15ae8ef0896c21e6b7
 @end

@@ -30,6 +30,9 @@
 - (void) save:(DrinksContainer*)drinksContainer;
 - (DrinksContainer*) load;
 -(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1c1e4939e8aa04eafef7aa15ae8ef0896c21e6b7
 @end

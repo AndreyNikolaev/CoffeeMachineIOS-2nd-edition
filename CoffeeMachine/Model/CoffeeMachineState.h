@@ -21,6 +21,7 @@
 -(DrinksContainer*) getCurrentDrinks;
 -(DrinksContainer*) getInitialDrinks;
 -(NSMutableArray*)getFiltratedDrinks;
+-(void)saveStateToFile;
 
 
 @end
