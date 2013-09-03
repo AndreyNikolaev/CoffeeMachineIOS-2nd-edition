@@ -10,7 +10,7 @@
 
 @class Drink;
 
-@interface DrinksContainer : NSObject
+@interface DrinksContainer : NSObject<NSCoding>
 
 @property (strong) NSMutableDictionary  *drinks;
 @property BOOL additionClosed;
@@ -27,5 +27,5 @@
 -(void)saveDrinksToPlist;
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)coder;
-- (void) save:(DrinksContainer*)drinksContainer;
+
 @end

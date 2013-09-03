@@ -42,7 +42,8 @@
     //[drinks setSomeDrinks];
     [drinks loadDrinksFromPlist];
     //[drinks saveDrinksToPlist];
-    [drinks save:self.coffeeMachineState.currentDrinksAmount];
+    //[drinks load];
+   
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     //[moneyAmount setSomeCoins];
     [moneyAmount loadCoinsFromPlist];
