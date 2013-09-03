@@ -40,9 +40,6 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
-
-    
-    [drinks loadDrinksFromPlist];
     [drinks loadDrinksFromPlist];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
@@ -53,7 +50,7 @@
         self.coffeeMachineState.coins = moneyAmount;
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
-    [self.coffeeMachineState saveStateToFile];
+    
      
    	
 }
@@ -167,6 +164,10 @@
     alertView.tag = 9998;
     //[self alertView:alertView clickedButtonAtIndex:0];
     [alertView show];
+}
+- (void) viewDidUnload{
+    [self.coffeeMachineState saveStateToFile];
+    NSLog(@"application enter background");
 }
 
 @end

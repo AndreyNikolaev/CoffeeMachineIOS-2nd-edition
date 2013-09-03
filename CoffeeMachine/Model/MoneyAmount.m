@@ -151,7 +151,7 @@
 {
     int amount=0;
     for (Coin *coin in [self.coins allKeys]) {
-        amount+=coin.value;
+        amount+=coin.value*[self.coins[coin] integerValue];
     }
     return amount;
 }
