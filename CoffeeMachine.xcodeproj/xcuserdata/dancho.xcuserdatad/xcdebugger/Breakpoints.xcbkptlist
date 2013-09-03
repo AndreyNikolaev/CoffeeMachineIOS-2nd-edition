@@ -283,9 +283,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "198"
-         endingLineNumber = "198"
-         landmarkName = "-initWithCoder:"
-         landmarkType = "5">
+         endingLineNumber = "198">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -296,9 +294,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "193"
-         endingLineNumber = "193"
-         landmarkName = "-encodeWithCoder:"
-         landmarkType = "5">
+         endingLineNumber = "193">
       </FileBreakpoint>
    </FileBreakpoints>
    <ExceptionBreakpoints>
