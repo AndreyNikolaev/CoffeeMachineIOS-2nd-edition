@@ -149,9 +149,13 @@
 
 -(int)sumOfCoins
 {
-    int amount=0;
+   int amount=0;
     for (Coin *coin in [self.coins allKeys]) {
+<<<<<<< HEAD
         amount+=coin.value*[self.coins[coin] integerValue];
+=======
+       amount+=coin.value;
+>>>>>>> 44bb14223955142dc1b69937baa89cc085031862
     }
     return amount;
 }
