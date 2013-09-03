@@ -9,11 +9,16 @@
 #import "FileReader.h"
 
 @implementation FileReader
-@synthesize filePath;
+@synthesize fileName;
 -(NSDictionary*)getDictAtIndex:(int) index
 {
-    NSString* sourcePath = [[NSBundle mainBundle] pathForResource:filePath ofType:@"plist"];
-    NSArray* sourceDataArray = [[NSArray alloc]initWithContentsOfFile:sourcePath];
+   // NSString* sourcePath = [[NSBundle mainBundle] pathForResource:filePath ofType:@"plist"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+   
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:fileName];
+    NSArray* sourceDataArray = [[NSArray alloc]initWithContentsOfFile:path];
+
     return [sourceDataArray objectAtIndex:index];
 }
 

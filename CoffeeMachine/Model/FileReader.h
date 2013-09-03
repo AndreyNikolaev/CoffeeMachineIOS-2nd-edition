@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface FileReader : NSObject
-@property NSString* filePath;
+@property NSString* fileName;
 -(NSDictionary*)getDictAtIndex:(int) index;
 @end

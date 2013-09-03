@@ -58,7 +58,7 @@
     for (Coin *storedCoin in [self.coins allKeys]) {
         if ([storedCoin isEqual:coin]) {
             coinFound = YES;
-            [self.coins setObject:@(amount + [self.coins[storedCoin] intValue]) forKey:storedCoin];
+            [self.coins setObject:@(amount + [self.coins[storedCoin] integerValue]) forKey:storedCoin];
             break;
         }
     }
@@ -151,11 +151,9 @@
 {
    int amount=0;
     for (Coin *coin in [self.coins allKeys]) {
-<<<<<<< HEAD
+
         amount+=coin.value*[self.coins[coin] integerValue];
-=======
-       amount+=coin.value;
->>>>>>> 44bb14223955142dc1b69937baa89cc085031862
+
     }
     return amount;
 }
@@ -199,7 +197,7 @@
 -(void)loadCoinsFromPlist
 {
     FileReader* file = [[FileReader alloc]init];
-    file.filePath = @"sourceData";
+    file.fileName = @"writedFile.plist";
     int i=0;
     Coin  *coin=[[Coin alloc]init];
     NSDictionary *dictCoins = [[NSDictionary alloc] initWithDictionary:[file getDictAtIndex:2]];

@@ -132,7 +132,7 @@
 -(void)loadDrinksFromPlist
 {
     FileReader* file = [[FileReader alloc]init];
-    file.filePath = @"sourceData";
+    file.fileName = @"writedFile.plist";
     NSDictionary *dictDrinks = [[NSDictionary alloc]initWithDictionary:[file getDictAtIndex:0]];
     NSDictionary *dictDrinksAmounts = [[NSDictionary alloc]initWithDictionary:[file getDictAtIndex:1]];
     int i=0;
