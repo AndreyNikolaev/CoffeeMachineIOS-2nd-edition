@@ -18,6 +18,7 @@
 		5AD3361717C4A5DD001F65DE /* InsufficientAmountFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3361517C4A5DB001F65DE /* InsufficientAmountFlow.xib */; };
 		5AD3361B17C4A66B001F65DE /* OrderFinalizeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */; };
 		5AD3361C17C4A66B001F65DE /* OrderFinalizeFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */; };
+		5AD794FC17D5D26D003A639A /* FileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD794FB17D5D26D003A639A /* FileWriter.m */; };
 		5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */; };
 		5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */; };
 		5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999517CE26B0007E5EB7 /* coffee.jpg */; };
@@ -57,6 +58,8 @@
 		5AD3361817C4A665001F65DE /* OrderFinalizeFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFinalizeFlow.h; sourceTree = "<group>"; };
 		5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFinalizeFlow.m; sourceTree = "<group>"; };
 		5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFinalizeFlow.xib; sourceTree = "<group>"; };
+		5AD794FA17D5D26D003A639A /* FileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileWriter.h; path = ../FileWriter.h; sourceTree = "<group>"; };
+		5AD794FB17D5D26D003A639A /* FileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileWriter.m; path = ../FileWriter.m; sourceTree = "<group>"; };
 		5AD7997C17CCC1A8007E5EB7 /* AdministrationFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdministrationFlow.h; sourceTree = "<group>"; };
 		5AD7997D17CCC1A8007E5EB7 /* AdministrationFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdministrationFlow.m; sourceTree = "<group>"; };
 		5AD7997E17CCC1A8007E5EB7 /* AdministrationFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdministrationFlow.xib; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				5AD129E717B23B0B00094D01 /* DrinksContainer.m */,
 				5AD799A117D0C090007E5EB7 /* FileReader.h */,
 				5AD799A217D0C090007E5EB7 /* FileReader.m */,
+				5AD794FA17D5D26D003A639A /* FileWriter.h */,
+				5AD794FB17D5D26D003A639A /* FileWriter.m */,
 				5AD129EC17B8D38300094D01 /* MoneyAmount.h */,
 				5AD129ED17B8D38400094D01 /* MoneyAmount.m */,
 				5AD7999F17D09835007E5EB7 /* sourceData.plist */,
@@ -276,6 +281,7 @@
 				5AD3361B17C4A66B001F65DE /* OrderFinalizeFlow.m in Sources */,
 				5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */,
 				5AD799A317D0C090007E5EB7 /* FileReader.m in Sources */,
+				5AD794FC17D5D26D003A639A /* FileWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
