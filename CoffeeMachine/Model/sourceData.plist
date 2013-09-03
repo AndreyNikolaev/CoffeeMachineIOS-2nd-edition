@@ -15,15 +15,15 @@
 		<string>50</string>
 	</dict>
 	<dict>
-		<key>New item</key>
+		<key>Coffee</key>
 		<integer>100</integer>
-		<key>New item - 2</key>
+		<key>Long Coffee</key>
 		<integer>100</integer>
-		<key>New item - 3</key>
-		<integer>0</integer>
-		<key>New item - 4</key>
+		<key>Ness Coffee</key>
 		<integer>100</integer>
-		<key>New item - 5</key>
+		<key>Capuchino</key>
+		<integer>100</integer>
+		<key>Hot Choco</key>
 		<integer>100</integer>
 	</dict>
 	<dict>

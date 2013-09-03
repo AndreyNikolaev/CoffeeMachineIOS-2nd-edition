@@ -39,6 +39,10 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
+<<<<<<< HEAD
+    
+    [drinks loadDrinksFromPlist];
+=======
     //[drinks setSomeDrinks];
     [drinks loadDrinksFromPlist];
     //[drinks saveDrinksToPlist];
@@ -48,8 +52,8 @@
 =======
     
 >>>>>>> a0c0f740748bf0a41c4ac59774e1a15b321f1b37
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
-    //[moneyAmount setSomeCoins];
     [moneyAmount loadCoinsFromPlist];
     
     if (self.coffeeMachineState == nil) {
