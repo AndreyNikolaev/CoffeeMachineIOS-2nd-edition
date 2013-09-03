@@ -72,4 +72,8 @@
         [self.navigationController popToRootViewControllerAnimated:YES];
 
 }
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.coffeeMachineState saveStateToFile];
+}
 @end

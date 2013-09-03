@@ -43,7 +43,7 @@
     for(Coin* coin in [self.coins allKeys]){
         for (Coin *updatedCoin in [mAmount.coins allKeys]) {
             if ([updatedCoin isEqual:coin]) {
-                [self.coins setObject:@(1 + [self.coins[updatedCoin] intValue]) forKey:updatedCoin];
+                [self.coins setObject:@([mAmount.coins[updatedCoin] integerValue] + [self.coins[updatedCoin] intValue]) forKey:updatedCoin];
                 break;
             }
         }
@@ -151,12 +151,8 @@
 {
    int amount=0;
     for (Coin *coin in [self.coins allKeys]) {
-<<<<<<< HEAD
         amount+=coin.value*[self.coins[coin] integerValue];
-=======
-       amount+=coin.value;
->>>>>>> 44bb14223955142dc1b69937baa89cc085031862
-    }
+        }
     return amount;
 }
 

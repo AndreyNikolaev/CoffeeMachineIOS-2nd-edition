@@ -40,21 +40,8 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
-<<<<<<< HEAD
-    [drinks loadDrinksFromPlist];
-=======
-    
-    [drinks loadDrinksFromPlist];
-    //[drinks setSomeDrinks];
-   // [drinks loadDrinksFromPlist];
-    //[drinks saveDrinksToPlist];
-    //[drinks load];
-   
 
-    
-    //[drinks loadDrinksFromPlist];
-   // [drinks loadDrinksFromPlist];
->>>>>>> 44bb14223955142dc1b69937baa89cc085031862
+    [drinks loadDrinksFromPlist];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
     
@@ -64,13 +51,8 @@
         self.coffeeMachineState.coins = moneyAmount;
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
-<<<<<<< HEAD
-    
-=======
+
  
-     //[drinks save:self.coffeeMachineState.currentDrinksAmount];
- [self.coffeeMachineState saveStateToFile];
->>>>>>> 44bb14223955142dc1b69937baa89cc085031862
      
    	
 }
@@ -146,10 +128,8 @@
 
 - (void) alertView:(UIAlertView *)alert clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-//   	 NSString *username = @"test";
     NSString *password = @"pass";
     if(alert.tag == 9998 && buttonIndex == 1) {
-//        NSString *e_uname = [[alert textFieldAtIndex:0]text ];
         NSString *e_pass = [[alert textFieldAtIndex:0]text ];
 
         if([e_pass isEqual:password]) {
@@ -163,13 +143,12 @@
                                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             wrongPassword.tag = 9999;
             [wrongPassword show];
-            //[self performSelector:@selector(goToAdministrationFlow:) withObject:nil afterDelay:0.01];
-           
+                      
         }
     }else if (alert.tag == 9999) {
     
         [self goToAdministrationFlow:nil];
-//        NSLog(@"test");
+
     }
     
 }
@@ -182,7 +161,6 @@
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Login"message:nil delegate:self cancelButtonTitle: @"Cancel"otherButtonTitles:@"Ok", nil];
     alertView.alertViewStyle = UIAlertViewStyleSecureTextInput;
     alertView.tag = 9998;
-    //[self alertView:alertView clickedButtonAtIndex:0];
     [alertView show];
 }
 - (void) viewDidUnload{

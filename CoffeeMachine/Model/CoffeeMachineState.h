@@ -16,7 +16,7 @@
     @property(strong)DrinksContainer* initialDrinksAmount;
 
 
--(MoneyAmount*) getCoins;
+//-(MoneyAmount*) getCoins;
 -(void)setCoins:(MoneyAmount*)newCoins;
 -(DrinksContainer*) getCurrentDrinks;
 -(DrinksContainer*) getInitialDrinks;
