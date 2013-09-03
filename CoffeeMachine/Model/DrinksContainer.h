@@ -27,11 +27,9 @@
 -(void)saveDrinksToPlist;
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)coder;
-<<<<<<< HEAD
 - (void) save:(DrinksContainer*)drinksContainer;
 - (DrinksContainer*) load;
 -(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts;
-=======
 
->>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
+
 @end
