@@ -149,6 +149,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399818913.636016"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
@@ -167,6 +168,13 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "47"
          endingLineNumber = "47"
+=======
+         timestampString = "399819543.441112"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -175,11 +183,19 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399818913.636016"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "48"
          endingLineNumber = "48"
+=======
+         timestampString = "399819543.441112"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -188,11 +204,19 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399818913.636016"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "49"
          endingLineNumber = "49"
+=======
+         timestampString = "399819543.441112"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -201,11 +225,19 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399818913.636016"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "52"
          endingLineNumber = "52"
+=======
+         timestampString = "399819543.441112"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -253,6 +285,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399818913.636016"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
@@ -267,26 +300,67 @@
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
          timestampString = "399372737.328948"
+=======
+         timestampString = "399819673.967656"
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "163"
+         endingLineNumber = "163"
+         landmarkName = "-validateUsernameAndPassword"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/ViewController.m"
-         timestampString = "399374071.999065"
+         filePath = "CoffeeMachine/Model/MoneyAmount.m"
+         timestampString = "399543860.66907"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "205"
+         endingLineNumber = "205"
+         landmarkName = "-loadCoinsFromPlist"
          landmarkType = "5">
       </FileBreakpoint>
+<<<<<<< HEAD
+=======
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CoffeeMachine/Model/Drink.m"
+         timestampString = "399805920.153511"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
+         landmarkName = "-encodeWithCoder:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CoffeeMachine/Model/DrinksContainer.m"
+         timestampString = "399839277.809584"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "198"
+         endingLineNumber = "198">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CoffeeMachine/Model/DrinksContainer.m"
+         timestampString = "399839298.140353"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "193"
+         endingLineNumber = "193">
+      </FileBreakpoint>
+>>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
    </FileBreakpoints>
    <ExceptionBreakpoints>
       <ExceptionBreakpoint

@@ -27,4 +27,5 @@
 -(void)setSomeCoins;
 -(NSMutableArray *)coinsAmountToString;
 -(void)loadCoinsFromPlist;
+-(NSMutableDictionary *)coinsValueAndAmount;
 @end

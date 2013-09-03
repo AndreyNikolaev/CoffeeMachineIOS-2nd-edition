@@ -208,7 +208,13 @@
     }
     
 }
-
+-(NSMutableDictionary *)coinsValueAndAmount {
+    NSMutableDictionary* coinsValueAndAmount = [[NSMutableDictionary alloc]init];
+    for(Coin *coin in [self.coins allKeys]){
+        [coinsValueAndAmount setObject:[NSNumber numberWithInteger:[self.coins[coin]integerValue]]forKey:[NSString stringWithFormat:@"%d",coin.value]];
+    }
+    return coinsValueAndAmount;
+}
 
 
 @end
