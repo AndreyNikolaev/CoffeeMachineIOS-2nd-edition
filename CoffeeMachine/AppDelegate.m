@@ -38,6 +38,17 @@
 {    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
+<<<<<<< HEAD
+=======
+
+    
+   // OrderFinalizeFlow *finalize = [[OrderFinalizeFlow alloc]init];
+   // self.coffeeMachineState = finalize.coffeeMachineState;
+    //[self.coffeeMachineState saveStateToFile];
+    NSLog(@"test");
+    
+
+>>>>>>> eb20c54f7c878e5c975c69f5cc567063d465c7a6
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -52,8 +63,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+<<<<<<< HEAD
 
      
+=======
+
+       
+
+
+>>>>>>> eb20c54f7c878e5c975c69f5cc567063d465c7a6
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

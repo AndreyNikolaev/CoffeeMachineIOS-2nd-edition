@@ -40,6 +40,7 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
+<<<<<<< HEAD
     [drinks loadDrinksFromPlist];
 
     
@@ -49,6 +50,10 @@
     //[drinks load];
    
 
+=======
+
+    [drinks loadDrinksFromPlist];
+>>>>>>> eb20c54f7c878e5c975c69f5cc567063d465c7a6
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
     
@@ -59,11 +64,15 @@
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
 
+<<<<<<< HEAD
     
 
  
      //[drinks save:self.coffeeMachineState.currentDrinksAmount];
  [self.coffeeMachineState saveStateToFile];
+=======
+ 
+>>>>>>> eb20c54f7c878e5c975c69f5cc567063d465c7a6
      
    	
 }
@@ -139,10 +148,8 @@
 
 - (void) alertView:(UIAlertView *)alert clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-//   	 NSString *username = @"test";
     NSString *password = @"pass";
     if(alert.tag == 9998 && buttonIndex == 1) {
-//        NSString *e_uname = [[alert textFieldAtIndex:0]text ];
         NSString *e_pass = [[alert textFieldAtIndex:0]text ];
 
         if([e_pass isEqual:password]) {
@@ -156,13 +163,12 @@
                                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             wrongPassword.tag = 9999;
             [wrongPassword show];
-            //[self performSelector:@selector(goToAdministrationFlow:) withObject:nil afterDelay:0.01];
-           
+                      
         }
     }else if (alert.tag == 9999) {
     
         [self goToAdministrationFlow:nil];
-//        NSLog(@"test");
+
     }
     
 }
@@ -175,7 +181,6 @@
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Login"message:nil delegate:self cancelButtonTitle: @"Cancel"otherButtonTitles:@"Ok", nil];
     alertView.alertViewStyle = UIAlertViewStyleSecureTextInput;
     alertView.tag = 9998;
-    //[self alertView:alertView clickedButtonAtIndex:0];
     [alertView show];
 }
 - (void) viewDidUnload{
