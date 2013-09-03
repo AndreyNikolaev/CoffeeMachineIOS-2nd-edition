@@ -28,4 +28,6 @@
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)coder;
 - (void) save:(DrinksContainer*)drinksContainer;
+- (DrinksContainer*) load;
+-(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts;
 @end

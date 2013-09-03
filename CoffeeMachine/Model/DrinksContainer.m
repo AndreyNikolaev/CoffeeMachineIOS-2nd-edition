@@ -147,9 +147,24 @@
     }
 }
 
+-(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts
+{
+    NSMutableArray* drinksArray = [[NSMutableArray alloc]init];
+    NSMutableDictionary* drinksDict = [[NSMutableDictionary alloc]init];
+    NSMutableDictionary* drinksAmountsDict = [[NSMutableDictionary alloc]init];
+    
+    for(Drink* currentDrink in [self.drinks allKeys] ){
+        [drinksDict setObject:[NSNumber numberWithInt:currentDrink.price] forKey:currentDrink.name];
+        [drinksAmountsDict setObject:[NSNumber numberWithInt:[self.drinks[currentDrink] intValue ]] forKey:currentDrink.name];
+    }
+    [drinksArray addObject:drinksDict];
+    [drinksArray addObject:drinksAmountsDict];
+    return drinksArray;
+}
+
 -(void)saveDrinksToPlist
     {
-<<<<<<< HEAD
+
         
        /* NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
        NSString *docDir = [paths objectAtIndex:0];
@@ -203,24 +218,6 @@
     return self;
 }
 
-- (void) save:(DrinksContainer*)drinksContainer
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docDir = [paths objectAtIndex:0];
-    NSString *path = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
-    NSMutableData* data=[[NSMutableData alloc] init];
-    if (data)
-    {
-        NSKeyedArchiver* archiver=[[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-        if (archiver)
-        {
-            [archiver encodeInt:1 forKey:@"Version"];
-            [archiver encodeObject:drinksContainer forKey:@"DrinksConainer"];
-            [archiver finishEncoding];
-            
-            [data writeToFile:path atomically:YES];
-            
-        }
-    }
-}
+
+
 @end
