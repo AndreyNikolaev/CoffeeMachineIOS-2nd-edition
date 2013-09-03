@@ -56,10 +56,11 @@
     return currentDrinks;
 }
 
--(void)getStateInArray
+-(NSMutableArray*)getStateInArray
 {
     NSMutableArray* stateArray=[[NSMutableArray alloc]initWithArray:[self.currentDrinksAmount getArrayFromDictsOfDrinksAndAmounts]];
-    
+    [stateArray addObject:[self.coins coinsValueAndAmount]];
+    return stateArray;
     
 }
 
