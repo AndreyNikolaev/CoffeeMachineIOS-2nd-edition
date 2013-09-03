@@ -9,6 +9,7 @@
 #import "CoffeeMachineState.h"
 #import "DrinksContainer.h"
 #import "Drink.h"
+#import "FileWriter.h"
 
 @implementation CoffeeMachineState
 @synthesize currentDrinksAmount;
@@ -61,6 +62,13 @@
     NSMutableArray* stateArray=[[NSMutableArray alloc]initWithArray:[self.currentDrinksAmount getArrayFromDictsOfDrinksAndAmounts]];
     [stateArray addObject:[self.coins coinsValueAndAmount]];
     return stateArray;
+    
+}
+-(void)saveStateToFile //may be better in FileWriter.m
+{
+    FileWriter* fileWriter = [[FileWriter alloc]init];
+    fileWriter.fileName = @"writedFile.plist";
+    [fileWriter saveToPlist:[self getStateInArray]];
     
 }
 

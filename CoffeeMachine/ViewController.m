@@ -14,6 +14,7 @@
 #import "MoneyAmount.h"
 #import "AdministrationFlow.h"
 
+
 @interface ViewController ()
 
 @end
@@ -52,7 +53,7 @@
         self.coffeeMachineState.coins = moneyAmount;
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
- 
+    [self.coffeeMachineState saveStateToFile];
      
    	
 }

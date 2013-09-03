@@ -162,45 +162,7 @@
     return drinksArray;
 }
 
--(void)saveDrinksToPlist
-    {
 
-<<<<<<< HEAD
-        
-       /* NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-       NSString *docDir = [paths objectAtIndex:0];
-       NSString *fullFileName = [NSString stringWithFormat:@"%@/ourArray.plist", docDir];
-    [NSKeyedArchiver archiveRootObject:self.drinks toFile:fullFileName];
-        
-        */
-       /* NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"set.plist"];
-        
-        NSMutableArray *myObject=[NSMutableArray array];
-        [myObject addObject:self.drinks];
-        
-        [NSKeyedArchiver archiveRootObject:myObject toFile:appFile];
-        */
-    //[[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:self.drinks] forKey:@"mySavedArray"];
-        
-               //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-       /* NSString *documentsDirectory = [paths objectAtIndex:0];
-=======
-               
-         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-         NSString *documentsDirectory = [paths objectAtIndex:0];
->>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
-        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"dataSource.plist"];
-                // write plist to disk
-        [self.drinks writeToFile:path atomically:YES];
-                NSMutableDictionary *saved = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-        if( saved==nil ){
-            NSLog(@"failed to retrieve dictionary from disk");
-        }else{
-            NSLog(@"ARRAY; %@ ", saved);
-        }
-    }
 
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
@@ -218,9 +180,4 @@
     return self;
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 83e9074f7d6244827c539ee556bec862a8f234f2
 @end
