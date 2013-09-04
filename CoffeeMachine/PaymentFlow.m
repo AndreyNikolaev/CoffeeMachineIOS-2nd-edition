@@ -28,11 +28,12 @@
 @synthesize userCoins;
 
 @synthesize sumLbl;
-@synthesize fiveBtn;
-@synthesize tenBtn;
-@synthesize twentyBtn;
-@synthesize fiftyBtn;
-@synthesize levBtn;
+
+@synthesize fiveImg;
+@synthesize tenImg;
+@synthesize twentyImg;
+@synthesize fiftyImg;
+@synthesize levImg;
  
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -48,7 +49,6 @@
 {
     [super viewDidLoad];
     sum = 0;
-    [self paint];
     userCoins=[[MoneyAmount alloc]init];
     // Do any additional setup after loading the view from its nib.
    
@@ -71,33 +71,6 @@
     userCoin.value=coinValue;
     [self.userCoins addCoin:userCoin amount:1];
     sumLbl.text=[NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
-}
-- (IBAction)sumFive:(id)sender {
- 
-    [self setCoinInUserCoins:5];
-    [self switchMenu];
-}
-
-- (IBAction)sumTen:(id)sender {
-    
-   [self setCoinInUserCoins:10];
-    [self switchMenu];
-}
-
-- (IBAction)sumTwenty:(id)sender {
-        
-   [self setCoinInUserCoins:20];
-    [self switchMenu];
-}
-
-- (IBAction)sumFifty:(id)sender {
-   [self setCoinInUserCoins:50];
-   [self switchMenu];
-}
-
-- (IBAction)sumLev:(id)sender {
-    [self setCoinInUserCoins:100];
-    [self switchMenu];
 }
 
 - (void) switchMenu {  
@@ -129,12 +102,35 @@
       
     }
 }
--(void) paint
-{
-    [tenBtn setImage:[UIImage imageNamed:@"10.png"] forState:UIControlStateNormal];
-    [fiveBtn setImage:[UIImage imageNamed:@"5.png"] forState:UIControlStateNormal];
-    [twentyBtn setImage:[UIImage imageNamed:@"20.png"] forState:UIControlStateNormal];
-    [fiftyBtn setImage:[UIImage imageNamed:@"50.png"] forState:UIControlStateNormal];
-    [levBtn setImage:[UIImage imageNamed:@"100.png"] forState:UIControlStateNormal];
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [touches anyObject];
+    
+    if ([touch view] == fiveImg)
+    {
+        [self setCoinInUserCoins:5];
+        [self switchMenu];
+    }
+    if ([touch view] == tenImg)
+    {
+        [self setCoinInUserCoins:10];
+        [self switchMenu];
+    }
+    if ([touch view] == twentyImg)
+    {
+        [self setCoinInUserCoins:20];
+        [self switchMenu];
+    }
+    if ([touch view] == fiftyImg)
+    {
+        [self setCoinInUserCoins:50];
+        [self switchMenu];
+    }
+    if ([touch view] == levImg)
+    {
+        [self setCoinInUserCoins:100];
+        [self switchMenu];
+    }
 }
 @end
