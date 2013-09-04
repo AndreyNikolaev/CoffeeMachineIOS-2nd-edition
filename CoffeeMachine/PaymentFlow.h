@@ -30,5 +30,9 @@ NSString *result;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 
+
+
 - (void)rotateImage: (UIImageView*) image;
+
+
 @end
