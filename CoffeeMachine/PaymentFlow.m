@@ -109,7 +109,6 @@
     
     if ([touch view] == fiveImg){
         
-        fiveImg.transform = CGAffineTransformMakeRotation((90*M_PI)/180);
         [self setCoinInUserCoins:5];
         [self switchMenu];
         [self rotateImage:fiveImg];
@@ -142,8 +141,9 @@
 }
 -(void)rotateImage: (UIImageView*) image
 {
+    image.transform = CGAffineTransformMakeRotation((-90*M_PI)/180);
     [UIView animateWithDuration:1 animations:^{
-        [image setTransform:CGAffineTransformMakeRotation(360 * M_PI / 180)];
+        image.transform = CGAffineTransformMakeRotation((360*M_PI)/180);
     }completion:nil];
 }
 
