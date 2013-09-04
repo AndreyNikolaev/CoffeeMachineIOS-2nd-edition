@@ -138,11 +138,8 @@
 {
    int amount=0;
     for (Coin *coin in [self.coins allKeys]) {
-<<<<<<< HEAD
 
-=======
->>>>>>> f0c7125717db06592c714c3a8c2f4c73e06af1c5
-        amount+=coin.value*[self.coins[coin] integerValue];
+amount+=coin.value*[self.coins[coin] integerValue];
     }
     return amount;
 }
