@@ -141,9 +141,14 @@
 }
 -(void)rotateImage: (UIImageView*) image
 {
-    [UIView animateWithDuration:1 animations:^{
-        [image setTransform:CGAffineTransformMakeRotation(360 * M_PI / 180)];
-    }completion:nil];
+    //[UIView animateWithDuration:1 animations:^{
+       // [image setTransform:CGAffineTransformMakeRotation(360 * M_PI / 180)];
+    //}completion:nil];
+    [UIView animateWithDuration:1.0 animations:^{
+        image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);
+    } completion:nil];
+    
+
 }
 
 @end
