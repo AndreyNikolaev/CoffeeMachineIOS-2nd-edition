@@ -111,27 +111,39 @@
         //fiveImg.transform = CGAffineTransformMakeRotation((90*M_PI)/180);
         [self setCoinInUserCoins:5];
         [self switchMenu];
+        [self rotateImage:fiveImg];
     }
     if ([touch view] == tenImg)
     {
         [self setCoinInUserCoins:10];
         [self switchMenu];
+        [self rotateImage:tenImg];
     }
     if ([touch view] == twentyImg)
     {
         [self setCoinInUserCoins:20];
         [self switchMenu];
+        [self rotateImage:twentyImg];
     }
     if ([touch view] == fiftyImg)
     {
         [self setCoinInUserCoins:50];
         [self switchMenu];
+        [self rotateImage:fiftyImg];
     }
     if ([touch view] == levImg)
     {
         [self setCoinInUserCoins:100];
         [self switchMenu];
+        [self rotateImage:levImg];
     }
+    
+}
+-(void)rotateImage: (UIImageView*) image
+{
+    [UIView animateWithDuration:1 animations:^{
+        [image setTransform:CGAffineTransformMakeRotation(360 * M_PI / 180)];
+    }completion:nil];
 }
 
 @end
