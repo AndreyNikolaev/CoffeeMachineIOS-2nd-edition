@@ -40,7 +40,6 @@
     self.navigationItem.rightBarButtonItem = adminButton;
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
-<<<<<<< HEAD
     [drinks loadDrinksFromPlist];
 
     
@@ -50,10 +49,7 @@
     //[drinks load];
    
 
-=======
 
-    [drinks loadDrinksFromPlist];
->>>>>>> eb20c54f7c878e5c975c69f5cc567063d465c7a6
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
     
@@ -64,15 +60,12 @@
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
 
-<<<<<<< HEAD
+
     
 
  
      //[drinks save:self.coffeeMachineState.currentDrinksAmount];
- [self.coffeeMachineState saveStateToFile];
-=======
- 
->>>>>>> eb20c54f7c878e5c975c69f5cc567063d465c7a6
+ //[self.coffeeMachineState saveStateToFile];
      
    	
 }

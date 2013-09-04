@@ -149,12 +149,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
-         timestampString = "399905254.595404"
+         timestampString = "399908419.823233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "143"
-         endingLineNumber = "143"
-         landmarkName = "-alertView:clickedButtonAtIndex:"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -162,11 +162,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
-         timestampString = "399905472.140266"
+         timestampString = "399908419.823233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "203"
-         endingLineNumber = "203"
+         startingLineNumber = "198"
+         endingLineNumber = "198"
          landmarkName = "-loadCoinsFromPlist"
          landmarkType = "5">
       </FileBreakpoint>
