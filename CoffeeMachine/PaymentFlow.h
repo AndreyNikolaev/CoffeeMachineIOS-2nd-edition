@@ -20,13 +20,13 @@ NSString *result;
 @property (strong) CoffeeMachineState *coffeeMachineState;
 @property (strong) Drink *selectedDrink;
 @property (strong) MoneyAmount *userCoins;
+@property (strong, nonatomic) IBOutlet UIImageView *tenImg;
+@property (strong, nonatomic) IBOutlet UIImageView *twentyImg;
+@property (strong, nonatomic) IBOutlet UIImageView *levImg;
 
-@property (strong, nonatomic) IBOutlet UIButton *fiveBtn;
+@property (strong, nonatomic) IBOutlet UIImageView *fiftyImg;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
-@property (strong, nonatomic) IBOutlet UIButton *tenBtn;
-@property (strong, nonatomic) IBOutlet UIButton *twentyBtn;
-@property (strong, nonatomic) IBOutlet UIButton *fiftyBtn;
-@property (strong, nonatomic) IBOutlet UIButton *levBtn;
+@property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 
 - (IBAction)sumFive:(id)sender;
 - (IBAction)sumTen:(id)sender;
