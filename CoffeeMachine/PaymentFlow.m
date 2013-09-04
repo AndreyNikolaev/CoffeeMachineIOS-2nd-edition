@@ -107,8 +107,9 @@
     
     UITouch *touch = [touches anyObject];
     
-    if ([touch view] == fiveImg)
-    {
+    if ([touch view] == fiveImg){
+        
+        fiveImg.transform = CGAffineTransformMakeRotation((90*M_PI)/180);
         [self setCoinInUserCoins:5];
         [self switchMenu];
     }
@@ -133,4 +134,5 @@
         [self switchMenu];
     }
 }
+
 @end

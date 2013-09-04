@@ -42,6 +42,8 @@
 		5ADBFE5117B11A77005B7B91 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4F17B11A77005B7B91 /* ViewController.xib */; };
 		5ADBFE5A17B12C7F005B7B91 /* PaymentFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */; };
 		5ADBFE5B17B12C7F005B7B91 /* PaymentFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */; };
+		5AE5A8A217D751B600499435 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5A8A117D751B600499435 /* AVFoundation.framework */; };
+		5AE5A8A417D751ED00499435 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5A8A317D751ED00499435 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		5ADBFE5717B12C7F005B7B91 /* PaymentFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentFlow.h; sourceTree = "<group>"; };
 		5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentFlow.m; sourceTree = "<group>"; };
 		5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentFlow.xib; sourceTree = "<group>"; };
+		5AE5A8A117D751B600499435 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5AE5A8A317D751ED00499435 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE5A8A417D751ED00499435 /* QuartzCore.framework in Frameworks */,
+				5AE5A8A217D751B600499435 /* AVFoundation.framework in Frameworks */,
 				5ADBFE3517B11A77005B7B91 /* UIKit.framework in Frameworks */,
 				5ADBFE3717B11A77005B7B91 /* Foundation.framework in Frameworks */,
 				5ADBFE3917B11A77005B7B91 /* CoreGraphics.framework in Frameworks */,
@@ -139,6 +145,8 @@
 		5ADBFE2817B11A77005B7B91 = {
 			isa = PBXGroup;
 			children = (
+				5AE5A8A317D751ED00499435 /* QuartzCore.framework */,
+				5AE5A8A117D751B600499435 /* AVFoundation.framework */,
 				5ADBFE3A17B11A77005B7B91 /* CoffeeMachine */,
 				5ADBFE3317B11A77005B7B91 /* Frameworks */,
 				5ADBFE3217B11A77005B7B91 /* Products */,
