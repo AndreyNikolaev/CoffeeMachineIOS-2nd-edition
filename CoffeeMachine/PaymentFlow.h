@@ -28,10 +28,6 @@ NSString *result;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 
-- (IBAction)sumFive:(id)sender;
-- (IBAction)sumTen:(id)sender;
-- (IBAction)sumTwenty:(id)sender;
-- (IBAction)sumFifty:(id)sender;
-- (IBAction)sumLev:(id)sender;
+- (void)rotateImage: (UIImageView*) image;
 
 @end
