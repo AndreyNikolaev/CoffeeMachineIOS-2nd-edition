@@ -146,7 +146,7 @@
     //}completion:nil];
     [UIView animateWithDuration:1.0 animations:^{
         image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);
-    } completion:nil];
+    } completion:nil ];
     
 
 }
