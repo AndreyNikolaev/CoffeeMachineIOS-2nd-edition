@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class CoffeeMachineState;
 @class Drink;
@@ -28,6 +30,9 @@ NSString *result;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 
+<<<<<<< HEAD
 - (void)rotateImage: (UIImageView*) image;
+=======
+>>>>>>> 8ccc243348eee9a087edf3ee8b4ae65b1ad94bfd
 
 @end
