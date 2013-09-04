@@ -24,6 +24,11 @@
 		5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999517CE26B0007E5EB7 /* coffee.jpg */; };
 		5AD799A017D09835007E5EB7 /* sourceData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7999F17D09835007E5EB7 /* sourceData.plist */; };
 		5AD799A317D0C090007E5EB7 /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD799A217D0C090007E5EB7 /* FileReader.m */; };
+		5AD799A917D728DC007E5EB7 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD799A817D728DC007E5EB7 /* 10.png */; };
+		5AD799AE17D72C7A007E5EB7 /* 100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD799AA17D72C79007E5EB7 /* 100.png */; };
+		5AD799AF17D72C7A007E5EB7 /* 50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD799AB17D72C7A007E5EB7 /* 50.png */; };
+		5AD799B017D72C7A007E5EB7 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD799AC17D72C7A007E5EB7 /* 20.png */; };
+		5AD799B117D72C7A007E5EB7 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD799AD17D72C7A007E5EB7 /* 5.png */; };
 		5ADBFE3517B11A77005B7B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3417B11A77005B7B91 /* UIKit.framework */; };
 		5ADBFE3717B11A77005B7B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3617B11A77005B7B91 /* Foundation.framework */; };
 		5ADBFE3917B11A77005B7B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBFE3817B11A77005B7B91 /* CoreGraphics.framework */; };
@@ -67,6 +72,11 @@
 		5AD7999F17D09835007E5EB7 /* sourceData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sourceData.plist; sourceTree = "<group>"; };
 		5AD799A117D0C090007E5EB7 /* FileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		5AD799A217D0C090007E5EB7 /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
+		5AD799A817D728DC007E5EB7 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		5AD799AA17D72C79007E5EB7 /* 100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100.png; sourceTree = "<group>"; };
+		5AD799AB17D72C7A007E5EB7 /* 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 50.png; sourceTree = "<group>"; };
+		5AD799AC17D72C7A007E5EB7 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20.png; sourceTree = "<group>"; };
+		5AD799AD17D72C7A007E5EB7 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		5ADBFE3117B11A77005B7B91 /* CoffeeMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADBFE3417B11A77005B7B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5ADBFE3617B11A77005B7B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -183,6 +193,11 @@
 			isa = PBXGroup;
 			children = (
 				5AD7999517CE26B0007E5EB7 /* coffee.jpg */,
+				5AD799AA17D72C79007E5EB7 /* 100.png */,
+				5AD799AB17D72C7A007E5EB7 /* 50.png */,
+				5AD799AC17D72C7A007E5EB7 /* 20.png */,
+				5AD799AD17D72C7A007E5EB7 /* 5.png */,
+				5AD799A817D728DC007E5EB7 /* 10.png */,
 				5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */,
 				5ADBFE3D17B11A77005B7B91 /* InfoPlist.strings */,
 				5ADBFE4017B11A77005B7B91 /* main.m */,
@@ -257,6 +272,11 @@
 				5AD7998017CCC1A8007E5EB7 /* AdministrationFlow.xib in Resources */,
 				5AD7999617CE26B0007E5EB7 /* coffee.jpg in Resources */,
 				5AD799A017D09835007E5EB7 /* sourceData.plist in Resources */,
+				5AD799A917D728DC007E5EB7 /* 10.png in Resources */,
+				5AD799AE17D72C7A007E5EB7 /* 100.png in Resources */,
+				5AD799AF17D72C7A007E5EB7 /* 50.png in Resources */,
+				5AD799B017D72C7A007E5EB7 /* 20.png in Resources */,
+				5AD799B117D72C7A007E5EB7 /* 5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

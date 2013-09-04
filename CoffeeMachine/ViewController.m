@@ -41,6 +41,7 @@
     
     DrinksContainer *drinks =[[ DrinksContainer alloc]init ];
     [drinks loadDrinksFromPlist];
+<<<<<<< HEAD
 
     
         //[drinks setSomeDrinks];
@@ -50,6 +51,8 @@
    
 
 
+=======
+>>>>>>> f0c7125717db06592c714c3a8c2f4c73e06af1c5
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
     
@@ -61,6 +64,7 @@
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
 
 
+<<<<<<< HEAD
     
 
  
@@ -68,6 +72,13 @@
  //[self.coffeeMachineState saveStateToFile];
      
    	
+=======
+
+ 
+     //[drinks save:self.coffeeMachineState.currentDrinksAmount];
+ [self.coffeeMachineState saveStateToFile];
+
+>>>>>>> f0c7125717db06592c714c3a8c2f4c73e06af1c5
 }
 
 
@@ -180,5 +191,6 @@
     [self.coffeeMachineState saveStateToFile];
     NSLog(@"application enter background");
 }
+
 
 @end

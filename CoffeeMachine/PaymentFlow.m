@@ -48,6 +48,7 @@
 {
     [super viewDidLoad];
     sum = 0;
+    [self paint];
     userCoins=[[MoneyAmount alloc]init];
     // Do any additional setup after loading the view from its nib.
    
@@ -127,5 +128,13 @@
         
       
     }
+}
+-(void) paint
+{
+    [tenBtn setImage:[UIImage imageNamed:@"10.png"] forState:UIControlStateNormal];
+    [fiveBtn setImage:[UIImage imageNamed:@"5.png"] forState:UIControlStateNormal];
+    [twentyBtn setImage:[UIImage imageNamed:@"20.png"] forState:UIControlStateNormal];
+    [fiftyBtn setImage:[UIImage imageNamed:@"50.png"] forState:UIControlStateNormal];
+    [levBtn setImage:[UIImage imageNamed:@"100.png"] forState:UIControlStateNormal];
 }
 @end
