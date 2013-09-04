@@ -86,7 +86,7 @@
             orderFinalizeFlow.change = withdraw.change;
             orderFinalizeFlow.userCoins = self.userCoins;
             orderFinalizeFlow.willGetDrink = YES;
-//            [self presentViewController:orderFinalizeFlow animated:YES completion:nil];
+
             [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
         }
         else{
@@ -141,18 +141,15 @@
 }
 -(void)rotateImage: (UIImageView*) image
 {
-    [UIView animateWithDuration:1.0 animations:^{
-<<<<<<< HEAD
-        image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);
-    } completion:nil ];
     
-=======
+    [UIView animateWithDuration:1.0 animations:^{
+       
+    
         image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,1.0,1.0);
     } completion:nil];
     [UIView animateWithDuration:1.0 animations:^{
         image.layer.transform = CATransform3DMakeRotation(M_PI,0.0,0.0,0.0);
     } completion:nil];
->>>>>>> 0c7a8639b1394487890cb8a7cff42ec4322d14bf
 
 }
 
