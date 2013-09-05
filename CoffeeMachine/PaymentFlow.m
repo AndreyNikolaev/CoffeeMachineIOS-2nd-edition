@@ -88,8 +88,15 @@
             orderFinalizeFlow.change = withdraw.change;
             orderFinalizeFlow.userCoins = self.userCoins;
             orderFinalizeFlow.willGetDrink = YES;
+            
+            [UIView  beginAnimations:nil context:NULL];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+            [UIView setAnimationDuration:0.75];
+            [self.navigationController pushViewController:orderFinalizeFlow animated:NO];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+            [UIView commitAnimations];
 
-            [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
+            //[self.navigationController pushViewController:orderFinalizeFlow animated:YES];
         }
         else{
             InsufficientAmountFlow *insAmountFlow=[[InsufficientAmountFlow alloc]initWithNibName:@"InsufficientAmountFlow" bundle:nil];
@@ -97,8 +104,15 @@
             insAmountFlow.selectedDrink = self.selectedDrink;
             insAmountFlow.change = withdraw.change;
             insAmountFlow.userCoins = self.userCoins;
+            [UIView  beginAnimations:nil context:NULL];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+            [UIView setAnimationDuration:0.75];
+            [self.navigationController pushViewController:insAmountFlow animated:NO];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+            [UIView commitAnimations];
+
             //[self presentViewController:insAmountFlow animated:YES completion:nil];
-            [self.navigationController pushViewController: insAmountFlow animated:YES];
+           // [self.navigationController pushViewController: insAmountFlow animated:YES];
         }
         
       
