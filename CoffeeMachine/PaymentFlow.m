@@ -26,6 +26,7 @@
 @synthesize coffeeMachineState;
 @synthesize selectedDrink;
 @synthesize userCoins;
+@synthesize coinUp;
 
 @synthesize sumLbl;
 
@@ -34,7 +35,7 @@
 @synthesize twentyImg;
 @synthesize fiftyImg;
 @synthesize levImg;
- 
+@synthesize coinImg;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +51,7 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
+    self.coinImg.hidden = YES;
     // Do any additional setup after loading the view from its nib.
    
 }
@@ -156,6 +158,8 @@
 -(void)rotateImage: (UIImageView*) image
 {
     
+    [self moveCoin];
+    // self.coinImg.hidden = YES;
     [UIView animateWithDuration:1.0 animations:^{
        
     
@@ -165,6 +169,45 @@
         image.layer.transform = CATransform3DMakeRotation(M_PI,0.0,0.0,0.0);
     } completion:nil];
 
+}
+//-(IBAction)moveBall:(id)sender{
+-(void)moveCoin
+{
+    self.coinImg.hidden = NO;
+    self.coinUp = YES;
+    if(self.coinUp){
+        NSLog(@"ball is up");
+        //animate the ball down
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+        
+        CGRect offScreenFrame = coinImg.frame;
+        offScreenFrame.origin.y = 500;
+        coinImg.frame = offScreenFrame;
+        
+        [UIView commitAnimations];
+        
+        self.coinUp = NO;
+    }else{
+        NSLog(@"ball is down");
+        //animate the ball up
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+        
+        CGRect offScreenFrame = coinImg.frame;
+        offScreenFrame.origin.y = 223;
+        coinImg.frame = offScreenFrame;
+        
+        [UIView commitAnimations];
+
+        coinUp = YES;
+       
+    }
+    
 }
 
 @end
