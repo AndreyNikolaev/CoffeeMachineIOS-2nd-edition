@@ -22,6 +22,8 @@ NSString *result;
 @property (strong) CoffeeMachineState *coffeeMachineState;
 @property (strong) Drink *selectedDrink;
 @property (strong) MoneyAmount *userCoins;
+@property  BOOL coinUp;
+@property (strong, nonatomic) IBOutlet UIImageView *coinImg;
 @property (strong, nonatomic) IBOutlet UIImageView *tenImg;
 @property (strong, nonatomic) IBOutlet UIImageView *twentyImg;
 @property (strong, nonatomic) IBOutlet UIImageView *levImg;
