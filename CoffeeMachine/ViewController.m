@@ -138,9 +138,14 @@
     paymentFlow.selectedDrink=[tempDrinksArray objectAtIndex:indexPath.row];
 
 
-
-    [self.navigationController pushViewController:paymentFlow animated:YES];
-
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
+    [self.navigationController pushViewController:paymentFlow animated:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
+    
+   // [self.navigationController pushViewController:paymentFlow animated:YES];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
     

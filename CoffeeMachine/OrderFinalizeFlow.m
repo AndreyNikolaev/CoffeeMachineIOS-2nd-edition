@@ -69,8 +69,17 @@
 
 - (IBAction)backToDrinkListFlow:(id)sender {
     
-        [self.navigationController popToRootViewControllerAnimated:YES];
-
+        //[self.navigationController popToRootViewControllerAnimated:YES];
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDelay:0.375];
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    [UIView commitAnimations];
 }
 - (void)viewDidDisappear:(BOOL)animated
 {
