@@ -97,8 +97,9 @@
             NSString *current = [_itemsArray objectAtIndex: i];
             
             cell.textLabel.text=current;
-             cell.backgroundView = av;
-            cell.textLabel.textColor = [UIColor whiteColor];
+             cell.textLabel.backgroundColor = [UIColor clearColor];
+            cell.backgroundView = av;
+            cell.textLabel.textColor = [UIColor blackColor];
             
 
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];

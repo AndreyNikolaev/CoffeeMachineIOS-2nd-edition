@@ -214,12 +214,21 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
+<<<<<<< HEAD
          timestampString = "400405399.845088"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "74"
          endingLineNumber = "74"
          landmarkName = "-updateCoffeeMachineState"
+=======
+         timestampString = "400081515.646971"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-backToDrinkListFlow:"
+>>>>>>> 7df37dc3faecf02d53ad3b8f7c258f8ed6bd1308
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -253,6 +262,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
+<<<<<<< HEAD
          timestampString = "399908914.650581"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
@@ -285,6 +295,14 @@
          startingLineNumber = "33"
          endingLineNumber = "33"
          landmarkName = "-viewDidLoad"
+=======
+         timestampString = "400417378.194481"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+>>>>>>> 7df37dc3faecf02d53ad3b8f7c258f8ed6bd1308
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
