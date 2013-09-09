@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class Drink;
 @class MoneyAmount;
 @class CoffeeMachineState;
@@ -16,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *drinkLbl;
 @property (strong, nonatomic) IBOutlet UILabel *changeLbl;
 @property (strong, nonatomic) IBOutlet UIButton *backToDrinkList;
+@property UIImageView* explosion;
+
 
 @property Drink* selectedDrink;
 @property MoneyAmount* change;
@@ -25,5 +28,6 @@
 
 -(void)updateCoffeeMachineState;
 - (IBAction)backToDrinkListFlow:(id)sender;
+
 
 @end

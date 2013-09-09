@@ -552,7 +552,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">44</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -582,6 +582,8 @@
 						<string key="backToDrinkList">UIButton</string>
 						<string key="changeLbl">UILabel</string>
 						<string key="drinkLbl">UILabel</string>
+						<string key="gifImg">UIImageView</string>
+						<string key="ivOne">UIImageView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="backToDrinkList">
@@ -595,6 +597,14 @@
 						<object class="IBToOneOutletInfo" key="drinkLbl">
 							<string key="name">drinkLbl</string>
 							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gifImg">
+							<string key="name">gifImg</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="ivOne">
+							<string key="name">ivOne</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
