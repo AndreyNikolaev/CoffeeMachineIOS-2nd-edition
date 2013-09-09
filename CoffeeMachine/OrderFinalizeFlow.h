@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *drinkLbl;
 @property (strong, nonatomic) IBOutlet UILabel *changeLbl;
 @property (strong, nonatomic) IBOutlet UIButton *backToDrinkList;
-
+@property (strong) UIImageView *explosion;
 @property Drink* selectedDrink;
 @property MoneyAmount* change;
 @property MoneyAmount* userCoins;
@@ -25,5 +25,5 @@
 
 -(void)updateCoffeeMachineState;
 - (IBAction)backToDrinkListFlow:(id)sender;
-
+- (UIImageView *) animated;
 @end

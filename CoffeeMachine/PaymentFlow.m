@@ -173,10 +173,10 @@
 //-(IBAction)moveBall:(id)sender{
 -(void)moveCoin
 {
-    self.coinImg.hidden = NO;
-    self.coinUp = YES;
-    if(self.coinUp){
-        NSLog(@"ball is up");
+   self.coinImg.hidden = NO;
+   self.coinUp = YES;
+   if(self.coinUp){
+      NSLog(@"ball is up");
         //animate the ball down
         
         [UIView beginAnimations:nil context:nil];
@@ -189,7 +189,7 @@
         
         [UIView commitAnimations];
         
-        self.coinUp = NO;
+       self.coinUp = NO;
     }else{
         NSLog(@"ball is down");
         //animate the ball up
