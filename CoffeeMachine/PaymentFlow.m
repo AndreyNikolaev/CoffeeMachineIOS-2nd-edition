@@ -26,7 +26,7 @@
 @synthesize coffeeMachineState;
 @synthesize selectedDrink;
 @synthesize userCoins;
-@synthesize coinUp;
+
 
 @synthesize sumLbl;
 
@@ -35,7 +35,7 @@
 @synthesize twentyImg;
 @synthesize fiftyImg;
 @synthesize levImg;
-@synthesize coinImg;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,7 +51,8 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-    self.coinImg.hidden = YES;
+  
+
     // Do any additional setup after loading the view from its nib.
    
 }
@@ -158,8 +159,6 @@
 -(void)rotateImage: (UIImageView*) image
 {
     
-    [self moveCoin];
-    // self.coinImg.hidden = YES;
     [UIView animateWithDuration:1.0 animations:^{
        
     
@@ -170,6 +169,8 @@
     } completion:nil];
 
 }
+<<<<<<< HEAD
+=======
 //-(IBAction)moveBall:(id)sender{
 -(void)moveCoin
 {
@@ -203,11 +204,7 @@
         coinImg.frame = offScreenFrame;
         
         [UIView commitAnimations];
+>>>>>>> f2d931a81e1664e5b17b42e5dbaf5766ba0b08cf
 
-        coinUp = YES;
-       
-    }
-    
-}
 
 @end

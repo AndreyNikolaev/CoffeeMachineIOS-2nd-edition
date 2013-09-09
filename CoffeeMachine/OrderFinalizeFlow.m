@@ -13,6 +13,8 @@
 #import "InsufficientAmountFlow.h"
 #import "ViewController.h"
 
+
+
 @interface OrderFinalizeFlow ()
 
 @end
@@ -28,6 +30,8 @@
 @synthesize  drinkLbl;
 @synthesize changeLbl;
 @synthesize explosion;
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -53,7 +57,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
+}	
 
 -(void)updateCoffeeMachineState{
     if(willGetDrink){
@@ -94,4 +98,7 @@
 {
     [self.coffeeMachineState saveStateToFile];
 }
+
+
+
 @end
