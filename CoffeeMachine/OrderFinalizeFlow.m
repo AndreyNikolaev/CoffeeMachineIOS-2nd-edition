@@ -61,9 +61,8 @@
 -(void)updateCoffeeMachineState{
     if(willGetDrink){
        //self.drinkLbl.text = self.selectedDrink.name;
-        NSNumber *numChange = [[NSNumber alloc]init];
-        numChange = [change sumOfCoins] / 100;
-        self.changeLbl.text = [NSString stringWithFormat:@"%@",numChange ];
+        float numChange =(float)[change sumOfCoins] / 100;
+        self.changeLbl.text = [NSString stringWithFormat:@"%f",numChange ];
         [coffeeMachineState.coins add:userCoins];
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
