@@ -26,8 +26,9 @@
 @synthesize coffeeMachineState;
 @synthesize userCoins;
 @synthesize willGetDrink;
+@synthesize backImg;
 
-@synthesize  drinkLbl;
+//@synthesize  drinkLbl;
 @synthesize changeLbl;
 
 
@@ -44,9 +45,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    [self updateCoffeeMachineState];
+       [super viewDidLoad];
+      [self updateCoffeeMachineState];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -58,13 +58,13 @@
 
 -(void)updateCoffeeMachineState{
     if(willGetDrink){
-       self.drinkLbl.text = self.selectedDrink.name;
+       //self.drinkLbl.text = self.selectedDrink.name;
        self.changeLbl.text = change.description;
         [coffeeMachineState.coins add:userCoins];
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
     else {
-        self.drinkLbl.text=@"Take your money";
+        //self.drinkLbl.text=@"Take your money";
         self.changeLbl.text=userCoins.description;
         //[coffeeMachineState.coins add:change];
     }
