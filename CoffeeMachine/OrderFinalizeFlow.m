@@ -45,8 +45,9 @@
 
 - (void)viewDidLoad
 {
-       [super viewDidLoad];
-      [self updateCoffeeMachineState];
+    [super viewDidLoad];
+    [self updateCoffeeMachineState];
+    self.changeLbl.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view from its nib.
 }
 
