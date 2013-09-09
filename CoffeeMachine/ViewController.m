@@ -36,6 +36,7 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.title = @"Coffee Machine";
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test.jpg"]];
     UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
     self.navigationItem.rightBarButtonItem = adminButton;
     
@@ -44,12 +45,6 @@
 
 
     
-        //[drinks setSomeDrinks];
-   // [drinks loadDrinksFromPlist];
-    //[drinks saveDrinksToPlist];
-    //[drinks load];
-   
-
 
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
@@ -62,19 +57,6 @@
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
 
 
-
-    
-
- 
-     //[drinks save:self.coffeeMachineState.currentDrinksAmount];
- //[self.coffeeMachineState saveStateToFile];
-     
-   	
-
-
- 
-     //[drinks save:self.coffeeMachineState.currentDrinksAmount];
- [self.coffeeMachineState saveStateToFile];
 
 }
 
@@ -94,6 +76,12 @@
 }
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
+    av.backgroundColor = [UIColor clearColor];
+    av.opaque = NO;
+    av.image = [UIImage imageNamed:@"coffee-back.png"];
+    
     if(cell==nil){
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
     }
@@ -104,9 +92,11 @@
             
             NSString *current = [_itemsArray objectAtIndex: i];
             cell.textLabel.text=current;
+            cell.textLabel.backgroundColor = [UIColor clearColor];
+            cell.backgroundView = av;
             
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-            imgView.image = [UIImage imageNamed:@"coffee.jpg"];
+            imgView.image = [UIImage imageNamed:@"kafe-1.png"];
             cell.imageView.image = imgView.image;
           }
     }
