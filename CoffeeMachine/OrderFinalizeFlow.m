@@ -48,7 +48,7 @@
     [super viewDidLoad];
     [self updateCoffeeMachineState];
     self.changeLbl.backgroundColor = [UIColor blueColor];
-    self.changeLbl.font =  [UIFont systemFontOfSize:20];
+    self.changeLbl.font =  [UIFont boldSystemFontOfSize:20];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -62,7 +62,7 @@
     if(willGetDrink){
        //self.drinkLbl.text = self.selectedDrink.name;
         float numChange =(float)[change sumOfCoins] / 100;
-        self.changeLbl.text = [NSString stringWithFormat:@"%f",numChange ];
+        self.changeLbl.text = [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
         [coffeeMachineState.coins add:userCoins];
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
