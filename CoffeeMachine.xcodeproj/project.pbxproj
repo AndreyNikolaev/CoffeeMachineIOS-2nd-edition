@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */; };
+		5A21F77117DDC02F007CDEE5 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A21F77017DDC02F007CDEE5 /* coffee.png */; };
+		5A21F77317DDC142007CDEE5 /* silver_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A21F77217DDC142007CDEE5 /* silver_background.png */; };
+		5A21F77517DDC408007CDEE5 /* coffee-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A21F77417DDC408007CDEE5 /* coffee-back.png */; };
 		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
 		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
 		5AD129E817B23B0B00094D01 /* DrinksContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E717B23B0B00094D01 /* DrinksContainer.m */; };
@@ -54,6 +57,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A21F77017DDC02F007CDEE5 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee.png; path = ../../coffee.png; sourceTree = "<group>"; };
+		5A21F77217DDC142007CDEE5 /* silver_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = silver_background.png; path = ../../../Downloads/silver_background.png; sourceTree = "<group>"; };
+		5A21F77417DDC408007CDEE5 /* coffee-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coffee-back.png"; path = "../../../Downloads/coffee-back.png"; sourceTree = "<group>"; };
 		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		5AD129E017B23AAE00094D01 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 		5ADBFE3B17B11A77005B7B91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A21F77017DDC02F007CDEE5 /* coffee.png */,
 				5AFED40917D870A1009FD69F /* bag.jpg */,
 				5AFED42717D8C3A1009FD69F /* 01.tiff */,
 				5AFED42817D8C3A1009FD69F /* 02.tiff */,
@@ -227,6 +234,16 @@
 				5AFED41017D8AE74009FD69F /* 10.jpg */,
 				5AFED41117D8AE74009FD69F /* 5.jpg */,
 				5AFED40717D77714009FD69F /* five.gif */,
+<<<<<<< HEAD
+=======
+				5A21F77417DDC408007CDEE5 /* coffee-back.png */,
+				5A21F77217DDC142007CDEE5 /* silver_background.png */,
+				5AD799AA17D72C79007E5EB7 /* 100.png */,
+				5AD799AB17D72C7A007E5EB7 /* 50.png */,
+				5AD799AC17D72C7A007E5EB7 /* 20.png */,
+				5AD799AD17D72C7A007E5EB7 /* 5.png */,
+				5AD799A817D728DC007E5EB7 /* 10.png */,
+>>>>>>> f2d931a81e1664e5b17b42e5dbaf5766ba0b08cf
 				5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */,
 				5ADBFE3D17B11A77005B7B91 /* InfoPlist.strings */,
 				5ADBFE4017B11A77005B7B91 /* main.m */,
@@ -304,6 +321,7 @@
 				5AFED40817D77714009FD69F /* five.gif in Resources */,
 				5AFED40A17D870A1009FD69F /* bag.jpg in Resources */,
 				5AFED40C17D8756D009FD69F /* coinIcon.jpg in Resources */,
+<<<<<<< HEAD
 				5AFED41217D8AE74009FD69F /* lev.jpg in Resources */,
 				5AFED41317D8AE74009FD69F /* 50.jpg in Resources */,
 				5AFED41417D8AE74009FD69F /* 20.jpg in Resources */,
@@ -313,6 +331,11 @@
 				5AFED42C17D8C3A1009FD69F /* 02.tiff in Resources */,
 				5AFED42D17D8C3A1009FD69F /* 03.tiff in Resources */,
 				5AFED42E17D8C3A1009FD69F /* 04.tiff in Resources */,
+=======
+				5A21F77117DDC02F007CDEE5 /* coffee.png in Resources */,
+				5A21F77317DDC142007CDEE5 /* silver_background.png in Resources */,
+				5A21F77517DDC408007CDEE5 /* coffee-back.png in Resources */,
+>>>>>>> f2d931a81e1664e5b17b42e5dbaf5766ba0b08cf
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
