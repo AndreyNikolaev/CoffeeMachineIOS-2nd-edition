@@ -33,8 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"silver_background.png"]];
-   self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"coffee-back.png"]];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.title = @"Coffee Machine";
@@ -63,6 +61,21 @@
     }
     _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
 
+
+
+    
+
+ 
+     //[drinks save:self.coffeeMachineState.currentDrinksAmount];
+ //[self.coffeeMachineState saveStateToFile];
+     
+   	
+
+
+ 
+     //[drinks save:self.coffeeMachineState.currentDrinksAmount];
+ [self.coffeeMachineState saveStateToFile];
+
 }
 
 
@@ -81,12 +94,6 @@
 }
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 300, 50)];
-    av.backgroundColor = [UIColor clearColor];
-    av.opaque = NO;
-    av.image = [UIImage imageNamed:@"coffee-back.png"];
-   
-
     if(cell==nil){
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
     }
@@ -94,16 +101,12 @@
     NSUInteger count = [_itemsArray count];
     for (NSUInteger i = 0; i < count; i++) {
         if(indexPath.row==i){
+            
             NSString *current = [_itemsArray objectAtIndex: i];
-            
             cell.textLabel.text=current;
-             cell.textLabel.backgroundColor = [UIColor clearColor];
-            cell.backgroundView = av;
-            cell.textLabel.textColor = [UIColor blackColor];
             
-
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-            imgView.image = [UIImage imageNamed:@"coffee.png"];
+            imgView.image = [UIImage imageNamed:@"coffee.jpg"];
             cell.imageView.image = imgView.image;
           }
     }

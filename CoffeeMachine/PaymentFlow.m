@@ -169,42 +169,6 @@
     } completion:nil];
 
 }
-<<<<<<< HEAD
-=======
-//-(IBAction)moveBall:(id)sender{
--(void)moveCoin
-{
-   self.coinImg.hidden = NO;
-   self.coinUp = YES;
-   if(self.coinUp){
-      NSLog(@"ball is up");
-        //animate the ball down
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.5];
-        [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
-        
-        CGRect offScreenFrame = coinImg.frame;
-        offScreenFrame.origin.y = 500;
-        coinImg.frame = offScreenFrame;
-        
-        [UIView commitAnimations];
-        
-       self.coinUp = NO;
-    }else{
-        NSLog(@"ball is down");
-        //animate the ball up
-        
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.5];
-        [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
-        
-        CGRect offScreenFrame = coinImg.frame;
-        offScreenFrame.origin.y = 223;
-        coinImg.frame = offScreenFrame;
-        
-        [UIView commitAnimations];
->>>>>>> f2d931a81e1664e5b17b42e5dbaf5766ba0b08cf
 
 
 @end

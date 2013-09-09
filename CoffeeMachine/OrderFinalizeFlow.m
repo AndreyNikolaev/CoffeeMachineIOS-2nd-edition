@@ -29,8 +29,6 @@
 
 @synthesize  drinkLbl;
 @synthesize changeLbl;
-@synthesize explosion;
-
 
 
 
@@ -48,10 +46,9 @@
 {
     [super viewDidLoad];
     
-    
     [self updateCoffeeMachineState];
-   
-        }
+    // Do any additional setup after loading the view from its nib.
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -88,12 +85,6 @@
     [self.navigationController popToRootViewControllerAnimated:NO];
     [UIView commitAnimations];
 }
-
-
-//Call this method for start explosion animation
-
-
-
 - (void)viewDidDisappear:(BOOL)animated
 {
     [self.coffeeMachineState saveStateToFile];
