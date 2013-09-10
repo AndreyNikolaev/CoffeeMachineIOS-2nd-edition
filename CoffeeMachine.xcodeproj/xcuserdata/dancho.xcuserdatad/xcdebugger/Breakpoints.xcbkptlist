@@ -213,6 +213,8 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+<<<<<<< HEAD
+=======
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
          timestampString = "400494735.13254"
          startingColumnNumber = "9223372036854775807"
@@ -226,6 +228,7 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+>>>>>>> ef8d5ad83506d53124e436f2f3a71bfaff968f85
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
          timestampString = "399908737.722572"
          startingColumnNumber = "9223372036854775807"
@@ -287,6 +290,35 @@
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
+<<<<<<< HEAD
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CoffeeMachine/PaymentFlow.m"
+         timestampString = "400496461.988408"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
+         landmarkName = "-switchMenu"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CoffeeMachine/PaymentFlow.m"
+         timestampString = "400428572.235267"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
+         landmarkName = "-switchMenu"
+         landmarkType = "5">
+      </FileBreakpoint>
+=======
+>>>>>>> ef8d5ad83506d53124e436f2f3a71bfaff968f85
    </FileBreakpoints>
    <ExceptionBreakpoints>
       <ExceptionBreakpoint

@@ -94,7 +94,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">5.jpg</string>
+							<string key="NSResourceName">5.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="869077966">
@@ -109,7 +109,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">10.jpg</string>
+							<string key="NSResourceName">10.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="215495970">
@@ -124,7 +124,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">20.jpg</string>
+							<string key="NSResourceName">20.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="338524721">
@@ -139,7 +139,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">50.jpg</string>
+							<string key="NSResourceName">50.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="68642116">
@@ -154,7 +154,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">lev.jpg</string>
+							<string key="NSResourceName">lev.gif</string>
 						</object>
 					</object>
 				</array>
@@ -1095,12 +1095,20 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+<<<<<<< HEAD
+			<string key="10.gif">{518, 563}</string>
+			<string key="20.gif">{518, 563}</string>
+			<string key="5.gif">{518, 563}</string>
+			<string key="50.gif">{518, 563}</string>
+			<string key="lev.gif">{518, 563}</string>
+=======
 			<string key="10.jpg">{518, 563}</string>
 			<string key="20.jpg">{518, 563}</string>
 			<string key="5.jpg">{518, 563}</string>
 			<string key="50.jpg">{518, 563}</string>
 			<string key="lev.jpg">{518, 563}</string>
 			<string key="paymentBack.jpg">{400, 409}</string>
+>>>>>>> ef8d5ad83506d53124e436f2f3a71bfaff968f85
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>

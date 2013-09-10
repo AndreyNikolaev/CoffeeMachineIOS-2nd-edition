@@ -49,6 +49,9 @@
     [self updateCoffeeMachineState];
     self.changeLbl.backgroundColor = [UIColor blueColor];
     self.changeLbl.font =  [UIFont boldSystemFontOfSize:20];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
+    self.navigationItem.leftBarButtonItem = backButton;
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -72,6 +75,11 @@
         //[coffeeMachineState.coins add:change];
     }
     
+}
+-(void)backToRootView : (id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //ViewController *vc = [[ViewController alloc]init];
+    //[self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)backToDrinkListFlow:(id)sender {

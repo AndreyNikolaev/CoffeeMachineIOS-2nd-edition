@@ -96,9 +96,7 @@
             [self.navigationController pushViewController:orderFinalizeFlow animated:NO];
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
             [UIView commitAnimations];
-            UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToRootView)];
-            self.navigationItem.backBarButtonItem = backButton;
-
+            
             //[self.navigationController pushViewController:orderFinalizeFlow animated:YES];
         }
         else{
@@ -123,11 +121,7 @@
     }
 }
 
--(void)backToRootView {
-    //[self.navigationController popToRootViewControllerAnimated:YES];
-    ViewController *vc = [[ViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
