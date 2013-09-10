@@ -49,6 +49,9 @@
     [self updateCoffeeMachineState];
     self.changeLbl.backgroundColor = [UIColor blueColor];
     self.changeLbl.font =  [UIFont boldSystemFontOfSize:20];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
+    self.navigationItem.leftBarButtonItem = backButton;
+
     // Do any additional setup after loading the view from its nib.
 }
 
