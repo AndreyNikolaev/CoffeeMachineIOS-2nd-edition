@@ -55,6 +55,7 @@
 		5AFED41517D8AE74009FD69F /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED41017D8AE74009FD69F /* 10.jpg */; };
 		5AFED41617D8AE74009FD69F /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED41117D8AE74009FD69F /* 5.jpg */; };
 		5AFED43217DDEB18009FD69F /* backImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED43117DDEB18009FD69F /* backImg.jpg */; };
+		5AFED43417DF16F0009FD69F /* paymentBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED43317DF16EF009FD69F /* paymentBack.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		5AFED41017D8AE74009FD69F /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		5AFED41117D8AE74009FD69F /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		5AFED43117DDEB18009FD69F /* backImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backImg.jpg; sourceTree = "<group>"; };
+		5AFED43317DF16EF009FD69F /* paymentBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paymentBack.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,13 @@
 				5A43FF7E17DE066500A90043 /* test.jpg */,
 				5AFED40917D870A1009FD69F /* bag.jpg */,
 				5AFED43117DDEB18009FD69F /* backImg.jpg */,
+<<<<<<< HEAD
+=======
+				5AFED43317DF16EF009FD69F /* paymentBack.jpg */,
+				5AFED42817D8C3A1009FD69F /* 02.tiff */,
+				5AFED42917D8C3A1009FD69F /* 03.tiff */,
+				5AFED42A17D8C3A1009FD69F /* 04.tiff */,
+>>>>>>> ef8d5ad83506d53124e436f2f3a71bfaff968f85
 				5AFED40B17D8756D009FD69F /* coinIcon.jpg */,
 				5AD7999517CE26B0007E5EB7 /* coffee.jpg */,
 				5AFED40D17D8AE74009FD69F /* lev.jpg */,
@@ -324,11 +333,15 @@
 				5A43FF7F17DE066500A90043 /* test.jpg in Resources */,
 				5A43FF8117DE068A00A90043 /* kafe-1.png in Resources */,
 				5A43FF8317DE07B200A90043 /* coffee-back.png in Resources */,
+<<<<<<< HEAD
 				5AE03B6417DF2DB400C1854D /* 5.gif in Resources */,
 				5AE03B6517DF2DB400C1854D /* 10.gif in Resources */,
 				5AE03B6617DF2DB400C1854D /* 20.gif in Resources */,
 				5AE03B6717DF2DB400C1854D /* 50.gif in Resources */,
 				5AE03B6817DF2DB400C1854D /* lev.gif in Resources */,
+=======
+				5AFED43417DF16F0009FD69F /* paymentBack.jpg in Resources */,
+>>>>>>> ef8d5ad83506d53124e436f2f3a71bfaff968f85
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
