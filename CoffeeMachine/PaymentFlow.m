@@ -120,7 +120,7 @@
     }
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:touch.view];
@@ -129,6 +129,9 @@
     {
         [touch view].center = location;
     }
+    
+    */
+    
     //coment for testig draging coins images
     /*if ([touch view] == fiveImg){
 
@@ -167,9 +170,24 @@
         
     }*/
     
-}
+//}
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self touchesBegan:touches withEvent:event];
+    //[self touchesBegan:touches withEvent:event];
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    CGPoint touchLocation = [touch locationInView:self.view];
+    
+    if ([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
+ {
+        
+        //fiftyImg.center = touchLocation;
+     [touch view].center = touchLocation;
+     
+        
+    }
+    
+            
+    
 }
 -(void)rotateImage: (UIImageView*) image
 {
