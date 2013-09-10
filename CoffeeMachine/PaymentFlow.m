@@ -109,6 +109,7 @@
             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
             [UIView setAnimationDuration:0.75];
             [self.navigationController pushViewController:insAmountFlow animated:NO];
+      
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
             [UIView commitAnimations];
 
@@ -123,13 +124,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:touch.view];
-    
-    if([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
-    {
-        [touch view].center = location;
-    }
-    //coment for testig draging coins images
+  
     /*if ([touch view] == fiveImg){
 
         [self setCoinInUserCoins:5];
@@ -169,7 +164,8 @@
     
 }
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self touchesBegan:touches withEvent:event];
+    
+    
 }
 -(void)rotateImage: (UIImageView*) image
 {
