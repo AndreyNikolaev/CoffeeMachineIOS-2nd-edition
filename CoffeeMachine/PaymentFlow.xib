@@ -42,6 +42,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 379}, {40, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="57486566"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -73,6 +74,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{68, 379}, {238, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -92,13 +94,14 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 71}, {71, 59}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="869077966"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">2</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">5.jpg</string>
+							<string key="NSResourceName">5.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="869077966">
@@ -106,13 +109,14 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{125, 71}, {71, 59}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="215495970"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">2</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">10.jpg</string>
+							<string key="NSResourceName">10.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="215495970">
@@ -120,13 +124,14 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{225, 68}, {71, 59}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="338524721"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">2</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">20.jpg</string>
+							<string key="NSResourceName">20.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="338524721">
@@ -134,13 +139,14 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{74, 163}, {71, 59}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="68642116"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">2</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">50.jpg</string>
+							<string key="NSResourceName">50.gif</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="68642116">
@@ -148,18 +154,20 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{190, 156}, {71, 59}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="267230314"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">2</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">lev.jpg</string>
+							<string key="NSResourceName">lev.gif</string>
 						</object>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 548}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="183891734"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -1044,11 +1052,11 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="10.jpg">{518, 563}</string>
-			<string key="20.jpg">{518, 563}</string>
-			<string key="5.jpg">{518, 563}</string>
-			<string key="50.jpg">{518, 563}</string>
-			<string key="lev.jpg">{518, 563}</string>
+			<string key="10.gif">{518, 563}</string>
+			<string key="20.gif">{518, 563}</string>
+			<string key="5.gif">{518, 563}</string>
+			<string key="50.gif">{518, 563}</string>
+			<string key="lev.gif">{518, 563}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
