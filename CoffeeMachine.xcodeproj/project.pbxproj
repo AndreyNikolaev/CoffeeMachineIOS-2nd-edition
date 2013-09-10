@@ -55,6 +55,7 @@
 		5AFED42D17D8C3A1009FD69F /* 03.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED42917D8C3A1009FD69F /* 03.tiff */; };
 		5AFED42E17D8C3A1009FD69F /* 04.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED42A17D8C3A1009FD69F /* 04.tiff */; };
 		5AFED43217DDEB18009FD69F /* backImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED43117DDEB18009FD69F /* backImg.jpg */; };
+		5AFED43417DF16F0009FD69F /* paymentBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED43317DF16EF009FD69F /* paymentBack.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		5AFED42917D8C3A1009FD69F /* 03.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 03.tiff; sourceTree = "<group>"; };
 		5AFED42A17D8C3A1009FD69F /* 04.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 04.tiff; sourceTree = "<group>"; };
 		5AFED43117DDEB18009FD69F /* backImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backImg.jpg; sourceTree = "<group>"; };
+		5AFED43317DF16EF009FD69F /* paymentBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paymentBack.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				5AFED40917D870A1009FD69F /* bag.jpg */,
 				5AFED42717D8C3A1009FD69F /* 01.tiff */,
 				5AFED43117DDEB18009FD69F /* backImg.jpg */,
+				5AFED43317DF16EF009FD69F /* paymentBack.jpg */,
 				5AFED42817D8C3A1009FD69F /* 02.tiff */,
 				5AFED42917D8C3A1009FD69F /* 03.tiff */,
 				5AFED42A17D8C3A1009FD69F /* 04.tiff */,
@@ -329,6 +332,7 @@
 				5A43FF7F17DE066500A90043 /* test.jpg in Resources */,
 				5A43FF8117DE068A00A90043 /* kafe-1.png in Resources */,
 				5A43FF8317DE07B200A90043 /* coffee-back.png in Resources */,
+				5AFED43417DF16F0009FD69F /* paymentBack.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

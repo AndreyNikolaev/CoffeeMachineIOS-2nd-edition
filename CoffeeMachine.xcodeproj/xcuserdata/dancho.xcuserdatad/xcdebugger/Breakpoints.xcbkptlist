@@ -213,14 +213,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-<<<<<<< HEAD
-=======
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
-         timestampString = "400494149.594048"
+         timestampString = "400494735.13254"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "78"
-         endingLineNumber = "78"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
          landmarkName = "-updateCoffeeMachineState"
          landmarkType = "5">
       </FileBreakpoint>
@@ -228,7 +226,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
->>>>>>> 3732cf8f8a2562fbb84083040f32a451ad049536
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
          timestampString = "399908737.722572"
          startingColumnNumber = "9223372036854775807"
@@ -288,32 +285,6 @@
          startingLineNumber = "33"
          endingLineNumber = "33"
          landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/PaymentFlow.m"
-         timestampString = "400428149.698796"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "116"
-         endingLineNumber = "116"
-         landmarkName = "-switchMenu"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/PaymentFlow.m"
-         timestampString = "400428572.235267"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
-         landmarkName = "-switchMenu"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
