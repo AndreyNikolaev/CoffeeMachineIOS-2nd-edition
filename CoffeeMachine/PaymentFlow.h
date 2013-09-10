@@ -35,6 +35,6 @@ NSString *result;
 
 
 - (void)rotateImage: (UIImageView*) image;
-
+-(void)backToRootView;
 
 @end
