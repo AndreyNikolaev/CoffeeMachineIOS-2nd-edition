@@ -239,10 +239,20 @@
 				5AFED43117DDEB18009FD69F /* backImg.jpg */,
 
 				5AFED43117DDEB18009FD69F /* backImg.jpg */,
+<<<<<<< HEAD
 				5AFED43317DF16EF009FD69F /* paymentBack.jpg */,
 				5AFED42817D8C3A1009FD69F /* 02.tiff */,
 				5AFED42917D8C3A1009FD69F /* 03.tiff */,
 				5AFED42A17D8C3A1009FD69F /* 04.tiff */,
+=======
+
+				5AFED43317DF16EF009FD69F /* paymentBack.jpg */,
+
+				5AFED42817D8C3A1009FD69F /* 02.tiff */,
+				5AFED42917D8C3A1009FD69F /* 03.tiff */,
+				5AFED42A17D8C3A1009FD69F /* 04.tiff */,
+
+>>>>>>> bcc3a5179552efaddc0e9c29b05430523a1b13ed
 				5AFED40B17D8756D009FD69F /* coinIcon.jpg */,
 				5AD7999517CE26B0007E5EB7 /* coffee.jpg */,
 				5AFED40D17D8AE74009FD69F /* lev.jpg */,
@@ -343,6 +353,10 @@
 				5AE03B6617DF2DB400C1854D /* 20.gif in Resources */,
 				5AE03B6717DF2DB400C1854D /* 50.gif in Resources */,
 				5AE03B6817DF2DB400C1854D /* lev.gif in Resources */,
+<<<<<<< HEAD
+=======
+
+>>>>>>> bcc3a5179552efaddc0e9c29b05430523a1b13ed
 				5AFED43417DF16F0009FD69F /* paymentBack.jpg in Resources */,
 
 			);
