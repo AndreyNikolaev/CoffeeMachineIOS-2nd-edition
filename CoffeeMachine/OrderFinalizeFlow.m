@@ -88,6 +88,7 @@
     [self.navigationController popToRootViewControllerAnimated:NO];
     [UIView commitAnimations];
 }
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     [self.coffeeMachineState saveStateToFile];
