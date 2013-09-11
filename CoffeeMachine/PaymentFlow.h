@@ -35,6 +35,5 @@ NSString *result;
 
 
 - (void)rotateImage: (UIImageView*) image;
-
-
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 @end

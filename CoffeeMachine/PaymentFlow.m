@@ -51,11 +51,11 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-  
-
+    
     // Do any additional setup after loading the view from its nib.
    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -121,24 +121,12 @@
     }
 }
 
-/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
-<<<<<<< HEAD
-  
-=======
-    CGPoint location = [touch locationInView:touch.view];
-    
-    if([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
-    {
-        [touch view].center = location;
-    }
-    
-    */
-    
-    //coment for testig draging coins images
->>>>>>> 3f6f0c96c6c343295c731ee90ef6029be24151e4
-    /*if ([touch view] == fiveImg){
+
+  /*
+    if ([touch view] == fiveImg){
 
         [self setCoinInUserCoins:5];
         [self switchMenu];
@@ -173,13 +161,16 @@
         [self switchMenu];
         [self rotateImage:levImg];
         
-    }*/
+    }
+   */
     
-//}
+}
+
+/*
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-<<<<<<< HEAD
+
     
-=======
+
     //[self touchesBegan:touches withEvent:event];
     UITouch *touch = [[event allTouches] anyObject];
     
@@ -195,9 +186,9 @@
     }
     
             
->>>>>>> 3f6f0c96c6c343295c731ee90ef6029be24151e4
+
     
-}
+}*/
 -(void)rotateImage: (UIImageView*) image
 {
     
