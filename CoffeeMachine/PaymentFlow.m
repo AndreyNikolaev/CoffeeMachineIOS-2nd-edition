@@ -55,13 +55,17 @@
    
    }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    //NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:self.view];
+   UITouch *touch = [touches anyObject];
+  [self moveCoin:touch.view];
+   [self.view bringSubviewToFront:[touch view]];
+    //UIView *viewOfSelf = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
     
-    UITouch *touch = [touches anyObject];
-    [self moveCoin:touch.view];
 }
 
 -(void) moveCoin: (UIImageView*) image
 {
+
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
@@ -150,6 +154,7 @@
     
     [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
     
+       
 }
 -(void)handle:(UIPanGestureRecognizer *)recognizer {
     
