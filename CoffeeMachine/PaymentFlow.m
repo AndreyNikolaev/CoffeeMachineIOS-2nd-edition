@@ -55,13 +55,7 @@
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
-    
-    /* set no of touch for pan gesture*/
-    
     [panGesture setMaximumNumberOfTouches:1];
-    
-    /*  Add gesture to your image. */
-    
     [tenImg addGestureRecognizer:panGesture];
 
    }
