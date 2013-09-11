@@ -51,24 +51,20 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-<<<<<<< HEAD
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    UIPanGestureRecognizer *panGesture1 = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-
-    [panGesture setDelegate:self];
-    [panGesture setMaximumNumberOfTouches:1];
-    [fiveImg addGestureRecognizer:panGesture];
-    [tenImg addGestureRecognizer:panGesture1];
-    [twentyImg addGestureRecognizer:panGesture];
-    [levImg addGestureRecognizer:panGesture];
-    [fiftyImg addGestureRecognizer:panGesture];
-
-=======
     
->>>>>>> f78579b100e482153182f7187e0eb525c1337521
-    // Do any additional setup after loading the view from its nib.
-   
-}
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [panGesture setDelegate:self];
+    
+    /* set no of touch for pan gesture*/
+    
+    [panGesture setMaximumNumberOfTouches:1];
+    
+    /*  Add gesture to your image. */
+    
+    [tenImg addGestureRecognizer:panGesture];
+
+   }
 
 
 - (void)didReceiveMemoryWarning
@@ -134,7 +130,18 @@
       
     }
 }
-- (void)handlePan:(UIPanGestureRecognizer*)recognizer {
+
+
+-(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
+    
+    CGPoint translation = [recognizer translationInView:recognizer.view];
+    
+    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
+    
+    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+    
+}
+-(void)handle:(UIPanGestureRecognizer *)recognizer {
     
     CGPoint translation = [recognizer translationInView:recognizer.view];
     
@@ -144,7 +151,9 @@
     
 }
 
-<<<<<<< HEAD
+
+
+
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     /*UITouch *touch = [touches anyObject];
@@ -159,14 +168,14 @@
     
     //coment for testig draging coins images
   /*  if ([touch view] == fiveImg){
-=======
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
 
   /*
     if ([touch view] == fiveImg){
->>>>>>> f78579b100e482153182f7187e0eb525c1337521
+
 
         [self setCoinInUserCoins:5];
         [self switchMenu];
@@ -210,7 +219,7 @@
 =======
    */
     
-}
+//}
 
 /*
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -236,13 +245,12 @@
             
 
     
-<<<<<<< HEAD
+
 }
  
  */
-=======
-}*/
->>>>>>> f78579b100e482153182f7187e0eb525c1337521
+
+
 -(void)rotateImage: (UIImageView*) image
 {
     
