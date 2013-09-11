@@ -51,7 +51,21 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
+<<<<<<< HEAD
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    UIPanGestureRecognizer *panGesture1 = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+
+    [panGesture setDelegate:self];
+    [panGesture setMaximumNumberOfTouches:1];
+    [fiveImg addGestureRecognizer:panGesture];
+    [tenImg addGestureRecognizer:panGesture1];
+    [twentyImg addGestureRecognizer:panGesture];
+    [levImg addGestureRecognizer:panGesture];
+    [fiftyImg addGestureRecognizer:panGesture];
+
+=======
     
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
     // Do any additional setup after loading the view from its nib.
    
 }
@@ -120,13 +134,39 @@
       
     }
 }
+- (void)handlePan:(UIPanGestureRecognizer*)recognizer {
+    
+    CGPoint translation = [recognizer translationInView:recognizer.view];
+    
+    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
+    
+    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+    
+}
 
+<<<<<<< HEAD
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    /*UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:touch.view];
+    
+    if([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
+    {
+        [touch view].center = location;
+    }
+    
+    */
+    
+    //coment for testig draging coins images
+  /*  if ([touch view] == fiveImg){
+=======
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
 
   /*
     if ([touch view] == fiveImg){
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
 
         [self setCoinInUserCoins:5];
         [self switchMenu];
@@ -162,6 +202,12 @@
         [self rotateImage:levImg];
         
     }
+<<<<<<< HEAD
+    
+}
+   */
+/*-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+=======
    */
     
 }
@@ -171,6 +217,7 @@
 
     
 
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
     //[self touchesBegan:touches withEvent:event];
     UITouch *touch = [[event allTouches] anyObject];
     
@@ -181,6 +228,7 @@
         
         //fiftyImg.center = touchLocation;
      [touch view].center = touchLocation;
+     [self.view bringSubviewToFront:[touch view]];
      
         
     }
@@ -188,7 +236,13 @@
             
 
     
+<<<<<<< HEAD
+}
+ 
+ */
+=======
 }*/
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
 -(void)rotateImage: (UIImageView*) image
 {
     
