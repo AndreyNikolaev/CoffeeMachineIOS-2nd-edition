@@ -33,6 +33,14 @@ NSString *result;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 
 
+<<<<<<< HEAD
 - (void)rotateImage: (UIImageView*) image;
 
+=======
+
+
+- (void)rotateImage: (UIImageView*) image;
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (void)handle:(UIPanGestureRecognizer*)recognizer;
+>>>>>>> c0573080a53263346ac46b468dc6d7daf7dd2608
 @end

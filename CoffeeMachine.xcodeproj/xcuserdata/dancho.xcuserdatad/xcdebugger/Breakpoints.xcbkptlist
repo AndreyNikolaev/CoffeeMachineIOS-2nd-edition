@@ -59,17 +59,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/PaymentFlow.h"
-         timestampString = "399987775.446141"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "18"
-         endingLineNumber = "18">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
          timestampString = "399908737.722572"
          startingColumnNumber = "9223372036854775807"

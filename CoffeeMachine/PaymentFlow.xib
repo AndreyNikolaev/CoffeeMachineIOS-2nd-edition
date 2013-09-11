@@ -144,7 +144,10 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{192, 115}, {71, 59}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+<<<<<<< HEAD
 						<reference key="NSNextKeyView" ref="57486566"/>
+=======
+>>>>>>> c0573080a53263346ac46b468dc6d7daf7dd2608
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">2</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -235,6 +238,35 @@
 					</object>
 					<int key="connectionID">360</int>
 				</object>
+<<<<<<< HEAD
+=======
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">gestureRecognizers</string>
+						<reference key="source" ref="183891734"/>
+						<reference key="destination" ref="738211457"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">YES</bool>
+					</object>
+					<int key="connectionID">548</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">handlePan:</string>
+						<reference key="source" ref="738211457"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">547</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="738211457"/>
+						<reference key="destination" ref="183891734"/>
+					</object>
+					<int key="connectionID">549</int>
+				</object>
+>>>>>>> c0573080a53263346ac46b468dc6d7daf7dd2608
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -905,6 +937,11 @@
 						<reference key="object" ref="839434896"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">534</int>
+						<reference key="object" ref="738211457"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1002,7 +1039,11 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
+<<<<<<< HEAD
 			<int key="maxID">550</int>
+=======
+			<int key="maxID">549</int>
+>>>>>>> c0573080a53263346ac46b468dc6d7daf7dd2608
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
