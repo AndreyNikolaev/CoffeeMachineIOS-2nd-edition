@@ -51,7 +51,16 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-  
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    UIPanGestureRecognizer *panGesture1 = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+
+    [panGesture setDelegate:self];
+    [panGesture setMaximumNumberOfTouches:1];
+    [fiveImg addGestureRecognizer:panGesture];
+    [tenImg addGestureRecognizer:panGesture1];
+    [twentyImg addGestureRecognizer:panGesture];
+    [levImg addGestureRecognizer:panGesture];
+    [fiftyImg addGestureRecognizer:panGesture];
 
     // Do any additional setup after loading the view from its nib.
    
@@ -119,10 +128,19 @@
       
     }
 }
-
-/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)handlePan:(UIPanGestureRecognizer*)recognizer {
     
-    UITouch *touch = [touches anyObject];
+    CGPoint translation = [recognizer translationInView:recognizer.view];
+    
+    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
+    
+    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+    
+}
+
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    /*UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:touch.view];
     
     if([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
@@ -133,7 +151,7 @@
     */
     
     //coment for testig draging coins images
-    /*if ([touch view] == fiveImg){
+  /*  if ([touch view] == fiveImg){
 
         [self setCoinInUserCoins:5];
         [self switchMenu];
@@ -168,10 +186,11 @@
         [self switchMenu];
         [self rotateImage:levImg];
         
-    }*/
+    }
     
-//}
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+}
+   */
+/*-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     //[self touchesBegan:touches withEvent:event];
     UITouch *touch = [[event allTouches] anyObject];
     
@@ -182,6 +201,7 @@
         
         //fiftyImg.center = touchLocation;
      [touch view].center = touchLocation;
+     [self.view bringSubviewToFront:[touch view]];
      
         
     }
@@ -189,6 +209,8 @@
             
     
 }
+ 
+ */
 -(void)rotateImage: (UIImageView*) image
 {
     
