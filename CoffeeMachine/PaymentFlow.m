@@ -51,23 +51,7 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-<<<<<<< HEAD
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    UIPanGestureRecognizer *panGesture1 = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
 
-    [panGesture setDelegate:self];
-    [panGesture setMaximumNumberOfTouches:1];
-    [fiveImg addGestureRecognizer:panGesture];
-    [tenImg addGestureRecognizer:panGesture1];
-    [twentyImg addGestureRecognizer:panGesture];
-    [levImg addGestureRecognizer:panGesture];
-    [fiftyImg addGestureRecognizer:panGesture];
-
-=======
-    
->>>>>>> f78579b100e482153182f7187e0eb525c1337521
-    // Do any additional setup after loading the view from its nib.
-   
 }
 
 
@@ -134,17 +118,26 @@
       
     }
 }
-- (void)handlePan:(UIPanGestureRecognizer*)recognizer {
+
+-(void)rotateImage: (UIImageView*) image
+{
     
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    
-    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-    
-    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+    [UIView animateWithDuration:1.0 animations:^{
+        
+        
+        image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,1.0,1.0);
+    } completion:nil];
+    [UIView animateWithDuration:1.0 animations:^{
+        image.layer.transform = CATransform3DMakeRotation(M_PI,0.0,0.0,0.0);
+    } completion:nil];
     
 }
 
-<<<<<<< HEAD
+
+
+
+
+
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     /*UITouch *touch = [touches anyObject];
@@ -210,7 +203,7 @@
 =======
    */
     
-}
+
 
 /*
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -240,23 +233,9 @@
 }
  
  */
-=======
-}*/
->>>>>>> f78579b100e482153182f7187e0eb525c1337521
--(void)rotateImage: (UIImageView*) image
-{
-    
-    [UIView animateWithDuration:1.0 animations:^{
-       
-    
-        image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,1.0,1.0);
-    } completion:nil];
-    [UIView animateWithDuration:1.0 animations:^{
-        image.layer.transform = CATransform3DMakeRotation(M_PI,0.0,0.0,0.0);
-    } completion:nil];
 
-}
 
 
 
 @end
+
