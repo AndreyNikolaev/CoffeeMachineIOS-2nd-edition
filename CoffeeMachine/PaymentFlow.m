@@ -51,6 +51,7 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
+<<<<<<< HEAD
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     UIPanGestureRecognizer *panGesture1 = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
 
@@ -62,9 +63,13 @@
     [levImg addGestureRecognizer:panGesture];
     [fiftyImg addGestureRecognizer:panGesture];
 
+=======
+    
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
     // Do any additional setup after loading the view from its nib.
    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -118,6 +123,7 @@
             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
             [UIView setAnimationDuration:0.75];
             [self.navigationController pushViewController:insAmountFlow animated:NO];
+      
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
             [UIView commitAnimations];
 
@@ -138,6 +144,7 @@
     
 }
 
+<<<<<<< HEAD
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     /*UITouch *touch = [touches anyObject];
@@ -152,6 +159,14 @@
     
     //coment for testig draging coins images
   /*  if ([touch view] == fiveImg){
+=======
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [touches anyObject];
+
+  /*
+    if ([touch view] == fiveImg){
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
 
         [self setCoinInUserCoins:5];
         [self switchMenu];
@@ -187,10 +202,22 @@
         [self rotateImage:levImg];
         
     }
+<<<<<<< HEAD
     
 }
    */
 /*-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+=======
+   */
+    
+}
+
+/*
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+
+    
+
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
     //[self touchesBegan:touches withEvent:event];
     UITouch *touch = [[event allTouches] anyObject];
     
@@ -207,10 +234,15 @@
     }
     
             
+
     
+<<<<<<< HEAD
 }
  
  */
+=======
+}*/
+>>>>>>> f78579b100e482153182f7187e0eb525c1337521
 -(void)rotateImage: (UIImageView*) image
 {
     
