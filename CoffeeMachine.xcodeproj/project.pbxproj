@@ -45,6 +45,8 @@
 		5ADBFE5117B11A77005B7B91 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE4F17B11A77005B7B91 /* ViewController.xib */; };
 		5ADBFE5A17B12C7F005B7B91 /* PaymentFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */; };
 		5ADBFE5B17B12C7F005B7B91 /* PaymentFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */; };
+		5AE4C55617E1AC460098BDB5 /* admCoffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4C55517E1AC460098BDB5 /* admCoffee.jpg */; };
+		5AE4C55817E1B0280098BDB5 /* emptyCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4C55717E1B0280098BDB5 /* emptyCoin.png */; };
 		5AE5A8A217D751B600499435 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5A8A117D751B600499435 /* AVFoundation.framework */; };
 		5AE5A8A417D751ED00499435 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5A8A317D751ED00499435 /* QuartzCore.framework */; };
 		5AFED40817D77714009FD69F /* five.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5AFED40717D77714009FD69F /* five.gif */; };
@@ -118,6 +120,8 @@
 		5ADBFE5717B12C7F005B7B91 /* PaymentFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentFlow.h; sourceTree = "<group>"; };
 		5ADBFE5817B12C7F005B7B91 /* PaymentFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentFlow.m; sourceTree = "<group>"; };
 		5ADBFE5917B12C7F005B7B91 /* PaymentFlow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentFlow.xib; sourceTree = "<group>"; };
+		5AE4C55517E1AC460098BDB5 /* admCoffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = admCoffee.jpg; sourceTree = "<group>"; };
+		5AE4C55717E1B0280098BDB5 /* emptyCoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyCoin.png; sourceTree = "<group>"; };
 		5AE5A8A117D751B600499435 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5AE5A8A317D751ED00499435 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5AFED40717D77714009FD69F /* five.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = five.gif; sourceTree = "<group>"; };
@@ -234,7 +238,9 @@
 		5ADBFE3B17B11A77005B7B91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5AE4C55517E1AC460098BDB5 /* admCoffee.jpg */,
 				5A0A86D017DF3CF0002972A1 /* 5.gif */,
+				5AE4C55717E1B0280098BDB5 /* emptyCoin.png */,
 				5A0A86D117DF3CF0002972A1 /* 10.gif */,
 				5A0A86D217DF3CF0002972A1 /* 20.gif */,
 				5AFED43717DF3E2C009FD69F /* paymentBack.jpg */,
@@ -353,6 +359,8 @@
 				5A0A86D817DF3CF0002972A1 /* 50.gif in Resources */,
 				5A0A86D917DF3CF0002972A1 /* lev.gif in Resources */,
 				5AFED43817DF3E2C009FD69F /* paymentBack.jpg in Resources */,
+				5AE4C55617E1AC460098BDB5 /* admCoffee.jpg in Resources */,
+				5AE4C55817E1B0280098BDB5 /* emptyCoin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

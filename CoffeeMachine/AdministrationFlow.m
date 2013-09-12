@@ -20,19 +20,20 @@
 @synthesize coffeeMachineState;
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"admCoffee.jpg"]];
 
-    self.title=@"Administrator report";
+    self.title=@"Reports";
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Load from URL" style:UIBarButtonItemStyleBordered target:self action:@selector(loadPlistFromURL:)];
+    self.navigationItem.rightBarButtonItem = backButton;
+    
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
     soldDrinks=self.coffeeMachineState.currentDrinksAmount;
-    //[soldDrinks setSomeDrinks];
     MoneyAmount *mAmount = [[MoneyAmount alloc]init];
     mAmount=self.coffeeMachineState.coins;
-    //[mAmount setSomeCoins];
 
    _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
     self.drinksSold = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
@@ -116,4 +117,12 @@
         return @"Coins";
     }
 }
+-(IBAction)loadPlistFromURL:(id)sender {
+    NSData *dataReturn = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://github.com/AndreyNikolaev/CoffeeMachineIOS/blob/master/CoffeeMachine/sourceFile.plist"]];
+    
+    // This will convert data format to array
+    NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:dataReturn];
+    //NSLog(@"TEST: %@", array);
+}
+
 @end
