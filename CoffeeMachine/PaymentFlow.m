@@ -54,14 +54,14 @@
     
     
    }
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
    UITouch *touch = [touches anyObject];
     // drag should only occur if the object is a coin
   [self moveCoin:touch.view];
    [self.view bringSubviewToFront:[touch view]];
      
-}
+}*/
 
 -(void) moveCoin: (UIImageView*) image
 {
@@ -182,13 +182,13 @@
     */
     
     //coment for testig draging coins images
-  /*  if ([touch view] == fiveImg){
+  /*  if ([touch view] == fiveImg){*/
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
 
-  /*
+  
     if ([touch view] == fiveImg){
 
 
@@ -226,12 +226,12 @@
         [self rotateImage:levImg];
         
     }
-<<<<<<< HEAD
+
     
 }
-   */
+
 /*-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-=======
+
    */
     
 //}
@@ -241,7 +241,7 @@
 
     
 
->>>>>>> f78579b100e482153182f7187e0eb525c1337521
+
     //[self touchesBegan:touches withEvent:event];
     UITouch *touch = [[event allTouches] anyObject];
     

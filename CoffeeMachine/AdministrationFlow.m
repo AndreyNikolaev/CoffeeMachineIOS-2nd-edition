@@ -118,16 +118,16 @@
     }
 }
 -(IBAction)loadPlistFromURL:(id)sender {
-<<<<<<< HEAD
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"test.plist"];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"writedFile.plist"];
    // [arrayToSave writeToFile:path atomically:YES];
   [[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"]] writeToFile:path atomically:YES];
-
+    
+    [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
+    [self.coffeeMachineState.coins loadCoinsFromPlist];
 }
-=======
-    }
->>>>>>> 371635bbe40bb52ca1c1cbe545cc32204201371c
+
+    
 
 @end
