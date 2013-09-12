@@ -73,7 +73,7 @@
     
     [panGesture setMaximumNumberOfTouches:1];
     
-    /*  Add gesture to your image. */
+    /*  Add gesture to your imagehytdty. */
     
     [image addGestureRecognizer:panGesture];
 

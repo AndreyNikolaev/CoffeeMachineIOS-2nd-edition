@@ -137,6 +137,7 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+<<<<<<< HEAD
          filePath = "CoffeeMachine/ViewController.m"
          timestampString = "400426649.768456"
          startingColumnNumber = "9223372036854775807"
@@ -189,6 +190,8 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+=======
+>>>>>>> d9439bff965e4b09f769f9c9e45cc217eee3a3af
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
          timestampString = "400494149.594048"
          startingColumnNumber = "9223372036854775807"
@@ -229,11 +232,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/ViewController.m"
-         timestampString = "400426897.101851"
+         timestampString = "400667192.549804"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "102"
-         endingLineNumber = "102"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>

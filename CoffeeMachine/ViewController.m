@@ -27,6 +27,7 @@
 @synthesize tableView = _tableView;
 @synthesize coffeeMachineState=_coffeeMachineState;
 @synthesize alertView=_alertView;
+@synthesize itemsArayDrinkPrices = _itemsArayDrinkPrices;
 
 #pragma mark -
 
@@ -90,11 +91,12 @@
     for (NSUInteger i = 0; i < count; i++) {
         if(indexPath.row==i){
             
-            NSString *current = [_itemsArray objectAtIndex: i];
-            cell.textLabel.text=current;
+            NSString *currentDrink = [_itemsArray objectAtIndex: i];
+            NSString *currentDrinkPrice = [_itemsArayDrinkPrices objectAtIndex: i];
+            cell.textLabel.text=currentDrink;
             cell.textLabel.backgroundColor = [UIColor clearColor];
             cell.backgroundView = av;
-            
+            cell.detailTextLabel.text = currentDrinkPrice;
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
             imgView.image = [UIImage imageNamed:@"kafe-1.png"];
             cell.imageView.image = imgView.image;
