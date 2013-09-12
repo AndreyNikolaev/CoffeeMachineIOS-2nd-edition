@@ -173,16 +173,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/ViewController.m"
-         timestampString = "400667192.549804"
+         filePath = "CoffeeMachine/Model/DrinksContainer.m"
+         timestampString = "400668399.31578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
+         landmarkName = "-getStringDrinkPrices"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
