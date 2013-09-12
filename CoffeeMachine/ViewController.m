@@ -77,26 +77,27 @@
 }
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
+    cell.textLabel.textAlignment = NSTextAlignmentRight;
     UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
     av.backgroundColor = [UIColor clearColor];
     av.opaque = NO;
     av.image = [UIImage imageNamed:@"coffee-back.png"];
     
     if(cell==nil){
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
+        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier: @"cell"];
     }
         
     NSUInteger count = [_itemsArray count];
     for (NSUInteger i = 0; i < count; i++) {
         if(indexPath.row==i){
-            
+
             NSString *currentDrink = [_itemsArray objectAtIndex: i];
             NSString *currentDrinkPrice = [_itemsArayDrinkPrices objectAtIndex: i];
             cell.textLabel.text=currentDrink;
+            cell.detailTextLabel.text = currentDrinkPrice;
             cell.textLabel.backgroundColor = [UIColor clearColor];
             cell.backgroundView = av;
-            cell.detailTextLabel.text = currentDrinkPrice;
+            
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
             imgView.image = [UIImage imageNamed:@"kafe-1.png"];
             cell.imageView.image = imgView.image;
