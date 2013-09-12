@@ -76,6 +76,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _itemsArray.count;
 }
+
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.textAlignment = NSTextAlignmentRight;
@@ -86,9 +87,13 @@
     
     if(cell==nil){
 
+        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
+
+
         
 
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
+
 
     }
         
@@ -105,7 +110,7 @@
             cell.backgroundView = av;
 
             cell.detailTextLabel.text = currentDrinkPrice;
-            cell.detailTextLabel.textAlignment = NSTextAlignmentCenter;
+            cell.detailTextLabel.textAlignment = NSTextAlignmentRight;
             cell.detailTextLabel.textColor = [UIColor blackColor];
 
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];

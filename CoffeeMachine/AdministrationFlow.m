@@ -118,6 +118,7 @@
     }
 }
 -(IBAction)loadPlistFromURL:(id)sender {
+<<<<<<< HEAD
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"test.plist"];
@@ -125,5 +126,8 @@
   [[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"]] writeToFile:path atomically:YES];
 
 }
+=======
+    }
+>>>>>>> 371635bbe40bb52ca1c1cbe545cc32204201371c
 
 @end
