@@ -52,24 +52,23 @@
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
     
-   
+    
    }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    //NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:self.view];
+    
    UITouch *touch = [touches anyObject];
+    // drag should only occur if the object is a coin
   [self moveCoin:touch.view];
    [self.view bringSubviewToFront:[touch view]];
-    //UIView *viewOfSelf = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
-    
+     
 }
 
 -(void) moveCoin: (UIImageView*) image
 {
 
-    
+       
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
-    
     /* set no of touch for pan gesture*/
     
     [panGesture setMaximumNumberOfTouches:1];
@@ -79,6 +78,7 @@
     [image addGestureRecognizer:panGesture];
 
     
+
 }
 
 - (void)didReceiveMemoryWarning
