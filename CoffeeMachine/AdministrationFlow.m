@@ -24,6 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"admCoffee.jpg"]];
+
     self.title=@"Administrator report";
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
     soldDrinks=self.coffeeMachineState.currentDrinksAmount;
@@ -57,6 +59,10 @@
 
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
+    av.backgroundColor = [UIColor clearColor];
+    av.opaque = NO;
+    av.image = [UIImage imageNamed:@"coffee-back.png"];
     if(cell==nil){
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
     }
@@ -67,6 +73,12 @@
             
                     NSString *current = [self.drinksSold objectAtIndex: i];
                     cell.textLabel.text=current;
+                    cell.backgroundView = av;
+                    
+                    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+                    imgView.image = [UIImage imageNamed:@"kafe-1.png"];
+                    cell.imageView.image = imgView.image;
+
                 }
             }return cell;
         }else{
@@ -76,6 +88,12 @@
                     
                     NSString *current = [_moneyAmount objectAtIndex: i];
                     cell.textLabel.text=current;
+                    cell.backgroundView = av;
+                    
+                    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+                    imgView.image = [UIImage imageNamed:@"emptyCoin.png"];
+                    cell.imageView.image = imgView.image;
+
                 }
 
         }return cell;
