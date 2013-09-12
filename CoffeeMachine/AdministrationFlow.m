@@ -18,7 +18,7 @@
 @synthesize moneyAmount = _moneyAmount;
 @synthesize drinksSold;
 @synthesize coffeeMachineState;
-
+@synthesize footerView;
 
 
 - (void)viewDidLoad
@@ -115,5 +115,23 @@
     }else{
         return @"Coins";
     }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    if(footerView == nil) {
+        footerView  = [[UIView alloc] init];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [button setFrame:CGRectMake(5, 3, 300, 44)];
+        [button setTitle:@"Click" forState:UIControlStateNormal];
+        [button.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+        [button addTarget:self action:@selector(loadPlistFromURL:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [footerView addSubview:button];
+    }
+    return footerView;
+}
+-(IBAction)loadPlistFromURL:(id)sender {
+    
 }
 @end

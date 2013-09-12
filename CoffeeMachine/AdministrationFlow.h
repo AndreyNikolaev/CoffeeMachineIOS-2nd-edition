@@ -15,4 +15,8 @@
 @property(strong) NSMutableArray *drinksSold;
 @property(strong) NSMutableArray *moneyAmount;
 @property CoffeeMachineState* coffeeMachineState;
+
+@property(strong, nonatomic)IBOutlet UIView *footerView;
+
+-(IBAction)loadPlistFromURL:(id)sender;
 @end

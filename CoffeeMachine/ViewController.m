@@ -85,11 +85,11 @@
     av.image = [UIImage imageNamed:@"coffee-back.png"];
     
     if(cell==nil){
-<<<<<<< HEAD
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier: @"cell"];
-=======
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"cell" ];
->>>>>>> a9f24f34e2c95d045e454405b75935d5f47bb614
+
+        
+
+        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
+
     }
         
     NSUInteger count = [_itemsArray count];
@@ -100,16 +100,14 @@
             NSString *currentDrink = [_itemsArray objectAtIndex: i];
             currentDrinkPrice = [_itemsArayDrinkPrices objectAtIndex: i];
             cell.textLabel.text=currentDrink;
-            cell.detailTextLabel.text = currentDrinkPrice;
+         //   cell.detailTextLabel.text = currentDrinkPrice;
             cell.textLabel.backgroundColor = [UIColor clearColor];
             cell.backgroundView = av;
-<<<<<<< HEAD
-            
-=======
+
             cell.detailTextLabel.text = currentDrinkPrice;
             cell.detailTextLabel.textAlignment = NSTextAlignmentCenter;
             cell.detailTextLabel.textColor = [UIColor blackColor];
->>>>>>> a9f24f34e2c95d045e454405b75935d5f47bb614
+
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
             imgView.image = [UIImage imageNamed:@"kafe-1.png"];
             cell.imageView.image = imgView.image;
