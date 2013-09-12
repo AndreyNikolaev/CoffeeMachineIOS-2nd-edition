@@ -30,6 +30,7 @@
 - (void) save:(DrinksContainer*)drinksContainer;
 - (DrinksContainer*) load;
 -(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts;
+-(NSMutableArray*)getStringDrinkPrices;
 
 
 @end

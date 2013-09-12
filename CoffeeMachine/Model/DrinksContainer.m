@@ -56,11 +56,23 @@
     NSMutableArray* stringOfDrinksArray=[[NSMutableArray alloc]init];
     
     for (Drink *storedDrink in [self.drinks allKeys]) {
-        [stringOfDrinksArray addObject:[NSString stringWithFormat:@"%@  price: %lu",storedDrink.name,(unsigned long)storedDrink.price]];
+        [stringOfDrinksArray addObject:[NSString stringWithFormat:@"%@",storedDrink.name]];
     }
     
     return stringOfDrinksArray;
 }
+
+-(NSMutableArray*)getStringDrinkPrices
+{
+    NSMutableArray* stringOfDrinksArray=[[NSMutableArray alloc]init];
+    
+    for (Drink *storedDrink in [self.drinks allKeys]) {
+        [stringOfDrinksArray addObject:[NSString stringWithFormat:@"%d",storedDrink.price]];
+    }
+    
+    return stringOfDrinksArray;
+}
+
 
 -(NSMutableArray*)drinkNameAndQuantityToString
 {

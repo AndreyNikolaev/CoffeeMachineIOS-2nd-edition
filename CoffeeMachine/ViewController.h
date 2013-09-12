@@ -16,6 +16,7 @@ NSInteger globalPrice;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property(strong, nonatomic) NSMutableArray *itemsArray;
+@property(strong,nonatomic) NSMutableArray *itemsArayDrinkPrices;
 @property(strong) CoffeeMachineState *coffeeMachineState;
 @property(strong, nonatomic) UIAlertView *alertView;
 -(IBAction)goToAdministrationFlow:(id)sender;
