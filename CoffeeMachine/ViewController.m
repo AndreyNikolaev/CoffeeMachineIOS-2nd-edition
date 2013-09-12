@@ -76,6 +76,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _itemsArray.count;
 }
+
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
@@ -85,7 +86,7 @@
     av.image = [UIImage imageNamed:@"coffee-back.png"];
     
     if(cell==nil){
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"cell" ];
+        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
     }
         
     NSUInteger count = [_itemsArray count];
@@ -99,7 +100,7 @@
             cell.textLabel.backgroundColor = [UIColor clearColor];
             cell.backgroundView = av;
             cell.detailTextLabel.text = currentDrinkPrice;
-            cell.detailTextLabel.textAlignment = NSTextAlignmentCenter;
+            cell.detailTextLabel.textAlignment = NSTextAlignmentRight;
             cell.detailTextLabel.textColor = [UIColor blackColor];
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
             imgView.image = [UIImage imageNamed:@"kafe-1.png"];
