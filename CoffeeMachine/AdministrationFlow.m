@@ -118,11 +118,12 @@
     }
 }
 -(IBAction)loadPlistFromURL:(id)sender {
-    NSData *dataReturn = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://github.com/AndreyNikolaev/CoffeeMachineIOS/blob/master/CoffeeMachine/sourceFile.plist"]];
-    
-    // This will convert data format to array
-    NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:dataReturn];
-    //NSLog(@"TEST: %@", array);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"test.plist"];
+   // [arrayToSave writeToFile:path atomically:YES];
+  [[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"]] writeToFile:path atomically:YES];
+
 }
 
 @end
