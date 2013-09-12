@@ -118,11 +118,6 @@
     }
 }
 -(IBAction)loadPlistFromURL:(id)sender {
-    NSData *dataReturn = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://github.com/AndreyNikolaev/CoffeeMachineIOS/blob/master/CoffeeMachine/sourceFile.plist"]];
-    
-    // This will convert data format to array
-    NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:dataReturn];
-    //NSLog(@"TEST: %@", array);
-}
+    }
 
 @end

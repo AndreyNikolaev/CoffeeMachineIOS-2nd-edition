@@ -86,15 +86,15 @@
     av.image = [UIImage imageNamed:@"coffee-back.png"];
     
     if(cell==nil){
-<<<<<<< HEAD
+
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
-=======
+
 
         
 
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
 
->>>>>>> 69506f8139902acb43cf7980528588fd8702b64c
+
     }
         
     NSUInteger count = [_itemsArray count];
