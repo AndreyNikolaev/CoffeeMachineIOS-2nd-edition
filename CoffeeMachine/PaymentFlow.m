@@ -52,30 +52,26 @@
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
     
-    
    }
-/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
    UITouch *touch = [touches anyObject];
     // drag should only occur if the object is a coin
   [self moveCoin:touch.view];
    [self.view bringSubviewToFront:[touch view]];
      
-}*/
+}
 
 -(void) moveCoin: (UIImageView*) image
 {
-
-       
+    [self addImageSubView:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
     /* set no of touch for pan gesture*/
     
     [panGesture setMaximumNumberOfTouches:1];
-    
-    /*  Add gesture to your imagehytdty. */
-    
     [image addGestureRecognizer:panGesture];
+    
 
     
 
@@ -184,7 +180,7 @@
     //coment for testig draging coins images
   /*  if ([touch view] == fiveImg){*/
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
 
@@ -229,6 +225,7 @@
 
     
 }
+ */
 
 /*-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
 
@@ -277,9 +274,12 @@
     [UIView animateWithDuration:1.0 animations:^{
         image.layer.transform = CATransform3DMakeRotation(M_PI,0.0,0.0,0.0);
     } completion:nil];
-
 }
 
-
+-(void)addImageSubView: (UIImageView*) image {
+    UIView *iv = [[UIImageView alloc] initWithImage:image.image];
+    iv.center = image.center;
+    [[image superview] addSubview:iv];
+   }
 
 @end
