@@ -128,6 +128,6 @@
     [self.coffeeMachineState.coins loadCoinsFromPlist];
 }
 
-    
+
 
 @end

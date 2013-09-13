@@ -90,8 +90,11 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{210, 505}, {104, 43}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+<<<<<<< HEAD
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
+=======
+>>>>>>> 40f9161c0071dfad2b445ad614a48c65de0b437c
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -390,7 +393,11 @@
 						<int key="objectID">81</int>
 						<reference key="object" ref="795358664"/>
 						<array class="NSMutableArray" key="children">
+<<<<<<< HEAD
 							<object class="IBNSLayoutConstraint" id="901016694">
+=======
+							<object class="IBNSLayoutConstraint" id="876870744">
+>>>>>>> 40f9161c0071dfad2b445ad614a48c65de0b437c
 								<reference key="firstItem" ref="795358664"/>
 								<int key="firstAttribute">8</int>
 								<int key="relation">0</int>
@@ -462,7 +469,11 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">116</int>
+<<<<<<< HEAD
 						<reference key="object" ref="901016694"/>
+=======
+						<reference key="object" ref="876870744"/>
+>>>>>>> 40f9161c0071dfad2b445ad614a48c65de0b437c
 						<reference key="parent" ref="795358664"/>
 					</object>
 				</array>
@@ -504,7 +515,11 @@
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array key="81.IBViewMetadataConstraints">
 					<reference ref="460759288"/>
+<<<<<<< HEAD
 					<reference ref="901016694"/>
+=======
+					<reference ref="876870744"/>
+>>>>>>> 40f9161c0071dfad2b445ad614a48c65de0b437c
 				</array>
 				<boolean value="NO" key="81.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="89.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -517,6 +532,7 @@
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
 			<int key="maxID">116</int>
+<<<<<<< HEAD
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -567,6 +583,8 @@
 					</object>
 				</object>
 			</array>
+=======
+>>>>>>> 40f9161c0071dfad2b445ad614a48c65de0b437c
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
