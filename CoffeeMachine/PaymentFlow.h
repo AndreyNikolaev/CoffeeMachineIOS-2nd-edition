@@ -39,4 +39,5 @@ NSString *result;
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 - (void)handle:(UIPanGestureRecognizer*)recognizer;
 -(void) moveCoin: (UIImageView*) image;
+-(void)addImageSubView: (UIImageView*) image;
 @end
