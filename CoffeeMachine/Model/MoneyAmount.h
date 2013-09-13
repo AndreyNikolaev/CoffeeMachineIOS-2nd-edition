@@ -18,6 +18,7 @@
 
 -(MoneyAmount *)add:(Coin*) c : (int) count;
 -(MoneyAmount *)add:(MoneyAmount*)mAmount;
+-(MoneyAmount *)addForFromPlist:(MoneyAmount*)mAmount;
 -(Withdraw *)withdraw:(int)amount;
 -(NSMutableArray *)getSortedCoinTypes;
 -(void)getCoins:(Coin *)c : (int)count;

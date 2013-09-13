@@ -134,13 +134,15 @@
     PaymentFlow *paymentFlow = [[PaymentFlow alloc] init];
     paymentFlow.coffeeMachineState=_coffeeMachineState;
 
-
-    paymentFlow.title = _itemsArray[indexPath.row];
+    NSString * tabTitle = [[NSString alloc]initWithString:_itemsArray[indexPath.row]];
+    tabTitle = [tabTitle stringByAppendingString:@"  "];
+    tabTitle = [tabTitle stringByAppendingString:_itemsArayDrinkPrices[indexPath.row]];
+    paymentFlow.title = tabTitle;
 
    
     
 
-    paymentFlow.title = _itemsArray[indexPath.row];
+    //paymentFlow.title = _itemsArray[indexPath.row];
     tempDrinkContainer=_coffeeMachineState.currentDrinksAmount;
     NSArray* tempDrinksArray=[[NSArray alloc]initWithArray:[tempDrinkContainer getDrinks]];
     paymentFlow.selectedDrink=[tempDrinksArray objectAtIndex:indexPath.row];

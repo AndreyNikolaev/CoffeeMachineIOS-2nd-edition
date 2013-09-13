@@ -39,7 +39,21 @@
         [self.drinks setObject:@(quantity) forKey:drink];
     }
 }
-
+- (void)addDrinkForFromPlist:(Drink *)drink quantity:(NSUInteger)quantity
+{
+    BOOL drinkFound = NO;
+    for (Drink *storedDrink in [self.drinks allKeys]) {
+        if ([storedDrink isEqual:drink]) {
+            drinkFound = YES;
+            [self.drinks setObject:@(quantity ) forKey:storedDrink];
+            break;
+        }
+    }
+    
+    if (!drinkFound) {
+        [self.drinks setObject:@(quantity) forKey:drink];
+    }
+}
 
 
 -(BOOL)isAdditionClosed
@@ -154,7 +168,7 @@
     {
         drink.name = currentDrink;
         drink.price = [dictDrinks[currentDrink] integerValue ];
-        [self addDrink:drink quantity:[[amounts objectAtIndex:i] integerValue ]];
+        [self addDrinkForFromPlist:drink quantity:[[amounts objectAtIndex:i] integerValue ]];
         i++;
     }
 }

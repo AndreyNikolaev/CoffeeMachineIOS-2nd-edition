@@ -16,6 +16,7 @@
 @property BOOL additionClosed;
 
 - (void)addDrink:(Drink *)drink quantity:(NSUInteger)quantity;
+- (void)addDrinkForFromPlist:(Drink *)drink quantity:(NSUInteger)quantity;
 -(NSUInteger*)getDrinkQuantity:(Drink*) drink;
 -(void)decreaseDrinkAmount:(Drink*) drink;
 -(NSMutableArray*)getDrinks;

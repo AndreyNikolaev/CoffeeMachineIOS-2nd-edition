@@ -32,11 +32,28 @@
     return self;
 
 }
+
+- (void)addCoinForFromPlist:(Coin *)coin amount:(NSUInteger)amount {
+    BOOL coinFound = NO;
+    for (Coin *storedCoin in [self.coins allKeys]) {
+        if ([storedCoin isEqual:coin]) {
+            coinFound = YES;
+            [self.coins setObject:@(amount ) forKey:storedCoin];
+            break;
+        }
+    }
+    
+    if (!coinFound) {
+        [self.coins setObject:@(amount) forKey:coin];
+    }
+}
 -(MoneyAmount *)add:(MoneyAmount*)mAmount {
     for(Coin* coin in [self.coins allKeys]){
         for (Coin *updatedCoin in [mAmount.coins allKeys]) {
             if ([updatedCoin isEqual:coin]) {
                 [self.coins setObject:@([mAmount.coins[updatedCoin] integerValue] + [self.coins[updatedCoin] intValue]) forKey:updatedCoin];
+                
+                
                 break;
             }
         }
@@ -165,7 +182,7 @@ amount+=coin.value*[self.coins[coin] integerValue];
     for(NSString *currentCoin in [dictCoins allKeys])
     {
         coin.value = currentCoin.integerValue;
-        [self addCoin:coin amount:[[amounts objectAtIndex:i] integerValue]];
+        [self addCoinForFromPlist:coin amount:[[amounts objectAtIndex:i] integerValue]];
         i++;
     }
     
