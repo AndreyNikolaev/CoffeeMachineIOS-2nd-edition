@@ -118,10 +118,6 @@
     }
 }
 -(IBAction)loadPlistFromURL:(id)sender {
-<<<<<<< HEAD
-
-=======
->>>>>>> 57fe0c0997794d64cc5b92e13b1eb879d19a594d
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"writedFile.plist"];
@@ -132,11 +128,6 @@
     [self.coffeeMachineState.coins loadCoinsFromPlist];
 }
 
-<<<<<<< HEAD
 
-
-=======
-    
->>>>>>> 57fe0c0997794d64cc5b92e13b1eb879d19a594d
 
 @end
