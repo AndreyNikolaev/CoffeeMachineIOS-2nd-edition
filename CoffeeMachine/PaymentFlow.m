@@ -54,14 +54,7 @@
     
     
    }
-/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-   UITouch *touch = [touches anyObject];
-    // drag should only occur if the object is a coin
-  [self moveCoin:touch.view];
-   [self.view bringSubviewToFront:[touch view]];
-     
-}*/
+
 
 -(void) moveCoin: (UIImageView*) image
 {
@@ -195,6 +188,9 @@
         [self setCoinInUserCoins:5];
         [self switchMenu];
         [self rotateImage:fiveImg];
+        
+        
+
         
 
     }
