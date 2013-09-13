@@ -53,6 +53,7 @@
     userCoins=[[MoneyAmount alloc]init];
     
    }
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
    UITouch *touch = [touches anyObject];
@@ -61,6 +62,7 @@
    [self.view bringSubviewToFront:[touch view]];
      
 }
+
 
 -(void) moveCoin: (UIImageView*) image
 {
@@ -192,6 +194,9 @@
         [self switchMenu];
         [self rotateImage:fiveImg];
         
+        
+
+        
 
     }
     if ([touch view] == tenImg)
@@ -278,7 +283,9 @@
 
 -(void)addImageSubView: (UIImageView*) image {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
+    CGRect imageframe = image.frame;
     iv.center = image.center;
+    iv.frame = imageframe;
     [[image superview] addSubview:iv];
    }
 
