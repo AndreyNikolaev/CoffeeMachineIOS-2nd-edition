@@ -61,7 +61,7 @@
     // drag should only occur if the object is a coin
   [self moveCoin:touch.view];
    [self.view bringSubviewToFront:[touch view]];
-     
+    
 }
 
 
@@ -74,15 +74,9 @@
     
     [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
+    
         
 }
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    if([self didCoinImageIsInSlotImg:touch.view :slotImg]){}
-        else NSLog(@"WORKING");
-}
-
 -(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe
 {
     BOOL flag = YES;
@@ -166,7 +160,13 @@
     recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
     
     [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-    
+    if([recognizer state] == UIGestureRecognizerStateEnded){
+        
+        if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
+            NSLog(@"in the slot");
+        }
+        
+    }
        
 }
 -(void)handle:(UIPanGestureRecognizer *)recognizer {
