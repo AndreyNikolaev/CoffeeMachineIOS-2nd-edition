@@ -44,4 +44,5 @@ NSString *result;
 -(void) moveCoin: (UIImageView*) image;
 -(void)addImageSubView: (UIImageView*) image;
 -(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe;
+-(void)updateSum: (UIImageView*) image;
 @end
