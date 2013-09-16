@@ -288,9 +288,6 @@
 
 -(void)rotateImage: (UIImageView*) image
 {
-    
-    //image.center = CGPointMake(image.center.x+50.0, image.center.y);
-    
         [UIView animateWithDuration:3.0 animations:^{
     
 [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
@@ -298,6 +295,7 @@
 
 
    } completion:nil];
+    
 }
 -(void)addImageSubView: (UIImageView*) image {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
