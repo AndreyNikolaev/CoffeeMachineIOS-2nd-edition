@@ -137,8 +137,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-<<<<<<< HEAD
-=======
          filePath = "CoffeeMachine/ViewController.m"
          timestampString = "400426649.768456"
          startingColumnNumber = "9223372036854775807"
@@ -191,7 +189,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
->>>>>>> 197c20f8203ae8b0009e17f6208b43a35236854e
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
          timestampString = "400494149.594048"
          startingColumnNumber = "9223372036854775807"
@@ -228,16 +225,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/Model/DrinksContainer.m"
-         timestampString = "400753557.134732"
+         filePath = "CoffeeMachine/ViewController.m"
+         timestampString = "400669688.377201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
-         landmarkName = "-getStringDrinkPrices"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
