@@ -28,6 +28,8 @@ NSString *result;
 @property (strong, nonatomic) IBOutlet UIImageView *twentyImg;
 @property (strong, nonatomic) IBOutlet UIImageView *levImg;
 
+@property  CGPoint oldCoinPosition;
+
 @property (strong, nonatomic) IBOutlet UIImageView *fiftyImg;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
@@ -42,4 +44,5 @@ NSString *result;
 -(void) moveCoin: (UIImageView*) image;
 -(void)addImageSubView: (UIImageView*) image;
 -(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe;
+-(void)updateSum: (UIImageView*) image;
 @end

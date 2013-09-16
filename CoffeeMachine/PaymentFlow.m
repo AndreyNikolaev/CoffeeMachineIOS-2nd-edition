@@ -27,6 +27,7 @@
 @synthesize selectedDrink;
 @synthesize userCoins;
 
+@synthesize oldCoinPosition;
 
 @synthesize sumLbl;
 
@@ -67,7 +68,7 @@
 
 -(void) moveCoin: (UIImageView*) image
 {
-    
+    self.oldCoinPosition = image.center;
     [self addImageSubView:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
@@ -155,7 +156,7 @@
 
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
-    
+    if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
     CGPoint translation = [recognizer translationInView:recognizer.view];
     
     recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
@@ -166,11 +167,12 @@
         if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
-            
+            [self updateSum:recognizer.view];
         }
-        
+        else recognizer.view.center = oldCoinPosition;
     }
        
+}
 }
 -(void)handle:(UIPanGestureRecognizer *)recognizer {
     
@@ -182,63 +184,42 @@
     
 }
 
-
-
-
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)updateSum: (UIImageView*) image {
     
-    /*UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:touch.view];
-    
-    if([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
-    {
-        [touch view].center = location;
-    }
-    
-    */
-    
-    //coment for testig draging coins images
-  /*  if ([touch view] == fiveImg){*/
-
-/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    UITouch *touch = [touches anyObject];
-
-  
-    if ([touch view] == fiveImg){
-
-
+    if (image == fiveImg){
+        
+        
         [self setCoinInUserCoins:5];
         [self switchMenu];
         [self rotateImage:fiveImg];
         
         
-
         
-
+        
+        
     }
-    if ([touch view] == tenImg)
+    if (image == tenImg)
     {
         [self setCoinInUserCoins:10];
         [self switchMenu];
         [self rotateImage:tenImg];
         
     }
-    if ([touch view] == twentyImg)
+    if (image == twentyImg)
     {
         [self setCoinInUserCoins:20];
         [self switchMenu];
         [self rotateImage:twentyImg];
         
     }
-    if ([touch view] == fiftyImg)
+    if (image == fiftyImg)
     {
         [self setCoinInUserCoins:50];
         [self switchMenu];
         [self rotateImage:fiftyImg];
         
     }
-    if ([touch view] == levImg)
+    if (image== levImg)
     {
         [self setCoinInUserCoins:100];
         [self switchMenu];
@@ -246,44 +227,7 @@
         
     }
 
-    
 }
- */
-
-/*-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-
-   */
-    
-//}
-
-/*
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-
-    
-
-
-    //[self touchesBegan:touches withEvent:event];
-    UITouch *touch = [[event allTouches] anyObject];
-    
-    CGPoint touchLocation = [touch locationInView:self.view];
-    
-    if ([touch view] == fiveImg || [touch view] == tenImg || [touch view] == twentyImg || [touch view] == fiftyImg || [touch view] == levImg)
- {
-        
-        //fiftyImg.center = touchLocation;
-     [touch view].center = touchLocation;
-     [self.view bringSubviewToFront:[touch view]];
-     
-        
-    }
-    
-            
-
-    
-
-}
- 
- */
 
 
 -(void)rotateImage: (UIImageView*) image
@@ -298,11 +242,12 @@
     
 }
 -(void)addImageSubView: (UIImageView*) image {
+    if(image == fiveImg || image == tenImg || image == twentyImg || image == fiftyImg || image == levImg) {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
     CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);
     iv.center = image.center;
     iv.frame = imageframe;
     [[image superview] addSubview:iv];
    }
-
+}
 @end
