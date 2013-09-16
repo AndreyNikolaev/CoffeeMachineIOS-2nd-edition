@@ -283,7 +283,7 @@
 
 -(void)addImageSubView: (UIImageView*) image {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
-    CGRect imageframe = image.frame;
+    CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);
     iv.center = image.center;
     iv.frame = imageframe;
     [[image superview] addSubview:iv];
