@@ -27,6 +27,7 @@
 @synthesize selectedDrink;
 @synthesize userCoins;
 
+@synthesize oldCoinPosition;
 
 @synthesize sumLbl;
 
@@ -67,7 +68,7 @@
 
 -(void) moveCoin: (UIImageView*) image
 {
-    
+    self.oldCoinPosition = image.center;
     [self addImageSubView:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
@@ -168,7 +169,7 @@
             [self rotateImage:recognizer.view];
             
         }
-        
+        else recognizer.view.center = oldCoinPosition;
     }
        
 }
