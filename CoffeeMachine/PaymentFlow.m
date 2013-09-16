@@ -66,7 +66,9 @@
 
 -(void) moveCoin: (UIImageView*) image
 {
+    
     [self addImageSubView:image];
+    [self rotateImage:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
     /* set no of touch for pan gesture*/
@@ -271,16 +273,16 @@
 -(void)rotateImage: (UIImageView*) image
 {
     
-    [UIView animateWithDuration:1.0 animations:^{
-       
+    image.center = CGPointMake(image.center.x+50.0, image.center.y);
     
-        image.layer.transform = CATransform3DMakeRotation(M_PI,1.0,1.0,1.0);
-    } completion:nil];
-    [UIView animateWithDuration:1.0 animations:^{
-        image.layer.transform = CATransform3DMakeRotation(M_PI,0.0,0.0,0.0);
-    } completion:nil];
-}
+        [UIView animateWithDuration:3.0 animations:^{
+    
+[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
+[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
 
+
+   } completion:nil];
+}
 -(void)addImageSubView: (UIImageView*) image {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
     CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);
