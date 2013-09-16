@@ -35,6 +35,7 @@
 @synthesize twentyImg;
 @synthesize fiftyImg;
 @synthesize levImg;
+@synthesize slotImg;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -60,7 +61,7 @@
     // drag should only occur if the object is a coin
   [self moveCoin:touch.view];
    [self.view bringSubviewToFront:[touch view]];
-     
+    
 }
 
 
@@ -76,10 +77,18 @@
     [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
     
-
-    
-
+        
 }
+-(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe
+{
+    BOOL flag = YES;
+    if(coinImage.center.x < slotImg.center.x - 20) flag = false;
+    if(coinImage.center.x > slotImg.center.x + 20) flag = false;
+    return flag;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -153,7 +162,13 @@
     recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
     
     [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-    
+    if([recognizer state] == UIGestureRecognizerStateEnded){
+        
+        if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
+            NSLog(@"in the slot");
+        }
+        
+    }
        
 }
 -(void)handle:(UIPanGestureRecognizer *)recognizer {

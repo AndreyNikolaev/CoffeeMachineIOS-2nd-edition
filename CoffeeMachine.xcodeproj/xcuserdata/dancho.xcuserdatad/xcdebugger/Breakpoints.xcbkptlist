@@ -137,6 +137,7 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+<<<<<<< HEAD
          filePath = "CoffeeMachine/ViewController.m"
          timestampString = "400426649.768456"
          startingColumnNumber = "9223372036854775807"
@@ -163,6 +164,8 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+=======
+>>>>>>> c7a8e93c0cf8f37d31855db3998c02cb145e1944
          filePath = "CoffeeMachine/ViewController.m"
          timestampString = "400426649.768456"
          startingColumnNumber = "9223372036854775807"
