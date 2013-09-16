@@ -69,7 +69,6 @@
 {
     
     [self addImageSubView:image];
-    [self rotateImage:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
     /* set no of touch for pan gesture*/
@@ -165,7 +164,9 @@
     if([recognizer state] == UIGestureRecognizerStateEnded){
         
         if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
-            NSLog(@"in the slot");
+            recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
+            [self rotateImage:recognizer.view];
+            
         }
         
     }
@@ -288,7 +289,7 @@
 -(void)rotateImage: (UIImageView*) image
 {
     
-    image.center = CGPointMake(image.center.x+50.0, image.center.y);
+    //image.center = CGPointMake(image.center.x+50.0, image.center.y);
     
         [UIView animateWithDuration:3.0 animations:^{
     
