@@ -31,6 +31,7 @@ NSString *result;
 @property (strong, nonatomic) IBOutlet UIImageView *fiftyImg;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
+@property (strong, nonatomic) IBOutlet UIImageView *slotImg;
 
 
 
@@ -40,4 +41,5 @@ NSString *result;
 - (void)handle:(UIPanGestureRecognizer*)recognizer;
 -(void) moveCoin: (UIImageView*) image;
 -(void)addImageSubView: (UIImageView*) image;
+-(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe;
 @end

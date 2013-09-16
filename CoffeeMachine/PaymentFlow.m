@@ -35,6 +35,7 @@
 @synthesize twentyImg;
 @synthesize fiftyImg;
 @synthesize levImg;
+@synthesize slotImg;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -73,11 +74,25 @@
     
     [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
-    
-
-    
-
+        
 }
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    if([self didCoinImageIsInSlotImg:touch.view :slotImg]){}
+        else NSLog(@"WORKING");
+}
+
+-(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe
+{
+    BOOL flag = YES;
+    if(coinImage.center.x < slotImg.center.x - 20) flag = false;
+    if(coinImage.center.x > slotImg.center.x + 20) flag = false;
+    return flag;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
