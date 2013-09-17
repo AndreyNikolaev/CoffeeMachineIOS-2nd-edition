@@ -53,11 +53,7 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-    [self moveCoin:fiveImg];
-    [self moveCoin:tenImg];
-    [self moveCoin:twentyImg];
-    [self moveCoin:fiftyImg];
-    [self moveCoin:levImg];
+   
    }
 
 /*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -89,7 +85,6 @@
    [ panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
     
-[self.view bringSubviewToFront:image];
 }
 
 
@@ -170,14 +165,14 @@
 
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
-<<<<<<< HEAD
+
     
-=======
+
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
     }
->>>>>>> 3657d0c32d9aa8a649a065453797f71784b21ad4
+
     if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
     CGPoint translation = [recognizer translationInView:recognizer.view];
     
@@ -190,22 +185,16 @@
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
             [self updateSum:recognizer.view];
+        
+
+            
         }
-        else recognizer.view.center = oldCoinPosition;
+        else  recognizer.view.center = oldCoinPosition;
     }
-       
+    
                                   }
 }
 
--(void)handle:(UIPanGestureRecognizer *)recognizer {
-    
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    
-    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-    
-    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-    
-}
 
 -(void)updateSum: (UIImageView*) image {
     
@@ -214,7 +203,7 @@
         
         [self setCoinInUserCoins:5];
         [self switchMenu];
-        [self rotateImage:fiveImg];
+      //  [self rotateImage:fiveImg];
         
         
         
@@ -225,28 +214,28 @@
     {
         [self setCoinInUserCoins:10];
         [self switchMenu];
-        [self rotateImage:tenImg];
+        //[self rotateImage:tenImg];
         
     }
     if (image == twentyImg)
     {
         [self setCoinInUserCoins:20];
         [self switchMenu];
-        [self rotateImage:twentyImg];
+       // [self rotateImage:twentyImg];
         
     }
     if (image == fiftyImg)
     {
         [self setCoinInUserCoins:50];
         [self switchMenu];
-        [self rotateImage:fiftyImg];
+      //  [self rotateImage:fiftyImg];
         
     }
     if (image== levImg)
     {
         [self setCoinInUserCoins:100];
         [self switchMenu];
-        [self rotateImage:levImg];
+       // [self rotateImage:levImg];
         
     }
 
@@ -255,40 +244,36 @@
 
 -(void)rotateImage: (UIImageView*) image 
 {
-    
-        [UIView animateWithDuration:1.0 animations:^{
-    
-[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-                      // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
-           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
-        } completion:nil ];
-<<<<<<< HEAD
-   // image.center = self.oldCoinPosition;
-=======
-=======
-
-    
-    //image.center = CGPointMake(image.center.x+50.0, image.center.y);
-    
-    [UIView animateWithDuration:2.0
-                           delay:0.0f
-                         options:UIViewAnimationOptionCurveEaseOut animations:^{
+    /*[UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:2];
+    [UIView setAnimationDidStopSelector:@selector(moveImageBack:)];
+    [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
+    [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
+    [UIView commitAnimations];
+     */
         [UIView animateWithDuration:3.0 animations:^{
     
-[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-
-
-
-        } completion:nil];
-
-   } completion:nil];
->>>>>>> 299f3cdaab329064d3a7e5a03f7abe7bb74eec9e
+            [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
+            [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
+            // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
+           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
+            } completion:^(BOOL finished){
+            if (finished) {
+                [self moveImageBack:image];
+            }
+        }];
     
-    
->>>>>>> 3657d0c32d9aa8a649a065453797f71784b21ad4
+          }
 
+-(void)moveImageBack :(UIImageView*)image {
+    NSLog(@"test");
+    image.center = self.oldCoinPosition;
+    [UIView animateWithDuration:0 animations:^{
+        
+    [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
+    [image.layer setValue:@0.9 forKeyPath:@"transform.scale.y"];
+    } completion:nil];
 }
 -(void)addImageSubView: (UIImageView*) image {
     if(image == fiveImg || image == tenImg || image == twentyImg || image == fiftyImg || image == levImg) {
