@@ -58,10 +58,10 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
-   UITouch *touch = [touches anyObject];
+    UITouch *touch = [touches anyObject];
     // drag should only occur if the object is a coin
-  [self moveCoin:touch.view];
-   [self.view bringSubviewToFront:[touch view]];
+    [self moveCoin:touch.view];
+    [self.view bringSubviewToFront:[touch view]];
     
 }
 
@@ -156,6 +156,10 @@
 
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
+    if([recognizer state] == UIGestureRecognizerStateBegan){
+        [self moveCoin:recognizer.view];
+        [self.view bringSubviewToFront:recognizer.view];
+    }
     if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
     CGPoint translation = [recognizer translationInView:recognizer.view];
     
@@ -246,13 +250,10 @@
 
 
 
-        } completion:^(BOOL finished){   // perform before animations  - problem
-            if (finished) {  
-                image.center = oldCoinPosition;
-            }
-        }];
+        } completion:nil];
 
    } completion:nil];
+    
     
 
 }
