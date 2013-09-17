@@ -230,8 +230,9 @@
 }
 
 
--(void)rotateImage: (UIImageView*) image
+-(void)rotateImage: (UIImageView*) image 
 {
+<<<<<<< HEAD
     
         [UIView animateWithDuration:1.0 animations:^{
     
@@ -241,7 +242,31 @@
            // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
            // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
         } completion:nil ];
+=======
+
     
+    //image.center = CGPointMake(image.center.x+50.0, image.center.y);
+    
+    [UIView animateWithDuration:2.0
+                           delay:0.0f
+                         options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:3.0 animations:^{
+    
+[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
+[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
+
+
+
+        } completion:^(BOOL finished){   // perform before animations  - problem
+            if (finished) {  
+                image.center = oldCoinPosition;
+            }
+        }];
+
+   } completion:nil];
+>>>>>>> 299f3cdaab329064d3a7e5a03f7abe7bb74eec9e
+    
+
 }
 -(void)addImageSubView: (UIImageView*) image {
     if(image == fiveImg || image == tenImg || image == twentyImg || image == fiftyImg || image == levImg) {
