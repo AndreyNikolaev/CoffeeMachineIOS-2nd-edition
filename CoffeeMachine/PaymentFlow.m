@@ -53,33 +53,47 @@
     [super viewDidLoad];
     sum = 0;
     userCoins=[[MoneyAmount alloc]init];
-    
+    [self moveCoin:fiveImg];
+    [self moveCoin:tenImg];
+    [self moveCoin:twentyImg];
+    [self moveCoin:fiftyImg];
+    [self moveCoin:levImg];
    }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
+<<<<<<< HEAD
+   UITouch *touch = [touches anyObject];
+    //drag should only occur if the object is a coin
+[self moveCoin:touch.view];
+ [self.view bringSubviewToFront:[touch view]];
+=======
     UITouch *touch = [touches anyObject];
     // drag should only occur if the object is a coin
     [self moveCoin:touch.view];
     [self.view bringSubviewToFront:[touch view]];
+>>>>>>> 3657d0c32d9aa8a649a065453797f71784b21ad4
     
 }
-
+*/
 
 -(void) moveCoin: (UIImageView*) image
-{
+{   
     self.oldCoinPosition = image.center;
     [self addImageSubView:image];
+
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
     /* set no of touch for pan gesture*/
     
-[panGesture setMaximumNumberOfTouches:1];
+   [ panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
     
-        
+[self.view bringSubviewToFront:image];
 }
--(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe
+
+
+-(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImage
 {
     BOOL flag = YES;
     if(coinImage.center.x < slotImg.center.x - 20) flag = false;
@@ -156,10 +170,14 @@
 
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
+<<<<<<< HEAD
+    
+=======
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
     }
+>>>>>>> 3657d0c32d9aa8a649a065453797f71784b21ad4
     if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
     CGPoint translation = [recognizer translationInView:recognizer.view];
     
@@ -176,8 +194,9 @@
         else recognizer.view.center = oldCoinPosition;
     }
        
+                                  }
 }
-}
+
 -(void)handle:(UIPanGestureRecognizer *)recognizer {
     
     CGPoint translation = [recognizer translationInView:recognizer.view];
@@ -236,16 +255,17 @@
 
 -(void)rotateImage: (UIImageView*) image 
 {
-<<<<<<< HEAD
     
         [UIView animateWithDuration:1.0 animations:^{
     
 [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
 [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-           // image.center = self.oldCoinPosition;
-           // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
+                      // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
            // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
         } completion:nil ];
+<<<<<<< HEAD
+   // image.center = self.oldCoinPosition;
+=======
 =======
 
     
@@ -267,6 +287,7 @@
 >>>>>>> 299f3cdaab329064d3a7e5a03f7abe7bb74eec9e
     
     
+>>>>>>> 3657d0c32d9aa8a649a065453797f71784b21ad4
 
 }
 -(void)addImageSubView: (UIImageView*) image {
