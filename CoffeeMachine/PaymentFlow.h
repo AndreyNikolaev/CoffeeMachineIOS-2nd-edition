@@ -46,4 +46,6 @@ NSString *result;
 -(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImage;
 -(void)updateSum: (UIImageView*) image;
 -(void)panView: (UIPanGestureRecognizer*)gestureRecognizer;
+-(void)moveImageBack :(UIImageView*)image;
+- (void)animDone:(NSString *)animationID finished:(BOOL)finished context:(void *)context;
 @end
