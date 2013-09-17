@@ -43,6 +43,7 @@ NSString *result;
 - (void)handle:(UIPanGestureRecognizer*)recognizer;
 -(void) moveCoin: (UIImageView*) image;
 -(void)addImageSubView: (UIImageView*) image;
--(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImahe;
+-(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImage;
 -(void)updateSum: (UIImageView*) image;
+-(void)panView: (UIPanGestureRecognizer*)gestureRecognizer;
 @end
