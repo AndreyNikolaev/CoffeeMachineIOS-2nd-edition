@@ -244,7 +244,11 @@
 
 -(void)rotateImage: (UIImageView*) image 
 {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> f43c8ab5705790fd52ba9203f5189f23c007b84e
     /*[UIView beginAnimations:nil context:nil];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDuration:2];
@@ -266,7 +270,11 @@
         }];
     
           }
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> f43c8ab5705790fd52ba9203f5189f23c007b84e
     
         [UIView animateWithDuration:1.0 animations:^{
     
@@ -296,7 +304,11 @@
 
    } completion:nil];
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 8837cc06021fc087fb463388c66e5152ee4461a7
+>>>>>>> f43c8ab5705790fd52ba9203f5189f23c007b84e
 
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");
