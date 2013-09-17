@@ -74,7 +74,7 @@
     [panGesture setDelegate:self];
     /* set no of touch for pan gesture*/
     
-    [panGesture setMaximumNumberOfTouches:1];
+[panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
     
         
@@ -232,13 +232,15 @@
 
 -(void)rotateImage: (UIImageView*) image
 {
-        [UIView animateWithDuration:3.0 animations:^{
+    
+        [UIView animateWithDuration:1.0 animations:^{
     
 [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
 [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-
-
-   } completion:nil];
+           // image.center = self.oldCoinPosition;
+           // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
+           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
+        } completion:nil ];
     
 }
 -(void)addImageSubView: (UIImageView*) image {
