@@ -48,4 +48,5 @@ NSString *result;
 -(void)panView: (UIPanGestureRecognizer*)gestureRecognizer;
 -(void)moveImageBack :(UIImageView*)image;
 - (void)animDone:(NSString *)animationID finished:(BOOL)finished context:(void *)context;
+-(void)rotateImageBack: (UIImageView*) image;
 @end

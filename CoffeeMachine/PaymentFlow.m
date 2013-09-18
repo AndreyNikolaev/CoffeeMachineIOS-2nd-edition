@@ -225,92 +225,33 @@
 }
 
 
-<<<<<<< HEAD
 
-=======
 -(void)rotateImage: (UIImageView*) image 
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> f43c8ab5705790fd52ba9203f5189f23c007b84e
-    /*[UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDuration:2];
-    [UIView setAnimationDidStopSelector:@selector(moveImageBack:)];
-    [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-    [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-    [UIView commitAnimations];
-     */
->>>>>>> 1c3d49af895a428070cecaafe03eb96ce294e2ca
->>>>>>> 256eb22e9291f1d2cc0543b014076ba0694d142e
-        [UIView animateWithDuration:3.0 animations:^{
+        [UIView animateWithDuration:2.0 animations:^{
     
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-            // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
-           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
-            } completion:^(BOOL finished){
+                                                    } completion:^(BOOL finished){
             if (finished) {
                 [self moveImageBack:image];
+                [self rotateImageBack:image];
             }
         }];
-    
-          }
-<<<<<<< HEAD
-
-    
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f43c8ab5705790fd52ba9203f5189f23c007b84e
-    
-        [UIView animateWithDuration:1.0 animations:^{
-    
-[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-                      // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
-           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
-        } completion:nil ];
-
-   // image.center = self.oldCoinPosition;
->>>>>>> 1c3d49af895a428070cecaafe03eb96ce294e2ca
-
-    
-<<<<<<< HEAD
-=======
-    [UIView animateWithDuration:2.0
-                           delay:0.0f
-                         options:UIViewAnimationOptionCurveEaseOut animations:^{
-        [UIView animateWithDuration:3.0 animations:^{
-    
-[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-
-
-
-        } completion:nil];
-
-   } completion:nil];
-
-<<<<<<< HEAD
 }
-=======
->>>>>>> 8837cc06021fc087fb463388c66e5152ee4461a7
->>>>>>> f43c8ab5705790fd52ba9203f5189f23c007b84e
+-(void)rotateImageBack: (UIImageView*) image
+{
+    [UIView animateWithDuration:0.0 animations:^{
+        
+        [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
+                 } completion:^(BOOL finished){
+        if (finished) {
+            
+        }
+    }];
+}
 
->>>>>>> 1c3d49af895a428070cecaafe03eb96ce294e2ca
->>>>>>> 256eb22e9291f1d2cc0543b014076ba0694d142e
->>>>>>> c9ee025263002cb564c3439273fbfd007f2c7283
+
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");
     image.center = self.oldCoinPosition;
