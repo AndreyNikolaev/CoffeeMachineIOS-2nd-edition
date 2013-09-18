@@ -81,6 +81,7 @@
                     cell.imageView.image = imgView.image;
 
                 }
+                
             }return cell;
         }else{
             NSUInteger count = [_moneyAmount count];
@@ -96,7 +97,7 @@
                     cell.imageView.image = imgView.image;
 
                 }
-
+                
         }return cell;
 
         }
@@ -105,7 +106,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-            
     
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -126,8 +126,7 @@
     
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
+    
 }
-
-
 
 @end

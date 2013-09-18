@@ -17,4 +17,5 @@
 @property CoffeeMachineState* coffeeMachineState;
 
 - (IBAction)loadPlistFromURL:(id)sender;
+- (void) refreshTableView;
 @end
