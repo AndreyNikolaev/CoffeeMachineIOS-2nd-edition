@@ -56,23 +56,6 @@
    
    }
     
-/*-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-<<<<<<< HEAD
-   UITouch *touch = [touches anyObject];
-    //drag should only occur if the object is a coin
-[self moveCoin:touch.view];
- [self.view bringSubviewToFront:[touch view]];
-=======
-    UITouch *touch = [touches anyObject];
-    // drag should only occur if the object is a coin
-    [self moveCoin:touch.view];
-    [self.view bringSubviewToFront:[touch view]];
->>>>>>> 3657d0c32d9aa8a649a065453797f71784b21ad4
-    
-}
-*/
-
 -(void) moveCoin: (UIImageView*) image
 {   
     self.oldCoinPosition = image.center;
@@ -244,15 +227,6 @@
 
 -(void)rotateImage: (UIImageView*) image 
 {
-<<<<<<< HEAD
-    /*[UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDuration:2];
-    [UIView setAnimationDidStopSelector:@selector(moveImageBack:)];
-    [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-    [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-    [UIView commitAnimations];
-     */
         [UIView animateWithDuration:3.0 animations:^{
     
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
@@ -266,38 +240,8 @@
         }];
     
           }
-=======
-    
-        [UIView animateWithDuration:1.0 animations:^{
-    
-[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-                      // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
-           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
-        } completion:nil ];
-
-   // image.center = self.oldCoinPosition;
-
 
     
-    //image.center = CGPointMake(image.center.x+50.0, image.center.y);
-    
-    [UIView animateWithDuration:2.0
-                           delay:0.0f
-                         options:UIViewAnimationOptionCurveEaseOut animations:^{
-        [UIView animateWithDuration:3.0 animations:^{
-    
-[image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-[image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-
-
-
-        } completion:nil];
-
-   } completion:nil];
-
->>>>>>> 8837cc06021fc087fb463388c66e5152ee4461a7
-
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");
     image.center = self.oldCoinPosition;
