@@ -244,6 +244,8 @@
     [UIView animateWithDuration:0.0 animations:^{
         
         [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
+        CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y+1, image.frame.size.width,image.frame.size.height);
+        image.frame = imageframe;
                  } completion:^(BOOL finished){
         if (finished) {
             
