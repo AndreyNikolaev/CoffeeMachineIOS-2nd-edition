@@ -130,9 +130,14 @@
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
     
+    MoneyAmount *mAmount = [[MoneyAmount alloc]init];
+    mAmount=self.coffeeMachineState.coins;
+    _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
     
-    NSArray* rowsToReload = [NSArray arrayWithObjects:self.tableIndexPath, nil];
-    [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
+    DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
+    soldDrinks=self.coffeeMachineState.currentDrinksAmount;
+    self.drinksSold = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
+    [self.tableView reloadData];
 
 }
 
