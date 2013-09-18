@@ -225,22 +225,42 @@
 }
 
 
+
 -(void)rotateImage: (UIImageView*) image 
 {
+<<<<<<< HEAD
 
         [UIView animateWithDuration:3.0 animations:^{
+=======
+        [UIView animateWithDuration:2.0 animations:^{
+>>>>>>> 2d777162011538e2d82ee47bdbd192dff8ccb749
     
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-            // [image.layer setValue:@1.5707 forKeyPath:@"transform.rotation"];
-           // [image.layer setValue:@-1.0 forKeyPath:@"transform.scale.y"];
-            } completion:^(BOOL finished){
+                                                    } completion:^(BOOL finished){
             if (finished) {
                 [self moveImageBack:image];
+                [self rotateImageBack:image];
             }
         }];
+<<<<<<< HEAD
     
           }
+=======
+}
+-(void)rotateImageBack: (UIImageView*) image
+{
+    [UIView animateWithDuration:0.0 animations:^{
+        
+        [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
+                 } completion:^(BOOL finished){
+        if (finished) {
+            
+        }
+    }];
+}
+
+>>>>>>> 2d777162011538e2d82ee47bdbd192dff8ccb749
 
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");
