@@ -167,7 +167,6 @@
         if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
-            [self updateSum:recognizer.view];
         
 
             
@@ -229,8 +228,16 @@
 -(void)rotateImage: (UIImageView*) image 
 {
 
+<<<<<<< HEAD
        
         [UIView animateWithDuration:2.0 animations:^{
+=======
+
+        [UIView animateWithDuration:2.0 animations:^{
+
+        [UIView animateWithDuration:2.0 animations:^{
+
+>>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
     
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
@@ -238,14 +245,25 @@
             if (finished) {
                 [self moveImageBack:image];
                 [self rotateImageBack:image];
+                [self updateSum:image];
+
             }
         }];
+<<<<<<< HEAD
+=======
+
+    
+        }];
+
+>>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
 }
 -(void)rotateImageBack: (UIImageView*) image
 {
     [UIView animateWithDuration:0.0 animations:^{
         
         [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
+        CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y+1, image.frame.size.width,image.frame.size.height);
+        image.frame = imageframe;
                  } completion:^(BOOL finished){
         if (finished) {
             
@@ -253,6 +271,10 @@
     }];
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
 
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");

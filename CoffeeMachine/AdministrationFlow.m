@@ -20,6 +20,7 @@
 @synthesize coffeeMachineState;
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +38,7 @@
 
    _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
     self.drinksSold = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
+    
 }
 
 
@@ -59,6 +61,7 @@
 }
 
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"cell"];
     UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
     av.backgroundColor = [UIColor clearColor];
@@ -126,7 +129,11 @@
     
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
+<<<<<<< HEAD
     
+=======
+      
+>>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
 }
 
 @end
