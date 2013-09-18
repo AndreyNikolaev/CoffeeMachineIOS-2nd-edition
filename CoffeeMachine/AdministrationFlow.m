@@ -129,18 +129,11 @@
     
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
-<<<<<<< HEAD
     
     
     NSArray* rowsToReload = [NSArray arrayWithObjects:self.tableIndexPath, nil];
     [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
-=======
-<<<<<<< HEAD
-    
-=======
->>>>>>> c01fde9ca7c0739b26c5f6590626b84b5549418e
-      
->>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
+
 }
 
 @end

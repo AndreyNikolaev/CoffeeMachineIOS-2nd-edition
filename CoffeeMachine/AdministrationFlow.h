@@ -20,9 +20,8 @@
 
 
 - (IBAction)loadPlistFromURL:(id)sender;
-<<<<<<< HEAD
-- (void) refreshTableView;
-=======
 
->>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
+- (void) refreshTableView;
+
+
 @end
