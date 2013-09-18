@@ -18,6 +18,7 @@
 @synthesize moneyAmount = _moneyAmount;
 @synthesize drinksSold;
 @synthesize coffeeMachineState;
+@synthesize tableIndexPath;
 
 
 
@@ -61,7 +62,7 @@
 }
 
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-  
+    self.tableIndexPath = indexPath;
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"cell"];
     UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
     av.backgroundColor = [UIColor clearColor];
@@ -124,11 +125,14 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"writedFile.plist"];
-   // [arrayToSave writeToFile:path atomically:YES];
-  [[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"]] writeToFile:path atomically:YES];
+    [[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"]] writeToFile:path atomically:YES];
     
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
+    
+    
+    NSArray* rowsToReload = [NSArray arrayWithObjects:self.tableIndexPath, nil];
+    [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
       
 }
 

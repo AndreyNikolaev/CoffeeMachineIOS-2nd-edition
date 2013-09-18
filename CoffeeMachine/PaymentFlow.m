@@ -60,12 +60,9 @@
 {   
     self.oldCoinPosition = image.center;
     [self addImageSubView:image];
-
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setDelegate:self];
-    /* set no of touch for pan gesture*/
-    
-   [ panGesture setMaximumNumberOfTouches:1];
+    [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
     
 }
@@ -85,7 +82,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)switchBack:(id)sender {
@@ -121,8 +117,6 @@
             [self.navigationController pushViewController:orderFinalizeFlow animated:NO];
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
             [UIView commitAnimations];
-
-            //[self.navigationController pushViewController:orderFinalizeFlow animated:YES];
         }
         else{
             InsufficientAmountFlow *insAmountFlow=[[InsufficientAmountFlow alloc]initWithNibName:@"InsufficientAmountFlow" bundle:nil];
@@ -137,9 +131,6 @@
       
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
             [UIView commitAnimations];
-
-            //[self presentViewController:insAmountFlow animated:YES completion:nil];
-           // [self.navigationController pushViewController: insAmountFlow animated:YES];
         }
         
       
@@ -148,8 +139,6 @@
 
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
-
-    
 
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
@@ -167,58 +156,40 @@
         if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
-        
-
-            
         }
         else  recognizer.view.center = oldCoinPosition;
     }
-    
-                                  }
+   }
 }
 
 
 -(void)updateSum: (UIImageView*) image {
     
     if (image == fiveImg){
-        
-        
+            
         [self setCoinInUserCoins:5];
         [self switchMenu];
-      //  [self rotateImage:fiveImg];
-        
-        
-        
-        
-        
     }
     if (image == tenImg)
     {
         [self setCoinInUserCoins:10];
         [self switchMenu];
-        //[self rotateImage:tenImg];
-        
     }
     if (image == twentyImg)
     {
         [self setCoinInUserCoins:20];
         [self switchMenu];
-       // [self rotateImage:twentyImg];
-        
     }
     if (image == fiftyImg)
     {
         [self setCoinInUserCoins:50];
         [self switchMenu];
-      //  [self rotateImage:fiftyImg];
-        
     }
     if (image== levImg)
     {
         [self setCoinInUserCoins:100];
         [self switchMenu];
-       // [self rotateImage:levImg];
-        
+       
     }
 
 }
@@ -227,13 +198,8 @@
 
 -(void)rotateImage: (UIImageView*) image 
 {
-
-
         [UIView animateWithDuration:2.0 animations:^{
-
         [UIView animateWithDuration:2.0 animations:^{
-
-    
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
                                                     } completion:^(BOOL finished){
@@ -244,16 +210,13 @@
 
             }
         }];
-
-    
         }];
 
 }
 -(void)rotateImageBack: (UIImageView*) image
 {
     [UIView animateWithDuration:0.0 animations:^{
-        
-        [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
+       [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
         CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y+1, image.frame.size.width,image.frame.size.height);
         image.frame = imageframe;
                  } completion:^(BOOL finished){
@@ -269,7 +232,6 @@
     NSLog(@"test");
     image.center = self.oldCoinPosition;
     [UIView animateWithDuration:0 animations:^{
-        
     [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
     [image.layer setValue:@0.9 forKeyPath:@"transform.scale.y"];
     } completion:nil];

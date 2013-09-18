@@ -15,6 +15,7 @@
 @property(strong) NSMutableArray *drinksSold;
 @property(strong) NSMutableArray *moneyAmount;
 @property CoffeeMachineState* coffeeMachineState;
+@property NSIndexPath* tableIndexPath;
 
 
 
