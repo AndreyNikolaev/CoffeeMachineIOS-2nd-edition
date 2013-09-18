@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12F37</string>
+		<string key="IBDocument.SystemVersion">12E55</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.39</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
@@ -1290,6 +1290,19 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">PaymentFlow</string>
 					<string key="superclassName">UIViewController</string>
+<<<<<<< HEAD
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">handlePan:</string>
+						<string key="NS.object.0">UIPanGestureRecognizer</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">handlePan:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">handlePan:</string>
+							<string key="candidateClassName">UIPanGestureRecognizer</string>
+						</object>
+					</object>
+=======
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="handlePan:">UIPanGestureRecognizer</string>
 						<string key="switchBack:">id</string>
@@ -1304,6 +1317,7 @@
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
+>>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="coinImg">UIImageView</string>
 						<string key="fiftyImg">UIImageView</string>

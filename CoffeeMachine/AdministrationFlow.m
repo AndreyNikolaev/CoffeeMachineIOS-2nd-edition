@@ -85,6 +85,7 @@
                     cell.imageView.image = imgView.image;
 
                 }
+                
             }return cell;
         }else{
             NSUInteger count = [_moneyAmount count];
@@ -100,7 +101,7 @@
                     cell.imageView.image = imgView.image;
 
                 }
-
+                
         }return cell;
 
         }
@@ -109,7 +110,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-            
     
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -129,13 +129,18 @@
     
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
+<<<<<<< HEAD
     
     
     NSArray* rowsToReload = [NSArray arrayWithObjects:self.tableIndexPath, nil];
     [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c01fde9ca7c0739b26c5f6590626b84b5549418e
       
+>>>>>>> 42fb56117cae612475a1bbe58bc61e40ad5afba5
 }
-
-
 
 @end
