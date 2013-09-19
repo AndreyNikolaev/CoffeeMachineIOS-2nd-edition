@@ -130,9 +130,7 @@
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
     
-<<<<<<< HEAD
-    }
-=======
+    
     MoneyAmount *mAmount = [[MoneyAmount alloc]init];
     mAmount=self.coffeeMachineState.coins;
     _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
@@ -143,6 +141,6 @@
     [self.tableView reloadData];
 
 }
->>>>>>> 3b53afe8f5e358397588fdc0c8de1cecb56d9611
+
 
 @end

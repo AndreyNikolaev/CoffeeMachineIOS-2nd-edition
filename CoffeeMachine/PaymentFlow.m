@@ -199,19 +199,8 @@
 -(void)rotateImage: (UIImageView*) image 
 {
 
-<<<<<<< HEAD
-
-
         [UIView animateWithDuration:2.0 animations:^{
 
-    
-=======
-        [UIView animateWithDuration:2.0 animations:^{
-
-        [UIView animateWithDuration:2.0 animations:^{
-        [UIView animateWithDuration:2.0 animations:^{
-
->>>>>>> 3b53afe8f5e358397588fdc0c8de1cecb56d9611
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
                                                     } completion:^(BOOL finished){
@@ -222,11 +211,6 @@
 
             }
         }];
-<<<<<<< HEAD
-=======
-
-        }];}];
->>>>>>> 3b53afe8f5e358397588fdc0c8de1cecb56d9611
 
 }
 -(void)rotateImageBack: (UIImageView*) image
@@ -243,10 +227,7 @@
 }
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 3b53afe8f5e358397588fdc0c8de1cecb56d9611
 
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");
