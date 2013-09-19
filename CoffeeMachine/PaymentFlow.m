@@ -202,9 +202,6 @@
 
         [UIView animateWithDuration:2.0 animations:^{
 
-        [UIView animateWithDuration:2.0 animations:^{
-        [UIView animateWithDuration:2.0 animations:^{
-
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
                                                     } completion:^(BOOL finished){
@@ -215,8 +212,6 @@
 
             }
         }];
-
-        }];}];
 
 }
 -(void)rotateImageBack: (UIImageView*) image
