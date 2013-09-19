@@ -141,7 +141,7 @@
 
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
-
+    SoundPlayer* sound = [[SoundPlayer alloc]init];
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
@@ -158,12 +158,15 @@
         if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
-            SoundPlayer* sound = [[SoundPlayer alloc]init];
+            
             sound.fileName = @"dropCoin";
             sound.fileType = @"mp3";
             [sound play];
         }   
         else  recognizer.view.center = oldCoinPosition;
+        sound.fileName = @"coinBack";
+        sound.fileType = @"mp3";
+        [sound play];
     }
    }
 }

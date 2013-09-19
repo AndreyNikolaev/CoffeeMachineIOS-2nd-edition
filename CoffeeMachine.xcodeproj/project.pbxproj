@@ -19,6 +19,8 @@
 		5A4FD4CD17E9CB50006F65DE /* paymentBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4CC17E9CB50006F65DE /* paymentBack.jpg */; };
 		5A4FD4D817EB26E7006F65DE /* SoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FD4D717EB26E7006F65DE /* SoundPlayer.m */; };
 		5A4FD4DA17EB27A5006F65DE /* dropCoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4D917EB27A5006F65DE /* dropCoin.mp3 */; };
+		5A4FD4DD17EB2D50006F65DE /* coinBack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4DB17EB2D50006F65DE /* coinBack.mp3 */; };
+		5A4FD4DE17EB2D50006F65DE /* selectCoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4DC17EB2D50006F65DE /* selectCoin.mp3 */; };
 		5AB3D56817EB219500BF73E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB3D56717EB219500BF73E4 /* AudioToolbox.framework */; };
 		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
 		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
@@ -82,6 +84,8 @@
 		5A4FD4D617EB26E7006F65DE /* SoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundPlayer.h; sourceTree = "<group>"; };
 		5A4FD4D717EB26E7006F65DE /* SoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundPlayer.m; sourceTree = "<group>"; };
 		5A4FD4D917EB27A5006F65DE /* dropCoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dropCoin.mp3; sourceTree = "<group>"; };
+		5A4FD4DB17EB2D50006F65DE /* coinBack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinBack.mp3; sourceTree = "<group>"; };
+		5A4FD4DC17EB2D50006F65DE /* selectCoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = selectCoin.mp3; sourceTree = "<group>"; };
 		5AB3D56717EB219500BF73E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				5AFED43A17E6F63B009FD69F /* slot.gif */,
 				5AE4C55517E1AC460098BDB5 /* admCoffee.jpg */,
 				5A0A86D017DF3CF0002972A1 /* 5.gif */,
+				5A4FD4DB17EB2D50006F65DE /* coinBack.mp3 */,
+				5A4FD4DC17EB2D50006F65DE /* selectCoin.mp3 */,
 				5AE4C55717E1B0280098BDB5 /* emptyCoin.png */,
 				5A0A86D117DF3CF0002972A1 /* 10.gif */,
 				5A0A86D217DF3CF0002972A1 /* 20.gif */,
@@ -378,6 +384,8 @@
 				5AFED43B17E6F63B009FD69F /* slot.gif in Resources */,
 				5A4FD4CD17E9CB50006F65DE /* paymentBack.jpg in Resources */,
 				5A4FD4DA17EB27A5006F65DE /* dropCoin.mp3 in Resources */,
+				5A4FD4DD17EB2D50006F65DE /* coinBack.mp3 in Resources */,
+				5A4FD4DE17EB2D50006F65DE /* selectCoin.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
