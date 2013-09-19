@@ -1351,13 +1351,13 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="10.gif">{518, 563}</string>
-			<string key="20.gif">{518, 563}</string>
-			<string key="5.gif">{518, 563}</string>
-			<string key="50.gif">{518, 563}</string>
-			<string key="lev.gif">{518, 563}</string>
-			<string key="paymentBack.jpg">{400, 409}</string>
-			<string key="slot.gif">{130, 120}</string>
+			<string key="10.gif">{16, 16}</string>
+			<string key="20.gif">{16, 16}</string>
+			<string key="5.gif">{16, 16}</string>
+			<string key="50.gif">{16, 16}</string>
+			<string key="lev.gif">{16, 16}</string>
+			<string key="paymentBack.jpg">{16, 16}</string>
+			<string key="slot.gif">{16, 16}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>

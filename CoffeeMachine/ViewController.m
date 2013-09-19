@@ -133,7 +133,7 @@
     tabTitle = [tabTitle stringByAppendingString:@"  "];
     tabTitle = [tabTitle stringByAppendingString:_itemsArayDrinkPrices[indexPath.row]];
     paymentFlow.title = tabTitle;
-
+    
    
     
 
