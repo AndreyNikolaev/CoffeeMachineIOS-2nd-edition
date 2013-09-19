@@ -72,7 +72,7 @@
     else {
         self.changeLbl.text=userCoins.description;
         [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
-        }
+        } 
     
 }
 
