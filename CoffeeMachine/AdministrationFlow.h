@@ -15,10 +15,16 @@
 @property(strong) NSMutableArray *drinksSold;
 @property(strong) NSMutableArray *moneyAmount;
 @property CoffeeMachineState* coffeeMachineState;
+@property NSIndexPath* tableIndexPath;
 
 
 
 - (IBAction)loadPlistFromURL:(id)sender;
+<<<<<<< HEAD
+=======
+
+- (void) refreshTableView;
+>>>>>>> 3b53afe8f5e358397588fdc0c8de1cecb56d9611
 
 
 @end

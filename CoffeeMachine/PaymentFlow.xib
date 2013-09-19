@@ -1317,6 +1317,10 @@
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b53afe8f5e358397588fdc0c8de1cecb56d9611
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="coinImg">UIImageView</string>
 						<string key="fiftyImg">UIImageView</string>
