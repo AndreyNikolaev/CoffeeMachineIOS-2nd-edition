@@ -63,17 +63,16 @@
 
 -(void)updateCoffeeMachineState{
     if(willGetDrink){
-       //self.drinkLbl.text = self.selectedDrink.name;
         float numChange =(float)[change sumOfCoins] / 100;
         self.changeLbl.text = [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
+        [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
         [coffeeMachineState.coins add:userCoins];
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
     else {
-        //self.drinkLbl.text=@"Take your money";
         self.changeLbl.text=userCoins.description;
-        //[coffeeMachineState.coins add:change];
-    }
+        [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
+        }
     
 }
 
