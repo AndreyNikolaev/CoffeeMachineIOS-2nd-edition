@@ -17,6 +17,7 @@
 		5A43FF8117DE068A00A90043 /* kafe-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A43FF8017DE068A00A90043 /* kafe-1.png */; };
 		5A43FF8317DE07B200A90043 /* coffee-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A43FF8217DE07B200A90043 /* coffee-back.png */; };
 		5A4FD4CD17E9CB50006F65DE /* paymentBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4CC17E9CB50006F65DE /* paymentBack.jpg */; };
+		5A4FD4D517EB23A7006F65DE /* SoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FD4D417EB23A6006F65DE /* SoundPlayer.m */; };
 		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
 		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
 		5AD129E817B23B0B00094D01 /* DrinksContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E717B23B0B00094D01 /* DrinksContainer.m */; };
@@ -76,6 +77,8 @@
 		5A43FF8017DE068A00A90043 /* kafe-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kafe-1.png"; sourceTree = "<group>"; };
 		5A43FF8217DE07B200A90043 /* coffee-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee-back.png"; sourceTree = "<group>"; };
 		5A4FD4CC17E9CB50006F65DE /* paymentBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paymentBack.jpg; sourceTree = "<group>"; };
+		5A4FD4D317EB23A6006F65DE /* SoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundPlayer.h; sourceTree = "<group>"; };
+		5A4FD4D417EB23A6006F65DE /* SoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundPlayer.m; sourceTree = "<group>"; };
 		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		5AD129E017B23AAE00094D01 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				5AD3361817C4A665001F65DE /* OrderFinalizeFlow.h */,
 				5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */,
 				5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */,
+				5A4FD4D317EB23A6006F65DE /* SoundPlayer.h */,
+				5A4FD4D417EB23A6006F65DE /* SoundPlayer.m */,
 				5ADBFE3B17B11A77005B7B91 /* Supporting Files */,
 			);
 			path = CoffeeMachine;
@@ -390,6 +395,7 @@
 				5AD7997F17CCC1A8007E5EB7 /* AdministrationFlow.m in Sources */,
 				5AD799A317D0C090007E5EB7 /* FileReader.m in Sources */,
 				5AD794FC17D5D26D003A639A /* FileWriter.m in Sources */,
+				5A4FD4D517EB23A7006F65DE /* SoundPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
