@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *backToDrinkList;
 @property (strong, nonatomic) IBOutlet UIImageView *backImg;
 @property UIImageView* explosion;
+@property (strong, nonatomic) IBOutlet UIImageView *changeImgView;
 
 
 @property Drink* selectedDrink;

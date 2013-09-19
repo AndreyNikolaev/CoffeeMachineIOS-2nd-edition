@@ -74,6 +74,8 @@
     BOOL flag = YES;
     if(coinImage.center.x < slotImg.center.x - 20) flag = false;
     if(coinImage.center.x > slotImg.center.x + 20) flag = false;
+    if(coinImage.center.y < slotImg.center.y - 20) flag = false;
+    if(coinImage.center.y > slotImg.center.y + 20) flag = false;
     return flag;
 }
 
