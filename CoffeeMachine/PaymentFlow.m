@@ -210,7 +210,7 @@
 -(void)rotateImage: (UIImageView*) image 
 {
 
-        [UIView animateWithDuration:2.0 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
 
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
