@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface SoundPlayer : NSObject
 @property NSString* fileName;
 @property NSString* fileType;
 
--(void)play:(NSString*) fileName : (NSString*) fileType;
+-(void)play;
 @end

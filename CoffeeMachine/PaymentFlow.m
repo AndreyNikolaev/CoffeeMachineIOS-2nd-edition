@@ -17,6 +17,7 @@
 #import "Drink.h"
 #import "OrderFinalizeFlow.h"
 #import "InsufficientAmountFlow.h"
+#import "SoundPlayer.h"
 @interface PaymentFlow ()
 
 @end
@@ -157,7 +158,11 @@
         if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
-        }
+            SoundPlayer* sound = [[SoundPlayer alloc]init];
+            sound.fileName = @"dropCoin";
+            sound.fileType = @"mp3";
+            [sound play];
+        }   
         else  recognizer.view.center = oldCoinPosition;
     }
    }

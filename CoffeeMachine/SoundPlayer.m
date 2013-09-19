@@ -8,11 +8,12 @@
 
 #import "SoundPlayer.h"
 
+
 @implementation SoundPlayer
 @synthesize fileName;
 @synthesize fileType;
 
--(void)play:(NSString*) fileName : (NSString*) fileType
+-(void)play
 {
 	SystemSoundID SoundID;
 	NSString *soundFile = [[NSBundle mainBundle] pathForResource: self.fileName ofType:self.fileType];

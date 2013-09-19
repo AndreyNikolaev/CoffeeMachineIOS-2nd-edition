@@ -138,13 +138,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
-         timestampString = "401284030.881767"
+         timestampString = "400494149.594048"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
-         landmarkName = "-updateCoffeeMachineState"
-         landmarkType = "5">
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "@implementation OrderFinalizeFlow"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
