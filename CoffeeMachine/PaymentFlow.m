@@ -95,6 +95,7 @@
     userCoin.value=coinValue;
     [self.userCoins addCoin:userCoin amount:1];
     sumLbl.text=[NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
+    [sumLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
 }
 
 - (void) switchMenu {  
