@@ -23,15 +23,13 @@
 @end
 
 @implementation PaymentFlow
-
+//custom objects
 @synthesize coffeeMachineState;
 @synthesize selectedDrink;
 @synthesize userCoins;
-
 @synthesize oldCoinPosition;
-
+//views
 @synthesize sumLbl;
-
 @synthesize fiveImg;
 @synthesize tenImg;
 @synthesize twentyImg;

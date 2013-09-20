@@ -15,8 +15,8 @@
 
 
 @synthesize tableView = _tableView;
-@synthesize moneyAmount = _moneyAmount;
-@synthesize drinksSold;
+@synthesize moneyAmount = _moneyAmount; // array with string of amount of every coin
+@synthesize drinksStringArray;
 @synthesize coffeeMachineState;
 @synthesize tableIndexPath;
 
@@ -27,19 +27,11 @@
 {
     [super viewDidLoad];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"admCoffee.jpg"]];
-
     self.title=@"Reports";
-    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Load from URL" style:UIBarButtonItemStyleBordered target:self action:@selector(loadPlistFromURL:)];
     self.navigationItem.rightBarButtonItem = backButton;
-    
-    DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
-    soldDrinks=self.coffeeMachineState.currentDrinksAmount;
-    MoneyAmount *mAmount = [[MoneyAmount alloc]init];
-    mAmount=self.coffeeMachineState.coins;
-
-   _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
-    self.drinksSold = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
+    _moneyAmount = [[NSMutableArray alloc]initWithArray:self.coffeeMachineState.coins.coinsAmountToString]; 
+    self.drinksStringArray = [[NSMutableArray alloc]initWithArray:self.coffeeMachineState.currentDrinksAmount.drinkNameAndQuantityToString];
     
 }
 
@@ -56,7 +48,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0){
-        return drinksSold.count;
+        return drinksStringArray.count;
     }else{
         return _moneyAmount.count;
     }
@@ -73,11 +65,11 @@
         cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
     }
         if(indexPath.section == 0) {
-            NSUInteger count = [self.drinksSold count];
+            NSUInteger count = [self.drinksStringArray count];
             for (NSUInteger i = 0; i < count; i++) {
                 if(indexPath.row==i){
             
-                    NSString *current = [self.drinksSold objectAtIndex: i];
+                    NSString *current = [self.drinksStringArray objectAtIndex: i];
                     cell.textLabel.text=current;
                     cell.backgroundView = av;
                     
@@ -138,7 +130,7 @@
     
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
     soldDrinks=self.coffeeMachineState.currentDrinksAmount;
-    self.drinksSold = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
+    self.drinksStringArray = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
     [self.tableView reloadData];
 
 }
