@@ -19,6 +19,7 @@
 - (IBAction)switchToFinalizeFlow:(id)sender;
 - (IBAction)switchToDrinkListFlow:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *notEnCoins;
 @property Drink* selectedDrink;
 @property MoneyAmount* change;
 @property CoffeeMachineState* coffeeMachineState;

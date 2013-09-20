@@ -29,8 +29,6 @@
 @synthesize backImg;
 @synthesize changeImgView;
 @synthesize readyDrinkImg;
-
-//@synthesize  drinkLbl;
 @synthesize changeLbl;
 
 
@@ -48,12 +46,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self updateCoffeeMachineState];
-    [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
+    [self updateCoffeeMachineState]; // updates coffeeMachineState
+    [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]]; //SUM label with digital style
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
     self.navigationItem.leftBarButtonItem = backButton;
-
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,9 +58,9 @@
     // Dispose of any resources that can be recreated.
 }	
 
+//updates coffeeMachineState and set Sum label and change Image 
 -(void)updateCoffeeMachineState{
-    if(willGetDrink){
-        
+    if(willGetDrink){   //if customer will get drink
         float numChange =(float)[change sumOfCoins] / 100;
         NSLog(@"font must be changed");
         if(numChange != 0){
@@ -75,7 +71,7 @@
         [coffeeMachineState.coins add:userCoins];
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
-    else {
+    else {  // if customer woun't get drink, he had cancelled the order
         self.readyDrinkImg.hidden = YES;
         float numChange =(float)[userCoins sumOfCoins] / 100;
         self.changeLbl.text =  [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
@@ -85,15 +81,13 @@
     
 }
 
+//switching back to DrinkListFlow with animations
 - (IBAction)backToDrinkListFlow:(id)sender {
-    
-        //[self.navigationController popToRootViewControllerAnimated:YES];
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
     [UIView commitAnimations];
-    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDelay:0.375];
     [self.navigationController popToRootViewControllerAnimated:NO];
@@ -102,7 +96,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [self.coffeeMachineState saveStateToFile];
+    [self.coffeeMachineState saveStateToFile];//saving coffeeMachinetate into file 
 }
 
 
