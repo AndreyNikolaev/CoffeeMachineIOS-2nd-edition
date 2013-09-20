@@ -28,7 +28,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"admCoffee.jpg"]];
+ // Custom initialization
     }
     return self;
 }
@@ -36,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -53,7 +55,7 @@
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
     orderFinalizeFlow.willGetDrink=YES;
-    [self presentViewController: orderFinalizeFlow animated:YES completion:nil];
+    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
 }
 
 - (IBAction)switchToDrinkListFlow:(id)sender {
@@ -63,7 +65,7 @@
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
     orderFinalizeFlow.willGetDrink=NO;
-    [self presentViewController: orderFinalizeFlow animated:YES completion:nil];
+    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
 }
 
 @end
