@@ -48,7 +48,6 @@
 {
     [super viewDidLoad];
     [self updateCoffeeMachineState];
-   // self.changeImgView.hidden = YES;
     [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
     self.navigationItem.leftBarButtonItem = backButton;
@@ -68,9 +67,9 @@
         NSLog(@"font must be changed");
         if(numChange != 0){
             self.changeLbl.text = [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
-            self.changeImgView.hidden = NO;
             self.changeLbl.backgroundColor = [UIColor blueColor];
-        }
+        }else
+        {self.changeImgView.hidden = YES;}
         [coffeeMachineState.coins add:userCoins];
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
