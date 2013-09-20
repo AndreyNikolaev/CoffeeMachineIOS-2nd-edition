@@ -101,7 +101,8 @@
     [sumLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
 }
 
-- (void) switchMenu {  
+- (void) switchMenu
+{
     if( userCoins.sumOfCoins >= selectedDrink.price){
         int test = [userCoins sumOfCoins] - selectedDrink.price;
         Withdraw* withdraw = [[Withdraw alloc]init];
@@ -142,7 +143,8 @@
 }
 
 
--(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
+-(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
+{
     SoundPlayer* sound = [[SoundPlayer alloc]init];
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
@@ -222,7 +224,6 @@
 
             }
         }];
-
 }
 -(void)rotateImageBack: (UIImageView*) image
 {
@@ -236,9 +237,6 @@
         }
     }];
 }
-
-
-
 
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");

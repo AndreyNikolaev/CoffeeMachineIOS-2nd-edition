@@ -30,7 +30,6 @@
 @synthesize changeImgView;
 @synthesize readyDrinkImg;
 
-//@synthesize  drinkLbl;
 @synthesize changeLbl;
 
 
@@ -87,7 +86,6 @@
 
 - (IBAction)backToDrinkListFlow:(id)sender {
     
-        //[self.navigationController popToRootViewControllerAnimated:YES];
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];

@@ -21,5 +21,4 @@ NSInteger globalPrice;
 @property(strong, nonatomic) UIAlertView *alertView;
 -(IBAction)goToAdministrationFlow:(id)sender;
 
--(void)validateUsernameAndPassword;
 @end

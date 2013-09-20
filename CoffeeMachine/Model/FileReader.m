@@ -12,7 +12,6 @@
 @synthesize fileName;
 -(NSDictionary*)getDictAtIndex:(int) index
 {
-   // NSString* sourcePath = [[NSBundle mainBundle] pathForResource:filePath ofType:@"plist"];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
    
     NSString *documentsDirectory = [paths objectAtIndex:0];
