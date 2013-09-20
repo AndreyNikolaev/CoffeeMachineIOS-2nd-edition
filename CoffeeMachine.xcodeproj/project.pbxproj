@@ -21,8 +21,9 @@
 		5A4FD4DA17EB27A5006F65DE /* dropCoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4D917EB27A5006F65DE /* dropCoin.mp3 */; };
 		5A4FD4DD17EB2D50006F65DE /* coinBack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4DB17EB2D50006F65DE /* coinBack.mp3 */; };
 		5A4FD4DE17EB2D50006F65DE /* selectCoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4DC17EB2D50006F65DE /* selectCoin.mp3 */; };
-		5A4FD4E017EB3284006F65DE /* backImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4DF17EB3284006F65DE /* backImg.jpg */; };
 		5A4FD4E217EB328A006F65DE /* yourChange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4E117EB328A006F65DE /* yourChange.jpg */; };
+		5A4FD4E417EC42D1006F65DE /* backImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4E317EC42D1006F65DE /* backImg.jpg */; };
+		5A4FD4EA17EC61CD006F65DE /* readyDrink-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FD4E917EC61CD006F65DE /* readyDrink-1.jpg */; };
 		5AB3D56817EB219500BF73E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB3D56717EB219500BF73E4 /* AudioToolbox.framework */; };
 		5AD129DF17B23A7700094D01 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129DE17B23A7700094D01 /* Coin.m */; };
 		5AD129E217B23AAE00094D01 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD129E117B23AAE00094D01 /* Drink.m */; };
@@ -87,8 +88,9 @@
 		5A4FD4D917EB27A5006F65DE /* dropCoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dropCoin.mp3; sourceTree = "<group>"; };
 		5A4FD4DB17EB2D50006F65DE /* coinBack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinBack.mp3; sourceTree = "<group>"; };
 		5A4FD4DC17EB2D50006F65DE /* selectCoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = selectCoin.mp3; sourceTree = "<group>"; };
-		5A4FD4DF17EB3284006F65DE /* backImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backImg.jpg; sourceTree = "<group>"; };
 		5A4FD4E117EB328A006F65DE /* yourChange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yourChange.jpg; sourceTree = "<group>"; };
+		5A4FD4E317EC42D1006F65DE /* backImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backImg.jpg; sourceTree = "<group>"; };
+		5A4FD4E917EC61CD006F65DE /* readyDrink-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "readyDrink-1.jpg"; sourceTree = "<group>"; };
 		5AB3D56717EB219500BF73E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5AD129DD17B23A7700094D01 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		5AD129DE17B23A7700094D01 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
@@ -269,8 +271,8 @@
 				5A0A86D317DF3CF0002972A1 /* 50.gif */,
 				5A0A86D417DF3CF0002972A1 /* lev.gif */,
 				5A43FF8217DE07B200A90043 /* coffee-back.png */,
-				5A4FD4DF17EB3284006F65DE /* backImg.jpg */,
 				5A4FD4E117EB328A006F65DE /* yourChange.jpg */,
+				5A4FD4E917EC61CD006F65DE /* readyDrink-1.jpg */,
 				5A43FF8017DE068A00A90043 /* kafe-1.png */,
 				5A43FF7E17DE066500A90043 /* test.jpg */,
 				5AFED40917D870A1009FD69F /* bag.jpg */,
@@ -283,6 +285,7 @@
 				5AD7999517CE26B0007E5EB7 /* coffee.jpg */,
 				5AFED40D17D8AE74009FD69F /* lev.jpg */,
 				5AFED40E17D8AE74009FD69F /* 50.jpg */,
+				5A4FD4E317EC42D1006F65DE /* backImg.jpg */,
 				5AFED40F17D8AE74009FD69F /* 20.jpg */,
 				5AFED41017D8AE74009FD69F /* 10.jpg */,
 				5AFED41117D8AE74009FD69F /* 5.jpg */,
@@ -388,8 +391,9 @@
 				5A4FD4DA17EB27A5006F65DE /* dropCoin.mp3 in Resources */,
 				5A4FD4DD17EB2D50006F65DE /* coinBack.mp3 in Resources */,
 				5A4FD4DE17EB2D50006F65DE /* selectCoin.mp3 in Resources */,
-				5A4FD4E017EB3284006F65DE /* backImg.jpg in Resources */,
 				5A4FD4E217EB328A006F65DE /* yourChange.jpg in Resources */,
+				5A4FD4E417EC42D1006F65DE /* backImg.jpg in Resources */,
+				5A4FD4EA17EC61CD006F65DE /* readyDrink-1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

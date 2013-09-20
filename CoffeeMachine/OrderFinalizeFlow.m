@@ -28,6 +28,7 @@
 @synthesize willGetDrink;
 @synthesize backImg;
 @synthesize changeImgView;
+@synthesize readyDrinkImg;
 
 //@synthesize  drinkLbl;
 @synthesize changeLbl;
@@ -63,6 +64,7 @@
 
 -(void)updateCoffeeMachineState{
     if(willGetDrink){
+        
         float numChange =(float)[change sumOfCoins] / 100;
         NSLog(@"font must be changed");
         if(numChange != 0){
@@ -74,7 +76,9 @@
         [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
     }
     else {
-        self.changeLbl.text=userCoins.description;
+        self.readyDrinkImg.hidden = YES;
+        float numChange =(float)[userCoins sumOfCoins] / 100;
+        self.changeLbl.text =  [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
         self.changeImgView.hidden = NO;
         self.changeLbl.backgroundColor = [UIColor blueColor];
          }
