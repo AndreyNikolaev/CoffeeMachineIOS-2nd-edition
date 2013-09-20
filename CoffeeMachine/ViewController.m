@@ -23,7 +23,7 @@
 
 @implementation ViewController
 
-@synthesize itemsArray = _itemsArray;
+@synthesize itemsArrayDrinks = _itemsArrayDrinks;
 @synthesize tableView = _tableView;
 @synthesize coffeeMachineState=_coffeeMachineState;
 @synthesize alertView=_alertView;
@@ -55,7 +55,7 @@
         [self.coffeeMachineState setCurrentDrinksAmount:drinks];
         self.coffeeMachineState.coins = moneyAmount;
     }
-    _itemsArray=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
+    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
     _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinkPrices]];
 
 
@@ -74,7 +74,7 @@
 #pragma mark === UITableView data source & delegate ===
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _itemsArray.count;
+    return _itemsArrayDrinks.count;
 }
 
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -92,12 +92,12 @@
 
     }
         
-    NSUInteger count = [_itemsArray count];
+    NSUInteger count = [_itemsArrayDrinks count];
     NSString* currentDrinkPrice = [[NSString alloc]init];
     for (NSUInteger i = 0; i < count; i++) {
         if(indexPath.row==i){
 
-            NSString *currentDrink = [_itemsArray objectAtIndex: i];
+            NSString *currentDrink = [_itemsArrayDrinks objectAtIndex: i];
             currentDrinkPrice = [_itemsArayDrinkPrices objectAtIndex: i];
             cell.textLabel.text=currentDrink;
          //   cell.detailTextLabel.text = currentDrinkPrice;
@@ -129,7 +129,7 @@
     PaymentFlow *paymentFlow = [[PaymentFlow alloc] init];
     paymentFlow.coffeeMachineState=_coffeeMachineState;
 
-    NSString * tabTitle = [[NSString alloc]initWithString:_itemsArray[indexPath.row]];
+    NSString * tabTitle = [[NSString alloc]initWithString:_itemsArrayDrinks[indexPath.row]];
     tabTitle = [tabTitle stringByAppendingString:@"  "];
     tabTitle = [tabTitle stringByAppendingString:_itemsArayDrinkPrices[indexPath.row]];
     paymentFlow.title = tabTitle;
