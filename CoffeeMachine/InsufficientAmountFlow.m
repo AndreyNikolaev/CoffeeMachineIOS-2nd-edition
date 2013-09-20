@@ -22,6 +22,7 @@
 @synthesize cancelOrderBtn;
 @synthesize makeDrinkBtn;
 @synthesize userCoins;
+@synthesize notEnCoins;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,8 +38,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view from its nib.
+    self.notEnCoins.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]; // changing style of label
+    self.notEnCoins.shadowColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,25 +48,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)switchToFinalizeFlow:(id)sender {
-    
+
+//switch to finalize flow, type: "make drink, don't return coins
+- (IBAction)switchToFinalizeFlow:(id)sender {     
     OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
     orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
-    orderFinalizeFlow.willGetDrink=YES;
+    orderFinalizeFlow.willGetDrink=YES;// shows to orderFinalizeFlow that the custumer woun't get drink
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
     [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
+
 }
 
+//switch to finalize flow, type: "don't make drink, return my coins", the name of method is bad, must be changed
 - (IBAction)switchToDrinkListFlow:(id)sender {
     OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
     orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins=self.userCoins;
-    orderFinalizeFlow.willGetDrink=NO;
+    orderFinalizeFlow.willGetDrink=NO; // shows to orderFinalizeFlow that the custumer woun't get drink
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
     [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
 }
 
 @end
