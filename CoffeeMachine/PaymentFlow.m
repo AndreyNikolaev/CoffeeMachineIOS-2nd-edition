@@ -56,7 +56,7 @@
     userCoins=[[MoneyAmount alloc]init];
    
    }
- 
+ //on start moving
 -(void) moveCoin: (UIImageView*) image
 {   
     self.oldCoinPosition = image.center;
@@ -68,7 +68,7 @@
     
 }
 
-
+//when dragged coin is over the slot image
 -(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImage
 {
     BOOL flag = YES;
@@ -92,6 +92,7 @@
     [[self navigationController ]setNavigationBarHidden:NO animated:YES];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 -(void)setCoinInUserCoins:(int)coinValue
 {
     Coin *userCoin=[[Coin alloc]init];
@@ -100,7 +101,7 @@
     sumLbl.text=[NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
     [sumLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
 }
-
+// switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 
 - (void) switchMenu
 {
     if( userCoins.sumOfCoins >= selectedDrink.price){
@@ -175,7 +176,7 @@
    }
 }
 
-
+//updating sum of inserted coins
 -(void)updateSum: (UIImageView*) image {
     
     if (image == fiveImg){
@@ -208,7 +209,7 @@
 }
 
 
-
+//animated rotation of image 
 -(void)rotateImage: (UIImageView*) image 
 {
 
@@ -226,7 +227,7 @@
         }];
 }
 
-
+//rotate image back to original size 
 -(void)rotateImageBack: (UIImageView*) image
 {
     [UIView animateWithDuration:0.0 animations:^{
@@ -239,7 +240,7 @@
         }
     }];
 }
-
+//moving image back to original position
 -(void)moveImageBack :(UIImageView*)image {
     NSLog(@"test");
     image.center = self.oldCoinPosition;
@@ -248,6 +249,7 @@
     [image.layer setValue:@0.9 forKeyPath:@"transform.scale.y"];
     } completion:nil];
 }
+// creating a new subview of a coin image
 -(void)addImageSubView: (UIImageView*) image {
     if(image == fiveImg || image == tenImg || image == twentyImg || image == fiftyImg || image == levImg) {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
