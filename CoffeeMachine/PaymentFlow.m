@@ -54,7 +54,7 @@
     userCoins=[[MoneyAmount alloc]init];
    
    }
-    
+ 
 -(void) moveCoin: (UIImageView*) image
 {   
     self.oldCoinPosition = image.center;
@@ -223,6 +223,8 @@
             }
         }];
 }
+
+
 -(void)rotateImageBack: (UIImageView*) image
 {
     [UIView animateWithDuration:0.0 animations:^{
