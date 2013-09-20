@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *backImg;
 @property UIImageView* explosion;
 @property (strong, nonatomic) IBOutlet UIImageView *changeImgView;
+@property (strong, nonatomic) IBOutlet UIImageView *readyDrinkImg;
 
 
 @property Drink* selectedDrink;
