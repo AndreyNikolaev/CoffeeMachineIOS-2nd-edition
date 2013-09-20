@@ -17,10 +17,7 @@
 @property CoffeeMachineState* coffeeMachineState;
 @property NSIndexPath* tableIndexPath;
 
-
-
 - (IBAction)loadPlistFromURL:(id)sender;
-- (void) refreshTableView;
 
 
 

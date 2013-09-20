@@ -25,7 +25,6 @@
         initialDrinksAmount=[[DrinksContainer alloc]init ];
         NSMutableArray* currentDrinks=[[NSMutableArray alloc]initWithArray:[currentDrinksAmount getDrinks]];
         for(int i=0;i<[currentDrinks count];i++){
-           // [initialDrinksAmount addDrink:<#(Drink *)#> quantity:<#(NSUInteger)#>:[currentDrinks objectAtIndex:i]];
         }
         [initialDrinksAmount commit];
         

@@ -134,10 +134,6 @@
     tabTitle = [tabTitle stringByAppendingString:_itemsArayDrinkPrices[indexPath.row]];
     paymentFlow.title = tabTitle;
     
-   
-    
-
-    //paymentFlow.title = _itemsArray[indexPath.row];
     tempDrinkContainer=_coffeeMachineState.currentDrinksAmount;
     NSArray* tempDrinksArray=[[NSArray alloc]initWithArray:[tempDrinkContainer getDrinks]];
     paymentFlow.selectedDrink=[tempDrinksArray objectAtIndex:indexPath.row];
@@ -150,7 +146,6 @@
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
     [UIView commitAnimations];
     
-   // [self.navigationController pushViewController:paymentFlow animated:YES];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
     
@@ -183,10 +178,6 @@
     }
     
 }
--(void)validateUsernameAndPassword {
-   
-}
- 
 
 -(IBAction)goToAdministrationFlow:(id)sender {
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Login"message:nil delegate:self cancelButtonTitle: @"Cancel"otherButtonTitles:@"Ok", nil];
