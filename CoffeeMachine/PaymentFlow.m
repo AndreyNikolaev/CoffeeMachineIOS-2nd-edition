@@ -55,19 +55,19 @@
    
    }
  //on start moving
--(void) moveCoin: (UIImageView*) image
+-(void) moveCoin: (UIView*) image
 {   
     self.oldCoinPosition = image.center;
     [self addImageSubView:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    [panGesture setDelegate:self];
+   // [panGesture setDelegate:self];
     [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
     
 }
 
 //when dragged coin is over the slot image
--(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImage
+-(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage
 {
     BOOL flag = YES;
     if(coinImage.center.x < slotImg.center.x - 20) flag = false;
@@ -158,7 +158,7 @@
     [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
     if([recognizer state] == UIGestureRecognizerStateEnded){
         
-        if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
+        if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg]){ // when the coin is near the slot
             recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
             [self rotateImage:recognizer.view];
             
@@ -226,7 +226,7 @@
 }
 
 //rotate image back to original size 
--(void)rotateImageBack: (UIImageView*) image
+-(void)rotateImageBack: (UIView*) image
 {
     [UIView animateWithDuration:0.0 animations:^{
        [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];

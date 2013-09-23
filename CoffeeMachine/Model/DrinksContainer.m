@@ -23,7 +23,7 @@
     }
     return self;
 }
-
+//adding a new drink and quantity into drinks dictionary
 - (void)addDrink:(Drink *)drink quantity:(NSUInteger)quantity
 {
     BOOL drinkFound = NO;
@@ -39,6 +39,8 @@
         [self.drinks setObject:@(quantity) forKey:drink];
     }
 }
+
+//adding a drink into drinks dictionary
 - (void)addDrinkForFromPlist:(Drink *)drink quantity:(NSUInteger)quantity
 {
     BOOL drinkFound = NO;
@@ -60,11 +62,13 @@
 {
     return self.additionClosed;
 }
+//get all keys of drinks dictionary
 -(NSArray*)getDrinks
 {   NSArray* tempDrinks=[[NSArray alloc]initWithArray:[self.drinks allKeys]];
     return tempDrinks;
 }
 
+//get all drink names as string
 -(NSMutableArray*)getStringDrinks
 {
     NSMutableArray* stringOfDrinksArray=[[NSMutableArray alloc]init];
@@ -76,6 +80,7 @@
     return stringOfDrinksArray;
 }
 
+// get all drink prices as string
 -(NSMutableArray*)getStringDrinkPrices
 {
     NSMutableArray* stringOfDrinksArray=[[NSMutableArray alloc]init];
@@ -87,7 +92,7 @@
     return stringOfDrinksArray;
 }
 
-
+// get drink name and quantity as string
 -(NSMutableArray*)drinkNameAndQuantityToString
 {
     NSMutableArray* drinkNameAndQuantity=[[NSMutableArray alloc]init];
@@ -97,32 +102,6 @@
     }
     
     return drinkNameAndQuantity;
-}
-
--(void)setSomeDrinks // test function
-{
-    Drink* drink1;
-    Drink* drink2;
-    Drink* drink3;
-    Drink* drink4;
-    drink1 = [[Drink alloc]init];
-    drink2 = [[Drink alloc]init];
-    drink3 = [[Drink alloc]init];
-    drink4 = [[Drink alloc]init];
-    drink1.name=@"Coffee";
-    drink1.price=30;
-    drink2.name=@"Tea";
-    drink2.price=20;
-    drink3.name=@"Long Coffßee";
-    drink3.price=40;
-    drink4.name=@"Hot Choko";
-    drink4.price=50;
-    [self addDrink:drink1 quantity:100];
-    [self addDrink:drink2 quantity:100];
-    [self addDrink:drink3 quantity:100];
-    [self addDrink:drink4 quantity:100];
-    
-    
 }
 
 -(DrinksContainer*)commit
@@ -137,7 +116,6 @@
     
     for (Drink *storedDrink in [self.drinks allKeys]) {
         if ([searchedDrink.name isEqualToString:storedDrink.name]) {
-            //quantity = (unsigned)[self.drinks valueForKey:storedDrink.name];
             break;
         }
     }
@@ -146,6 +124,7 @@
     return quantity;
 }
 
+//decreasing drink quantity
 -(void)decreaseDrinkAmount:(Drink *)selectedDrink
 {
     for (Drink *storedDrink in [self.drinks allKeys]) {
@@ -172,7 +151,7 @@
         i++;
     }
 }
-
+//getting array of dictionaries of drink names and quantities
 -(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts
 {
     NSMutableArray* drinksArray = [[NSMutableArray alloc]init];
@@ -193,7 +172,6 @@
 
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    //[encoder encodeObject:self.drinks  forKey:@"DrinksContainer"];
     [encoder encodeObject:[self.drinks allKeys]forKey:@"Drinks"];
     [encoder encodeObject:[self.drinks allValues] forKey:@"Amounts"];
 }
@@ -202,7 +180,6 @@
     self = [super init];
     if (self) {
     [self.drinks setObject:[coder decodeObjectForKey:@"Amounts"] forKey:[coder decodeObjectForKey:@"Drinks"]];
-       // self.drinks =[coder decodeObjectForKey:@"DrinksContainer"];
     }
     return self;
 }

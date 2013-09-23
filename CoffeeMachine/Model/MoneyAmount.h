@@ -11,22 +11,21 @@
 
 @class Withdraw;
 
-@interface MoneyAmount : NSObject<NSCopying>
+@interface MoneyAmount : NSObject
 
 @property(strong)NSMutableDictionary *coins ;
 
 
 -(MoneyAmount *)add:(Coin*) c : (int) count;
 -(MoneyAmount *)add:(MoneyAmount*)mAmount;
--(MoneyAmount *)addForFromPlist:(MoneyAmount*)mAmount;
 -(Withdraw *)withdraw:(int)amount;
--(NSMutableArray *)getSortedCoinTypes;
+-(NSArray *)getSortedCoinTypes;
 -(void)getCoins:(Coin *)c : (int)count;
 -(NSString *)description;
 -(int)sumOfCoins;
 - (void)addCoin:(Coin *)coin amount:(NSUInteger)amount;
--(void)setSomeCoins;
 -(NSMutableArray *)coinsAmountToString;
 -(void)loadCoinsFromPlist;
 -(NSMutableDictionary *)coinsValueAndAmount;
+- (void)addCoinForFromPlist:(Coin *)coin amount:(NSUInteger)amount;
 @end

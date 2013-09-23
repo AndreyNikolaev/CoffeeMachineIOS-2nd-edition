@@ -17,21 +17,17 @@
 
 - (void)addDrink:(Drink *)drink quantity:(NSUInteger)quantity;
 - (void)addDrinkForFromPlist:(Drink *)drink quantity:(NSUInteger)quantity;
--(NSUInteger*)getDrinkQuantity:(Drink*) drink;
--(void)decreaseDrinkAmount:(Drink*) drink;
--(NSMutableArray*)getDrinks;
+-(NSUInteger*)getDrinkQuantity:(Drink*) searchedDrink;
+-(void)decreaseDrinkAmount:(Drink*) selectedDrink;
+-(NSArray*)getDrinks;
 -(NSMutableArray*)getStringDrinks;
--(void)setSomeDrinks;
 -(DrinksContainer*)commit;
 -(NSMutableArray *)drinkNameAndQuantityToString;
 -(void)loadDrinksFromPlist;
--(void)saveDrinksToPlist;
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)coder;
-- (void) save:(DrinksContainer*)drinksContainer;
-- (DrinksContainer*) load;
 -(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts;
 -(NSMutableArray*)getStringDrinkPrices;
-
+-(BOOL)isAdditionClosed;
 
 @end

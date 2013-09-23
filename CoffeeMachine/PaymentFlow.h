@@ -38,11 +38,11 @@ NSString *result;
 
 
 
--(void)rotateImage: (UIImageView*) image;
+-(void)rotateImage: (UIView*) image;
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
--(void) moveCoin: (UIImageView*) image;
+-(void) moveCoin: (UIView*) image;
 -(void)addImageSubView: (UIImageView*) image;
--(BOOL)didCoinImageIsInSlotImg: (UIImageView*)coinImage: (UIImageView*)slotImage;
+-(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage;
 -(void)updateSum: (UIImageView*) image;
 -(void)moveImageBack :(UIImageView*)image;
 -(void)rotateImageBack: (UIImageView*) image;
