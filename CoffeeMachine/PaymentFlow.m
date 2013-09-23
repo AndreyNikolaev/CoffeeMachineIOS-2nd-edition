@@ -251,7 +251,7 @@
 -(void)addImageSubView: (UIImageView*) image {
     if(image == fiveImg || image == tenImg || image == twentyImg || image == fiftyImg || image == levImg) {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
-    CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);
+    CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);                        //we have questions about positioning new image view 
     iv.center = image.center;
     iv.frame = imageframe;
     [[image superview] addSubview:iv];
