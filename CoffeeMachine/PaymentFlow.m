@@ -146,32 +146,30 @@
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
     }
+    
     if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-    if([recognizer state] == UIGestureRecognizerStateEnded){
-<<<<<<< HEAD
-       if([self didCoinImageIsInSlotImg:recognizer.view :slotImg]){ // when the coin is near the slot
-=======
+        CGPoint translation = [recognizer translationInView:recognizer.view];
         
-        if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg]){ // when the coin is near the slot
->>>>>>> 9afe26a880e6a9ced80e95322dbe1d903baa0945
-            recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
-            [self rotateImage:recognizer.view];
+        recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
+        
+        [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+        if([recognizer state] == UIGestureRecognizerStateEnded){
             
-            sound.fileName = @"dropCoin";
+            if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg]){ // when the coin is near the slot
+                recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
+                [self rotateImage:recognizer.view];
+                
+                sound.fileName = @"dropCoin";
+                sound.fileType = @"mp3";
+                [sound play];
+            }
+            else  recognizer.view.center = oldCoinPosition;
+            sound.fileName = @"coinBack";
             sound.fileType = @"mp3";
             [sound play];
-        }   
-        else  recognizer.view.center = oldCoinPosition;
-        sound.fileName = @"coinBack";
-        sound.fileType = @"mp3";
-        [sound play];
+        }
     }
-   }
 }
-
 //updating sum of inserted coins
 -(void)updateSum: (UIImageView*) image {
     
