@@ -26,13 +26,14 @@
 
 
 
-
+//adding a coin into coins dictionary
 -(MoneyAmount *)add:(Coin *)c : (int)count {
     [self.coins setObject:[NSNumber numberWithInteger:count] forKey:c];
     return self;
 
 }
 
+//adding a coin 
 - (void)addCoinForFromPlist:(Coin *)coin amount:(NSUInteger)amount {
     BOOL coinFound = NO;
     for (Coin *storedCoin in [self.coins allKeys]) {
@@ -47,6 +48,7 @@
         [self.coins setObject:@(amount) forKey:coin];
     }
 }
+// adding a MoneyAmount into coins dictionary
 -(MoneyAmount *)add:(MoneyAmount*)mAmount {
     for(Coin* coin in [self.coins allKeys]){
         for (Coin *updatedCoin in [mAmount.coins allKeys]) {
@@ -61,7 +63,7 @@
     return self;
 }
 
-
+//adding a coin and its amount
 - (void)addCoin:(Coin *)coin amount:(NSUInteger)amount
 {
     BOOL coinFound = NO;
@@ -79,13 +81,13 @@
 }
 
 
-
--(NSMutableArray*)getSortedCoinTypes{
+// sorting all coins in desc order
+-(NSArray*)getSortedCoinTypes{
     
-    NSMutableArray *availableCoinTypes = [[NSMutableArray alloc]initWithArray:[coins allKeys]];
+    NSArray *availableCoinTypes = [[NSArray alloc]initWithArray:[coins allKeys]];
     availableCoinTypes=[availableCoinTypes sortedArrayUsingSelector:@selector(compare:)];
     availableCoinTypes=[[availableCoinTypes reverseObjectEnumerator] allObjects];
-    NSLog(@"Sorted Array: %@", [availableCoinTypes description]);
+    //NSLog(@"Sorted Array: %@", [availableCoinTypes description]);
     return availableCoinTypes;
 
 }
@@ -134,6 +136,7 @@
     return withdraw;
     
 }
+
 -(void)getCoins:(Coin *)coin :(int)count{
     int availableCoins=[self.coins[coin] intValue];
     if(availableCoins >= count){
@@ -150,7 +153,7 @@
     NSLog(@"description: %@",stringCoins);
        return stringCoins;
 }
-
+// accumulate sum of coins 
 -(int)sumOfCoins
 {
    int amount=0;
@@ -161,7 +164,7 @@ amount+=coin.value*[self.coins[coin] integerValue];
     return amount;
 }
 
-
+// get coins amount as string
 -(NSMutableArray *)coinsAmountToString {
     NSMutableArray* coinsAmount=[[NSMutableArray alloc]init];
     for (Coin *coin in [self.coins allKeys]) {
@@ -187,6 +190,8 @@ amount+=coin.value*[self.coins[coin] integerValue];
     }
     
 }
+
+// get coins and their amounts 
 -(NSMutableDictionary *)coinsValueAndAmount {
     NSMutableDictionary* coinsValueAndAmount = [[NSMutableDictionary alloc]init];
     for(Coin *coin in [self.coins allKeys]){
