@@ -114,13 +114,8 @@
             orderFinalizeFlow.change = withdraw.change;
             orderFinalizeFlow.userCoins = self.userCoins;
             orderFinalizeFlow.willGetDrink = YES;
+            [self animatedSwitchMenu:orderFinalizeFlow];
             
-            [UIView  beginAnimations:nil context:NULL];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            [UIView setAnimationDuration:0.75];
-            [self.navigationController pushViewController:orderFinalizeFlow animated:NO];
-            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
-            [UIView commitAnimations];
         }
         else{
             InsufficientAmountFlow *insAmountFlow=[[InsufficientAmountFlow alloc]initWithNibName:@"InsufficientAmountFlow" bundle:nil];
@@ -128,20 +123,22 @@
             insAmountFlow.selectedDrink = self.selectedDrink;
             insAmountFlow.change = withdraw.change;
             insAmountFlow.userCoins = self.userCoins;
-            [UIView  beginAnimations:nil context:NULL];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            [UIView setAnimationDuration:0.75];
-            [self.navigationController pushViewController:insAmountFlow animated:NO];
-      
-            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
-            [UIView commitAnimations];
-        }
+            [self animatedSwitchMenu:insAmountFlow];        }
         
       
     }
 }
 
-
+-(void)animatedSwitchMenu: (id)flow
+{
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
+    [self.navigationController pushViewController:flow animated:NO];
+    
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
+}
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
     SoundPlayer* sound = [[SoundPlayer alloc]init];
@@ -149,31 +146,30 @@
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
     }
-
+    
     if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    
-    recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-    
-    [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-    if([recognizer state] == UIGestureRecognizerStateEnded){
+        CGPoint translation = [recognizer translationInView:recognizer.view];
         
-        if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg]){ // when the coin is near the slot
-            recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
-            [self rotateImage:recognizer.view];
+        recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
+        
+        [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+        if([recognizer state] == UIGestureRecognizerStateEnded){
             
-            sound.fileName = @"dropCoin";
+            if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg]){ // when the coin is near the slot
+                recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
+                [self rotateImage:recognizer.view];
+                
+                sound.fileName = @"dropCoin";
+                sound.fileType = @"mp3";
+                [sound play];
+            }
+            else  recognizer.view.center = oldCoinPosition;
+            sound.fileName = @"coinBack";
             sound.fileType = @"mp3";
             [sound play];
-        }   
-        else  recognizer.view.center = oldCoinPosition;
-        sound.fileName = @"coinBack";
-        sound.fileType = @"mp3";
-        [sound play];
+        }
     }
-   }
 }
-
 //updating sum of inserted coins
 -(void)updateSum: (UIImageView*) image {
     
@@ -207,12 +203,10 @@
 }
 
 
-//animated rotation of image 
+//animated rotation of image
 -(void)rotateImage: (UIImageView*) image 
 {
-
         [UIView animateWithDuration:0.5 animations:^{
-
             [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
             [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
                                                     } completion:^(BOOL finished){
@@ -220,7 +214,6 @@
                 [self moveImageBack:image];
                 [self rotateImageBack:image];
                 [self updateSum:image];
-
             }
         }];
 }
@@ -240,7 +233,6 @@
 }
 //moving image back to original position
 -(void)moveImageBack :(UIImageView*)image {
-    NSLog(@"test");
     image.center = self.oldCoinPosition;
     [UIView animateWithDuration:0 animations:^{
     [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
