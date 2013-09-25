@@ -40,6 +40,8 @@
     [super viewDidLoad];
     self.notEnCoins.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]; // changing style of label
     self.notEnCoins.shadowColor = [UIColor blackColor];
+    [self.navigationItem.leftBarButtonItem setEnabled:NO];
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
