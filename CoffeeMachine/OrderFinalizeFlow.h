@@ -13,6 +13,7 @@
 @class CoffeeMachineState;
 
 @interface OrderFinalizeFlow : UIViewController
+
 @property (strong, nonatomic) IBOutlet UILabel *changeLbl;
 @property (strong, nonatomic) IBOutlet UIButton *backToDrinkList;
 @property (strong, nonatomic) IBOutlet UIImageView *backImg;
@@ -20,8 +21,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *changeImgView;
 @property (strong, nonatomic) IBOutlet UIImageView *readyDrinkImg;
 @property (strong, nonatomic) IBOutlet UILabel *infoDrinkLbl;
-
-
 @property Drink* selectedDrink;
 @property MoneyAmount* change;
 @property MoneyAmount* userCoins;

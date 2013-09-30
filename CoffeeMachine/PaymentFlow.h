@@ -14,29 +14,20 @@
 @class Drink;
 @class MoneyAmount;
 
-int sum;
-NSString *result;
-
 @interface PaymentFlow : UIViewController 
 
 @property (strong) CoffeeMachineState *coffeeMachineState;
 @property (strong) Drink *selectedDrink;
 @property (strong) MoneyAmount *userCoins;
-
 @property (strong, nonatomic) IBOutlet UIImageView *coinImg;
 @property (strong, nonatomic) IBOutlet UIImageView *tenImg;
 @property (strong, nonatomic) IBOutlet UIImageView *twentyImg;
 @property (strong, nonatomic) IBOutlet UIImageView *levImg;
-
 @property  CGPoint oldCoinPosition;
-
 @property (strong, nonatomic) IBOutlet UIImageView *fiftyImg;
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 @property (strong, nonatomic) IBOutlet UIImageView *slotImg;
-
-
-
 
 -(void)rotateImage: (UIView*) image;
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;

@@ -12,7 +12,6 @@
 @class CoffeeMachineState;
 @class Drink;
 
-
 @interface InsufficientAmountFlow : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *makeDrinkBtn;
@@ -25,5 +24,8 @@
 
 - (IBAction)switchToFinalizeFlow:(id)sender;
 - (IBAction)switchToDrinkListFlow:(id)sender;
+
+
+
 
 @end

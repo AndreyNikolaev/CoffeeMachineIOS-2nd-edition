@@ -18,10 +18,6 @@
 @implementation AdministrationFlow
 
 
-
-
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,26 +38,27 @@
 }
 
 
-- (NSInteger)numberOfSectionsInTableView :(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView :(UITableView *)tableView
+{
     return 2;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if(section == 0){
-        return self.drinksStringArray.count;
+        return _drinksStringArray.count;
     }else{
         return _moneyAmount.count;
     }
 }
 
-- (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     self.tableIndexPath = indexPath;
-    
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"cell"];
     if(cell==nil){
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
+        cell=[[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
     }
-    
     UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
     av.backgroundColor = [UIColor clearColor];
     av.opaque = NO;
@@ -70,42 +67,27 @@
         NSUInteger count = [self.drinksStringArray count];
         for (NSUInteger i = 0; i < count; i++) {
             if(indexPath.row==i){
-                
                 NSString *current = [self.drinksStringArray objectAtIndex: i];
                 cell.textLabel.text=current;
                 cell.backgroundView = av;
-                
                 UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
                 imgView.image = [UIImage imageNamed:@"kafe-1.png"];
                 cell.imageView.image = imgView.image;
-                
             }
-            
         } return cell;
     } else {
         NSUInteger count = [_moneyAmount count];
         for (NSUInteger i = 0; i < count; i++) {
-            if(indexPath.row==i){
-                
+            if(indexPath.row == i){
                 NSString *current = [_moneyAmount objectAtIndex: i];
                 cell.textLabel.text=current;
                 cell.backgroundView = av;
-                
                 UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
                 imgView.image = [UIImage imageNamed:@"emptyCoin.png"];
                 cell.imageView.image = imgView.image;
-                
             }
-            
         } return cell;
-        
     }
-}
-
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -123,20 +105,15 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:PLIST_FILENAME];
     [[NSData dataWithContentsOfURL:[NSURL URLWithString:PLIST_URL]] writeToFile:path atomically:YES];
-    
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
-    
-    
     MoneyAmount *mAmount = [[MoneyAmount alloc]init];
     mAmount=self.coffeeMachineState.coins;
     _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
-    
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
     soldDrinks=self.coffeeMachineState.currentDrinksAmount;
     self.drinksStringArray = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantity];
     [self.tableView reloadData];
-    
 }
 
 
