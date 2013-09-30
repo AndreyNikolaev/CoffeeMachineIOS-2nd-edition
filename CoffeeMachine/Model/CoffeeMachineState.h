@@ -11,17 +11,11 @@
 #import "DrinksContainer.h"
 @interface CoffeeMachineState : NSObject
 
-    @property(strong)MoneyAmount* coins;
-    @property(strong)DrinksContainer* currentDrinksAmount;
-    @property(strong)DrinksContainer* initialDrinksAmount;
+@property(strong)MoneyAmount* coins;
+@property(strong)DrinksContainer* currentDrinksAmount;
 
-
-//-(MoneyAmount*) getCoins;
--(void)setCoins:(MoneyAmount*)newCoins;
--(DrinksContainer*) getCurrentDrinks;
--(DrinksContainer*) getInitialDrinks;
--(NSMutableArray*)getFiltratedDrinks;
+-(DrinksContainer*) currentDrinks;
+-(NSMutableArray*)filtratedDrinks;
 -(void)saveStateToFile;
-
 
 @end

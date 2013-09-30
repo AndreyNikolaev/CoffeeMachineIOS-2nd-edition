@@ -10,10 +10,10 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Coin : NSObject<NSCopying>
+@interface Coin : NSObject <NSCopying>
 
 @property int value;
+
 - (NSComparisonResult)compare:(Coin *)otherObject;
-- (BOOL)isEqual:(Coin*)other;
-- (NSUInteger)hash;
+
 @end

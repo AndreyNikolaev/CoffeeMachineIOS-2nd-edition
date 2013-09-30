@@ -11,6 +11,7 @@
 @interface FileWriter : NSObject
 
 @property(strong) NSString *fileName;
+
 -(void)saveToPlist : (NSArray *)arrayToSave ;
 
 @end

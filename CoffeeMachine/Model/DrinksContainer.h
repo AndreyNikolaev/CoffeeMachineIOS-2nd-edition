@@ -13,21 +13,17 @@
 @interface DrinksContainer : NSObject<NSCoding>
 
 @property (strong) NSMutableDictionary  *drinks;
-@property BOOL additionClosed;
+
 
 - (void)addDrink:(Drink *)drink quantity:(NSUInteger)quantity;
 - (void)addDrinkForFromPlist:(Drink *)drink quantity:(NSUInteger)quantity;
--(NSUInteger*)getDrinkQuantity:(Drink*) searchedDrink;
+-(NSUInteger*)drinkQuantity:(Drink*) searchedDrink;
 -(void)decreaseDrinkAmount:(Drink*) selectedDrink;
--(NSArray*)getDrinks;
--(NSMutableArray*)getStringDrinks;
--(DrinksContainer*)commit;
--(NSMutableArray *)drinkNameAndQuantityToString;
+-(NSArray*)drinksArray;
+-(NSMutableArray*)drinksString;
+-(NSArray *)drinkNameAndQuantity;
 -(void)loadDrinksFromPlist;
-- (void)encodeWithCoder:(NSCoder *)encoder;
-- (id)initWithCoder:(NSCoder *)coder;
--(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts;
--(NSMutableArray*)getStringDrinkPrices;
--(BOOL)isAdditionClosed;
+-(NSMutableArray*)dictsOfDrinksAndAmountsArray;
+-(NSMutableArray*)drinkPricesString;
 
 @end

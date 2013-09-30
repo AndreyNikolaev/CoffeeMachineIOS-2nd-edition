@@ -38,7 +38,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-//Custom initialization
     }
     return self;
 }
@@ -47,11 +46,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self formatLabels];
     [self updateCoffeeMachineState]; // updates coffeeMachineState
+<<<<<<< HEAD
     [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]]; //SUM label with digital style
     [self.infoDrinkLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
     self.infoDrinkLbl.text = self.selectedDrink.name.uppercaseString;
     self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
+=======
+    self.infoDrinkLbl.text = self.selectedDrink.name.uppercaseString;
+>>>>>>> 60a9de6d851fe56991f7d823259cefb598a5b04c
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
     self.navigationItem.leftBarButtonItem = backButton;
 }
@@ -60,13 +64,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}	
+}
+
+-(void)formatLabels
+{
+    [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]]; //SUM label with digital style
+    [self.infoDrinkLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
+    self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
+}
 
 //updates coffeeMachineState and set Sum label and change Image 
--(void)updateCoffeeMachineState{
+-(void)updateCoffeeMachineState
+{
     if(willGetDrink){   //if customer will get drink
         float numChange =(float)[change sumOfCoins] / 100;
-        NSLog(@"font must be changed");
         if(numChange != 0){
             self.changeLbl.text = [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
             self.changeLbl.backgroundColor = [UIColor blueColor];

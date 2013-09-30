@@ -9,6 +9,10 @@
 #import "AdministrationFlow.h"
 #import "ViewController.h"
 
+
+#define PLIST_URL       @"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"
+#define PLIST_FILENAME  @"writedFile.plist"
+
 @interface AdministrationFlow ()
 @end
 @implementation AdministrationFlow
@@ -22,25 +26,26 @@
 {
     [super viewDidLoad];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"admCoffee.jpg"]];
-    self.title=@"Reports";
+    self.title = @"Reports";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Load from URL" style:UIBarButtonItemStyleBordered target:self action:@selector(loadPlistFromURL:)];
     self.navigationItem.rightBarButtonItem = backButton;
-    _moneyAmount = [[NSMutableArray alloc]initWithArray:self.coffeeMachineState.coins.coinsAmountToString]; 
-    self.drinksStringArray = [[NSMutableArray alloc]initWithArray:self.coffeeMachineState.currentDrinksAmount.drinkNameAndQuantityToString];
+    _moneyAmount = [[NSMutableArray alloc] initWithArray:self.coffeeMachineState.coins.coinsAmountToString];
+    self.drinksStringArray = [[NSMutableArray alloc] initWithArray:self.coffeeMachineState.currentDrinksAmount.drinkNameAndQuantity];
     
 }
 
 
 - (void)didReceiveMemoryWarning
 {
-        [super didReceiveMemoryWarning];
-        // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
 - (NSInteger)numberOfSectionsInTableView :(UITableView *)tableView {
     return 2;
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0){
         return self.drinksStringArray.count;
@@ -51,48 +56,50 @@
 
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     self.tableIndexPath = indexPath;
+    
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if(cell==nil){
+        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
+    }
+    
     UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
     av.backgroundColor = [UIColor clearColor];
     av.opaque = NO;
     av.image = [UIImage imageNamed:@"coffee-back.png"];
-    if(cell==nil){
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell" ];
-    }
-        if(indexPath.section == 0) {
-            NSUInteger count = [self.drinksStringArray count];
-            for (NSUInteger i = 0; i < count; i++) {
-                if(indexPath.row==i){
+    if(indexPath.section == 0) {
+        NSUInteger count = [self.drinksStringArray count];
+        for (NSUInteger i = 0; i < count; i++) {
+            if(indexPath.row==i){
+                
+                NSString *current = [self.drinksStringArray objectAtIndex: i];
+                cell.textLabel.text=current;
+                cell.backgroundView = av;
+                
+                UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+                imgView.image = [UIImage imageNamed:@"kafe-1.png"];
+                cell.imageView.image = imgView.image;
+                
+            }
             
-                    NSString *current = [self.drinksStringArray objectAtIndex: i];
-                    cell.textLabel.text=current;
-                    cell.backgroundView = av;
-                    
-                    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-                    imgView.image = [UIImage imageNamed:@"kafe-1.png"];
-                    cell.imageView.image = imgView.image;
-
-                }
+        } return cell;
+    } else {
+        NSUInteger count = [_moneyAmount count];
+        for (NSUInteger i = 0; i < count; i++) {
+            if(indexPath.row==i){
                 
-            }return cell;
-        }else{
-            NSUInteger count = [_moneyAmount count];
-            for (NSUInteger i = 0; i < count; i++) {
-                if(indexPath.row==i){
-                    
-                    NSString *current = [_moneyAmount objectAtIndex: i];
-                    cell.textLabel.text=current;
-                    cell.backgroundView = av;
-                    
-                    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-                    imgView.image = [UIImage imageNamed:@"emptyCoin.png"];
-                    cell.imageView.image = imgView.image;
-
-                }
+                NSString *current = [_moneyAmount objectAtIndex: i];
+                cell.textLabel.text=current;
+                cell.backgroundView = av;
                 
-        }return cell;
-
-        }
+                UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+                imgView.image = [UIImage imageNamed:@"emptyCoin.png"];
+                cell.imageView.image = imgView.image;
+                
+            }
+            
+        } return cell;
+        
+    }
 }
 
 
@@ -100,6 +107,7 @@
 {
     
 }
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if(section == 0)
@@ -109,11 +117,12 @@
         return @"Coins";
     }
 }
+
 -(IBAction)loadPlistFromURL:(id)sender {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"writedFile.plist"];
-    [[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"]] writeToFile:path atomically:YES];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:PLIST_FILENAME];
+    [[NSData dataWithContentsOfURL:[NSURL URLWithString:PLIST_URL]] writeToFile:path atomically:YES];
     
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
@@ -125,9 +134,9 @@
     
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
     soldDrinks=self.coffeeMachineState.currentDrinksAmount;
-    self.drinksStringArray = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantityToString];
+    self.drinksStringArray = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantity];
     [self.tableView reloadData];
-
+    
 }
 
 

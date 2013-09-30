@@ -11,6 +11,9 @@
 
 @implementation Drink
 
+@synthesize price;
+@synthesize name;
+
 -(id)init
 {
     self = [super init];
@@ -20,8 +23,6 @@
     }
     return self;
 }
-@synthesize price;
-@synthesize name;
 
 -(NSString*)description
 {
@@ -33,7 +34,6 @@
     Drink *drink = [[Drink alloc] init];
     drink.name = self.name;
     drink.price = self.price;
-    
     return drink;
 }
 
@@ -41,31 +41,37 @@
 {
     return [self copy];
 }
--(BOOL)isEqual:(Drink *)other
-{
-    if([self.name isEqualToString:other.name] && self.price == other.price)
-        return YES;
-    else return NO;
-}
 
-- (NSUInteger)hash {
+- (NSUInteger)hash
+{
     NSUInteger hash = 0;
     hash += self.name.hash;
     hash += self.price;
     return hash;
 }
-- (void)encodeWithCoder:(NSCoder *)encoder {
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
     [encoder encodeObject:self.name forKey:@"drinkName"];
     [encoder encodeObject:[NSNumber numberWithInteger:self.price] forKey:@"drinkPrice"];
 }
-- (id)initWithCoder:(NSCoder *)coder {
+
+- (id)initWithCoder:(NSCoder *)coder
+{
     self = [super init];
     if (self) {
         self.name = [coder decodeObjectForKey:@"drinkName"];
         self.price = (int)[coder decodeObjectForKey:@"drinkPrice"];
-       
-    }
+        }
     return self;
+}
+
+//isEqual must be overwrited, otherwise load from URL doesn't work fine 
+-(BOOL)isEqual:(Drink *)other
+{
+    if([self.name isEqualToString:other.name] && self.price == other.price)
+        return YES;
+    else return NO;
 }
 
 @end

@@ -60,12 +60,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
-         timestampString = "401625418.615372"
+         timestampString = "401981136.89382"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144"
-         landmarkName = "-getCoins::"
+         startingLineNumber = "134"
+         endingLineNumber = "134"
+         landmarkName = "-getOutCoins::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -73,31 +73,32 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
-         timestampString = "401625418.615372"
+         timestampString = "401981136.89382"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
-         landmarkName = "@implementation MoneyAmount"
+         startingLineNumber = "132"
+         endingLineNumber = "132"
+         landmarkName = "-getOutCoins::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CoffeeMachine/OrderFinalizeFlow.m"
+         timestampString = "402220504.81826"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
+         landmarkName = "@implementation OrderFinalizeFlow"
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/Model/MoneyAmount.m"
-         timestampString = "401625418.615372"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "142"
-         endingLineNumber = "142"
-         landmarkName = "-getCoins::"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
+<<<<<<< HEAD
          filePath = "CoffeeMachine/OrderFinalizeFlow.m"
          timestampString = "401789250.064518"
          startingColumnNumber = "9223372036854775807"
@@ -106,17 +107,27 @@
          endingLineNumber = "88"
          landmarkName = "@implementation OrderFinalizeFlow"
          landmarkType = "3">
+=======
+         filePath = "CoffeeMachine/Model/MoneyAmount.m"
+         timestampString = "401981136.89382"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-withdraw:"
+         landmarkType = "5">
+>>>>>>> 60a9de6d851fe56991f7d823259cefb598a5b04c
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
-         timestampString = "401625418.615372"
+         timestampString = "401981136.89382"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
          landmarkName = "-withdraw:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -124,13 +135,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CoffeeMachine/Model/MoneyAmount.m"
-         timestampString = "401625418.615372"
+         filePath = "CoffeeMachine/Model/FileReader.m"
+         timestampString = "401979327.139426"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "123"
-         endingLineNumber = "123"
-         landmarkName = "-withdraw:"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "-getDictAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

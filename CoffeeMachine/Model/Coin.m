@@ -16,7 +16,6 @@
     if (self) {
         //init code here
         self.value = 0;
-       
     }
     return self;
 }
@@ -25,11 +24,11 @@
 {
     return [NSString stringWithFormat:@"%d", self.value];
 }
+
 - (id)copy
 {
     Coin *coin  = [[Coin alloc] init];
     coin.value = self.value;
-      
     return coin;
 }
 
@@ -37,18 +36,30 @@
 {
     return [self copy];
 }
+
 - (NSComparisonResult)compare:(Coin *)otherObject{
-    return [[NSNumber numberWithInt:self.value] compare:[NSNumber numberWithInt:otherObject.value]];
+    if (self.value > otherObject.value) {
+        return NSOrderedAscending;
+    }
+    else if (self.value < otherObject.value) {
+        return NSOrderedDescending;
+    }
+    
+    return NSOrderedSame;
 }
+
+//isEqual and hash must be overwrited, otherwise load from URL doesn't work fine 
 -(BOOL)isEqual:(Coin *)other
 {
     if(self.value == other.value)
         return YES;
     else return NO;
 }
+
 - (NSUInteger)hash { // mey not correct
     NSUInteger hash = 0;
     hash += self.value;
     return hash;
 }
+
 @end

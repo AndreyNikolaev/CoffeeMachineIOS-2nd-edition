@@ -42,7 +42,7 @@ NSString *result;
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 -(void) moveCoin: (UIView*) image;
 -(void)addImageSubView: (UIImageView*) image;
--(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage;
+-(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage : (int) pixSensitivity;
 -(void)updateSum: (UIImageView*) image;
 -(void)moveImageBack :(UIImageView*)image;
 -(void)rotateImageBack: (UIImageView*) image;

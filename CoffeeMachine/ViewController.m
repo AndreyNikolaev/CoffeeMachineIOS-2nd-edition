@@ -29,8 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    
+//    self.tableView.dataSource = self;
+//    self.tableView.delegate = self;
+    
     self.title = @"Coffee Machine";
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test.jpg"]];
     UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
@@ -40,8 +42,6 @@
     [drinks loadDrinksFromPlist];
 
 
-    
-
     MoneyAmount *moneyAmount = [[MoneyAmount alloc]init];
     [moneyAmount loadCoinsFromPlist];
     
@@ -50,8 +50,8 @@
         [self.coffeeMachineState setCurrentDrinksAmount:drinks];
         self.coffeeMachineState.coins = moneyAmount;
     }
-    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
-    _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinkPrices]];
+    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
+    _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
 
 
 
@@ -73,20 +73,18 @@
 }
 
 - (UITableViewCell *) tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if(cell == nil) {
+        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
+    }
+    
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     UIImageView *av = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 277, 58)];
     av.backgroundColor = [UIColor clearColor];
     av.opaque = NO;
     av.image = [UIImage imageNamed:@"coffee-back.png"];
-    if(cell==nil){
-
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
-        cell=[[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell" ];
-
-
-    }
-        
+    
     NSUInteger count = [_itemsArrayDrinks count];
     NSString* currentDrinkPrice = [[NSString alloc]init];
     for (NSUInteger i = 0; i < count; i++) {
@@ -129,7 +127,7 @@
     paymentFlow.title = tabTitle;
     
     tempDrinkContainer=_coffeeMachineState.currentDrinksAmount;
-    NSArray* tempDrinksArray=[[NSArray alloc]initWithArray:[tempDrinkContainer getDrinks]];
+    NSArray* tempDrinksArray=[[NSArray alloc]initWithArray:[tempDrinkContainer drinksArray]];
     paymentFlow.selectedDrink=[tempDrinksArray objectAtIndex:indexPath.row];
 
 
@@ -184,8 +182,13 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+<<<<<<< HEAD
     _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
     _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinkPrices]];
+=======
+    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
+    _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
+>>>>>>> 60a9de6d851fe56991f7d823259cefb598a5b04c
     [self.tableView reloadData];
 }
 
