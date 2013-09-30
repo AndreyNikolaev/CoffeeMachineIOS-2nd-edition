@@ -42,7 +42,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -51,29 +50,28 @@
 {
     [super viewDidLoad];
     sum = 0;
-    userCoins=[[MoneyAmount alloc]init];
+    userCoins = [[MoneyAmount alloc] init];
    
-   }
+}
+
  //on start moving
--(void) moveCoin: (UIView*) image
+-(void) moveCoin: (UIImageView *) image
 {   
     self.oldCoinPosition = image.center;
     [self addImageSubView:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-   // [panGesture setDelegate:self];
     [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
-    
 }
 
 //when dragged coin is over the slot image
--(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage
+-(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage : (int) pixSensitivity
 {
     BOOL flag = YES;
-    if(coinImage.center.x < slotImg.center.x - 20) flag = false;
-    if(coinImage.center.x > slotImg.center.x + 20) flag = false;
-    if(coinImage.center.y < slotImg.center.y - 20) flag = false;
-    if(coinImage.center.y > slotImg.center.y + 20) flag = false;
+    if(coinImage.center.x < slotImg.center.x - pixSensitivity) flag = false;
+    if(coinImage.center.x > slotImg.center.x + pixSensitivity) flag = false;
+    if(coinImage.center.y < slotImg.center.y - pixSensitivity) flag = false;
+    if(coinImage.center.y > slotImg.center.y + pixSensitivity) flag = false;
     return flag;
 }
 
@@ -86,28 +84,27 @@
 }
 
 - (IBAction)switchBack:(id)sender {
-    ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController"bundle:nil ];
+    ViewController *viewControler = [[ViewController alloc] initWithNibName:@"ViewController"bundle:nil ];
     [[self navigationController ]setNavigationBarHidden:NO animated:YES];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController pushViewController:viewControler animated:YES];
 }
 
 -(void)setCoinInUserCoins:(int)coinValue
 {
-    Coin *userCoin=[[Coin alloc]init];
-    userCoin.value=coinValue;
+    Coin *userCoin = [[Coin alloc] init];
+    userCoin.value = coinValue;
     [self.userCoins addCoin:userCoin amount:1];
-    sumLbl.text=[NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
+    sumLbl.text = [NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
     [sumLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
 }
 // switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 
 - (void) switchMenu
 {
     if( userCoins.sumOfCoins >= selectedDrink.price){
-        int test = [userCoins sumOfCoins] - selectedDrink.price;
-        Withdraw* withdraw = [[Withdraw alloc]init];
-        withdraw = [coffeeMachineState.coins withdraw:test];
-        if(withdraw.status== SUCCESSFUL){
-            
+        int change = [userCoins sumOfCoins] - selectedDrink.price;
+        Withdraw* withdraw = [[Withdraw alloc] init];
+        withdraw = [coffeeMachineState.coins withdraw:change];
+        if(withdraw.status == SUCCESSFUL){
             OrderFinalizeFlow *orderFinalizeFlow =[ [OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
             orderFinalizeFlow.coffeeMachineState = self.coffeeMachineState;
             orderFinalizeFlow.selectedDrink = self.selectedDrink;
@@ -124,10 +121,9 @@
             insAmountFlow.change = withdraw.change;
             insAmountFlow.userCoins = self.userCoins;
             [self animatedSwitchMenu:insAmountFlow];        }
-        
-      
     }
 }
+
 
 -(void)animatedSwitchMenu: (id)flow
 {
@@ -135,10 +131,10 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];
     [self.navigationController pushViewController:flow animated:NO];
-    
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
     [UIView commitAnimations];
 }
+
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
     SoundPlayer* sound = [[SoundPlayer alloc]init];
@@ -149,16 +145,12 @@
     
     if(recognizer.view == fiveImg || recognizer.view == tenImg || recognizer.view == twentyImg || recognizer.view == fiftyImg || recognizer.view == levImg) {
         CGPoint translation = [recognizer translationInView:recognizer.view];
-        
         recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-        
         [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
         if([recognizer state] == UIGestureRecognizerStateEnded){
-            
-            if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg]){ // when the coin is near the slot
+            if([self didCoinImageIsInSlotImg:recognizer.view slotImage:slotImg : 20]){ // when the coin is near the slot
                 recognizer.view.center = CGPointMake(slotImg.center.x,slotImg.center.y);
                 [self rotateImage:recognizer.view];
-                
                 sound.fileName = @"dropCoin";
                 sound.fileType = @"mp3";
                 [sound play];
@@ -170,11 +162,10 @@
         }
     }
 }
+
 //updating sum of inserted coins
 -(void)updateSum: (UIImageView*) image {
-    
     if (image == fiveImg){
-            
         [self setCoinInUserCoins:5];
         [self switchMenu];
     }
@@ -197,9 +188,7 @@
     {
         [self setCoinInUserCoins:100];
         [self switchMenu];
-       
     }
-
 }
 
 
@@ -218,7 +207,7 @@
         }];
 }
 
-//rotate image back to original size 
+//rotate image back to original position 
 -(void)rotateImageBack: (UIView*) image
 {
     [UIView animateWithDuration:0.0 animations:^{
@@ -232,7 +221,8 @@
     }];
 }
 //moving image back to original position
--(void)moveImageBack :(UIImageView*)image {
+-(void)moveImageBack :(UIImageView*)image
+{
     image.center = self.oldCoinPosition;
     [UIView animateWithDuration:0 animations:^{
     [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
@@ -240,10 +230,11 @@
     } completion:nil];
 }
 // creating a new subview of a coin image
--(void)addImageSubView: (UIImageView*) image {
+-(void)addImageSubView: (UIImageView*) image
+{
     if(image == fiveImg || image == tenImg || image == twentyImg || image == fiftyImg || image == levImg) {
     UIView *iv = [[UIImageView alloc] initWithImage:image.image];
-    CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);                        //we have questions about positioning new image view 
+    CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);                        //we have questions about positioning new image view
     iv.center = image.center;
     iv.frame = imageframe;
     [[image superview] addSubview:iv];

@@ -12,17 +12,15 @@
 
 @implementation DrinksContainer
 
-@synthesize additionClosed = isAdditionClosed;
-
 -(id)init
 {
     self = [super init];
     if (self) {
         self.drinks = [NSMutableDictionary dictionary];
-        self.additionClosed = NO;
     }
     return self;
 }
+
 //adding a new drink and quantity into drinks dictionary
 - (void)addDrink:(Drink *)drink quantity:(NSUInteger)quantity
 {
@@ -34,7 +32,6 @@
             break;
         }
     }
-    
     if (!drinkFound) {
         [self.drinks setObject:@(quantity) forKey:drink];
     }
@@ -58,69 +55,52 @@
 }
 
 
--(BOOL)isAdditionClosed
-{
-    return self.additionClosed;
-}
+
 //get all keys of drinks dictionary
--(NSArray*)getDrinks
+-(NSArray*)drinksArray
 {   NSArray* tempDrinks=[[NSArray alloc]initWithArray:[self.drinks allKeys]];
     return tempDrinks;
 }
 
 //get all drink names as string
--(NSMutableArray*)getStringDrinks
+-(NSArray*)drinksString
 {
     NSMutableArray* stringOfDrinksArray=[[NSMutableArray alloc]init];
-    
     for (Drink *storedDrink in [self.drinks allKeys]) {
-        [stringOfDrinksArray addObject:[NSString stringWithFormat:@"%@",storedDrink.name]];
+        [stringOfDrinksArray addObject:[NSString stringWithFormat:@"%@",storedDrink.name] ];
     }
-    
     return stringOfDrinksArray;
 }
 
 // get all drink prices as string
--(NSMutableArray*)getStringDrinkPrices
+-(NSArray*)drinkPricesString
 {
     NSMutableArray* stringOfDrinksArray=[[NSMutableArray alloc]init];
-    
     for (Drink *storedDrink in [self.drinks allKeys]) {
         [stringOfDrinksArray addObject:[NSString stringWithFormat:@"%d",storedDrink.price]];
     }
-    
     return stringOfDrinksArray;
 }
 
 // get drink name and quantity as string
--(NSMutableArray*)drinkNameAndQuantityToString
+-(NSArray*)drinkNameAndQuantity
 {
     NSMutableArray* drinkNameAndQuantity=[[NSMutableArray alloc]init];
-    
     for (Drink *drink in [self.drinks allKeys]) {
         [drinkNameAndQuantity addObject:[NSString stringWithFormat:@"%@ - amount: %d",drink.name,[self.drinks[drink]integerValue]]];
     }
-    
     return drinkNameAndQuantity;
 }
 
--(DrinksContainer*)commit
-{
-    self.additionClosed=YES;
-    return self;
-}
 
--(NSUInteger*)getDrinkQuantity:(Drink *)searchedDrink
+-(NSUInteger*)drinkQuantity:(Drink *)searchedDrink
 {
     NSUInteger* quantity=0;
-    
     for (Drink *storedDrink in [self.drinks allKeys]) {
         if ([searchedDrink.name isEqualToString:storedDrink.name]) {
             break;
         }
     }
-    
-    
     return quantity;
 }
 
@@ -134,15 +114,15 @@
         }
     }
 }
+
 -(void)loadDrinksFromPlist
 {
-    FileReader* file = [[FileReader alloc]init];
-    file.fileName = @"writedFile.plist";
-    NSDictionary *dictDrinks = [[NSDictionary alloc]initWithDictionary:[file getDictAtIndex:0]];
-    NSDictionary *dictDrinksAmounts = [[NSDictionary alloc]initWithDictionary:[file getDictAtIndex:1]];
-    int i=0;
-    Drink  *drink=[[Drink alloc]init];
-    NSArray* amounts=[[NSArray alloc]initWithArray:[dictDrinksAmounts allValues]];
+    FileReader *file = [[FileReader alloc] initWithFileName:@"writedFile.plist"];
+    NSDictionary *dictDrinks = [[NSDictionary alloc] initWithDictionary:[file getDictAtIndex:0]];
+    NSDictionary *dictDrinksAmounts = [[NSDictionary alloc] initWithDictionary:[file getDictAtIndex:1]];
+    int i = 0;
+    Drink  *drink =[ [Drink alloc] init];
+    NSArray* amounts = [[NSArray alloc] initWithArray:[dictDrinksAmounts allValues]];
     for(NSString* currentDrink in [dictDrinks allKeys])
     {
         drink.name = currentDrink;
@@ -151,16 +131,17 @@
         i++;
     }
 }
+
 //getting array of dictionaries of drink names and quantities
--(NSMutableArray*) getArrayFromDictsOfDrinksAndAmounts
+-(NSMutableArray*) dictsOfDrinksAndAmountsArray
 {
-    NSMutableArray* drinksArray = [[NSMutableArray alloc]init];
-    NSMutableDictionary* drinksDict = [[NSMutableDictionary alloc]init];
-    NSMutableDictionary* drinksAmountsDict = [[NSMutableDictionary alloc]init];
+    NSMutableArray* drinksArray = [[NSMutableArray alloc] init];
+    NSMutableDictionary* drinksDict = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary* drinksAmountsDict = [[NSMutableDictionary alloc] init];
     
     for(Drink* currentDrink in [self.drinks allKeys] ){
         [drinksDict setObject:[NSNumber numberWithInt:currentDrink.price] forKey:currentDrink.name];
-        [drinksAmountsDict setObject:[NSNumber numberWithInt:[self.drinks[currentDrink] intValue ]] forKey:currentDrink.name];
+        [drinksAmountsDict setObject:[NSNumber numberWithInt:[self.drinks[currentDrink] intValue ] ] forKey:currentDrink.name];
     }
     [drinksArray addObject:drinksDict];
     [drinksArray addObject:drinksAmountsDict];
@@ -169,17 +150,18 @@
 
 
 
-
-
-- (void)encodeWithCoder:(NSCoder *)encoder {
+//dont need this methods, warning when remove them
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
     [encoder encodeObject:[self.drinks allKeys]forKey:@"Drinks"];
     [encoder encodeObject:[self.drinks allValues] forKey:@"Amounts"];
 }
 
-- (id)initWithCoder:(NSCoder *)coder {
+- (id)initWithCoder:(NSCoder *)coder
+{
     self = [super init];
     if (self) {
-    [self.drinks setObject:[coder decodeObjectForKey:@"Amounts"] forKey:[coder decodeObjectForKey:@"Drinks"]];
+        [self.drinks setObject:[coder decodeObjectForKey:@"Amounts"] forKey:[coder decodeObjectForKey:@"Drinks"]];
     }
     return self;
 }

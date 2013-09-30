@@ -16,16 +16,16 @@
 @property(strong)NSMutableDictionary *coins ;
 
 
--(MoneyAmount *)add:(Coin*) c : (int) count;
+-(MoneyAmount *)add:(Coin*) coin : (int) count;
 -(MoneyAmount *)add:(MoneyAmount*)mAmount;
 -(Withdraw *)withdraw:(int)amount;
--(NSArray *)getSortedCoinTypes;
--(void)getCoins:(Coin *)c : (int)count;
--(NSString *)description;
+-(NSArray *)sortedCoinTypes;
+-(void)getOutCoins:(Coin *)coin : (int)count;
 -(int)sumOfCoins;
 - (void)addCoin:(Coin *)coin amount:(NSUInteger)amount;
 -(NSMutableArray *)coinsAmountToString;
 -(void)loadCoinsFromPlist;
 -(NSMutableDictionary *)coinsValueAndAmount;
 - (void)addCoinForFromPlist:(Coin *)coin amount:(NSUInteger)amount;
+
 @end

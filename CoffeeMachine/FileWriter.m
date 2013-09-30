@@ -10,14 +10,11 @@
 
 @implementation FileWriter
 
-@synthesize fileName;
-
--(void)saveToPlist:(NSArray *)arrayToSave {
+-(void)saveToPlist:(NSArray *)arrayToSave
+{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:self.fileName];
-    // write plist to disk
     [arrayToSave writeToFile:path atomically:YES];
-
 }
 @end

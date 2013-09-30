@@ -12,64 +12,50 @@
 #import "FileWriter.h"
 
 @implementation CoffeeMachineState
-@synthesize currentDrinksAmount;
-@synthesize initialDrinksAmount;
-@synthesize coins=_coins;
 
 -(id)init:(MoneyAmount*) newCoins : (DrinksContainer*) newDrinks
 {
     self = [super init];
-    if (self) {
-        _coins=newCoins;
-        currentDrinksAmount=newDrinks;
-        initialDrinksAmount=[[DrinksContainer alloc]init ];
-        NSMutableArray* currentDrinks=[[NSMutableArray alloc]initWithArray:[currentDrinksAmount getDrinks]];
+    if (self)
+    {
+        _coins = newCoins;
+        _currentDrinksAmount=newDrinks;
+        NSMutableArray* currentDrinks=[[NSMutableArray alloc]initWithArray:[_currentDrinksAmount drinksArray]];
         for(int i=0;i<[currentDrinks count];i++){
         }
-        [initialDrinksAmount commit];
-        
+              
     }
     return self;
 }
 
--(DrinksContainer*)getCurrentDrinks
+-(DrinksContainer*)currentDrinks
 {
-    return currentDrinksAmount;
-}
--(DrinksContainer*)getInitialDrinks
-{
-    return initialDrinksAmount;
+    return _currentDrinksAmount;
 }
 
--(NSMutableDictionary*)getFiltratedDrinks
+-(NSMutableDictionary*)filtratedDrinks
 {
-    NSMutableDictionary* currentDrinks=[[NSMutableDictionary alloc]initWithDictionary:currentDrinksAmount.drinks];
-       
+    NSMutableDictionary* currentDrinks=[[NSMutableDictionary alloc] initWithDictionary:_currentDrinksAmount.drinks];
     for (Drink *storedDrink in [currentDrinks allKeys]) {
         if ([currentDrinks[storedDrink]integerValue] == 0) {
             [currentDrinks removeObjectForKey:storedDrink];
                }
     }
-
-    
-    
     return currentDrinks;
 }
 
 -(NSMutableArray*)getStateInArray
 {
-    NSMutableArray* stateArray=[[NSMutableArray alloc]initWithArray:[self.currentDrinksAmount getArrayFromDictsOfDrinksAndAmounts]];
+    NSMutableArray* stateArray=[[NSMutableArray alloc]initWithArray:[self.currentDrinksAmount dictsOfDrinksAndAmountsArray]];
     [stateArray addObject:[self.coins coinsValueAndAmount]];
     return stateArray;
-    
-}
--(void)saveStateToFile //may be better in FileWriter.m
-{
-    FileWriter* fileWriter = [[FileWriter alloc]init];
-    fileWriter.fileName = @"writedFile.plist";
-    [fileWriter saveToPlist:[self getStateInArray]];
-    
 }
 
+-(void)saveStateToFile //may be better in FileWriter.m
+{
+    FileWriter* fileWriter = [[FileWriter alloc] init];
+    fileWriter.fileName = @"writedFile.plist";
+    [fileWriter saveToPlist:[self getStateInArray]];
+}
 
 @end
