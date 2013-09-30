@@ -14,16 +14,16 @@
 
 
 @interface InsufficientAmountFlow : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIButton *makeDrinkBtn;
 @property (strong, nonatomic) IBOutlet UIButton *cancelOrderBtn;
-- (IBAction)switchToFinalizeFlow:(id)sender;
-- (IBAction)switchToDrinkListFlow:(id)sender;
-
 @property (strong, nonatomic) IBOutlet UILabel *notEnCoins;
 @property Drink* selectedDrink;
 @property MoneyAmount* change;
 @property CoffeeMachineState* coffeeMachineState;
 @property MoneyAmount* userCoins;
 
+- (IBAction)switchToFinalizeFlow:(id)sender;
+- (IBAction)switchToDrinkListFlow:(id)sender;
 
 @end

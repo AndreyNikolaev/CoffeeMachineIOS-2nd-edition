@@ -10,8 +10,7 @@
 
 
 @implementation SoundPlayer
-@synthesize fileName;
-@synthesize fileType;
+
 
 -(void)play
 {

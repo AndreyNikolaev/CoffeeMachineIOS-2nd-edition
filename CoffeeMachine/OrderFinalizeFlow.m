@@ -48,7 +48,14 @@
     [super viewDidLoad];
     [self formatLabels];
     [self updateCoffeeMachineState]; // updates coffeeMachineState
+<<<<<<< HEAD
+    [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]]; //SUM label with digital style
+    [self.infoDrinkLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
     self.infoDrinkLbl.text = self.selectedDrink.name.uppercaseString;
+    self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
+=======
+    self.infoDrinkLbl.text = self.selectedDrink.name.uppercaseString;
+>>>>>>> 60a9de6d851fe56991f7d823259cefb598a5b04c
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
     self.navigationItem.leftBarButtonItem = backButton;
 }

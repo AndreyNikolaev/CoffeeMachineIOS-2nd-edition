@@ -23,11 +23,6 @@
 
 @implementation ViewController
 
-@synthesize itemsArrayDrinks = _itemsArrayDrinks;
-@synthesize tableView = _tableView;
-@synthesize coffeeMachineState=_coffeeMachineState;
-@synthesize alertView=_alertView;
-@synthesize itemsArayDrinkPrices = _itemsArayDrinkPrices;
 
 #pragma mark -
 
@@ -187,8 +182,13 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+<<<<<<< HEAD
+    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
+    _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinkPrices]];
+=======
     _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
     _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
+>>>>>>> 60a9de6d851fe56991f7d823259cefb598a5b04c
     [self.tableView reloadData];
 }
 

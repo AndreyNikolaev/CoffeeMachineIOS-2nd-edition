@@ -16,13 +16,6 @@
 
 @implementation InsufficientAmountFlow
 
-@synthesize selectedDrink;
-@synthesize coffeeMachineState;
-@synthesize change;
-@synthesize cancelOrderBtn;
-@synthesize makeDrinkBtn;
-@synthesize userCoins;
-@synthesize notEnCoins;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

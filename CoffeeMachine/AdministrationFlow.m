@@ -18,11 +18,6 @@
 @implementation AdministrationFlow
 
 
-@synthesize tableView = _tableView;
-@synthesize moneyAmount = _moneyAmount; // array with string of amount of every coin
-@synthesize drinksStringArray;
-@synthesize coffeeMachineState;
-@synthesize tableIndexPath;
 
 
 
@@ -53,7 +48,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0){
-        return drinksStringArray.count;
+        return self.drinksStringArray.count;
     }else{
         return _moneyAmount.count;
     }

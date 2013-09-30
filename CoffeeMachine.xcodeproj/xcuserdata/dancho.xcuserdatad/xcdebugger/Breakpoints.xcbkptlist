@@ -98,6 +98,16 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
+<<<<<<< HEAD
+         filePath = "CoffeeMachine/OrderFinalizeFlow.m"
+         timestampString = "401789250.064518"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "88"
+         endingLineNumber = "88"
+         landmarkName = "@implementation OrderFinalizeFlow"
+         landmarkType = "3">
+=======
          filePath = "CoffeeMachine/Model/MoneyAmount.m"
          timestampString = "401981136.89382"
          startingColumnNumber = "9223372036854775807"
@@ -106,6 +116,7 @@
          endingLineNumber = "98"
          landmarkName = "-withdraw:"
          landmarkType = "5">
+>>>>>>> 60a9de6d851fe56991f7d823259cefb598a5b04c
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
