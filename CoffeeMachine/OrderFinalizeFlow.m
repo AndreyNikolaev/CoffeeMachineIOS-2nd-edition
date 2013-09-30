@@ -21,16 +21,6 @@
 
 @implementation OrderFinalizeFlow
 
-@synthesize selectedDrink;
-@synthesize change;
-@synthesize coffeeMachineState;
-@synthesize userCoins;
-@synthesize willGetDrink;
-@synthesize backImg;
-@synthesize changeImgView;
-@synthesize readyDrinkImg;
-@synthesize changeLbl;
-@synthesize infoDrinkLbl;
 
 
 
@@ -69,20 +59,20 @@
 //updates coffeeMachineState and set Sum label and change Image 
 -(void)updateCoffeeMachineState
 {
-    if(willGetDrink){   //if customer will get drink
-        float numChange =(float)[change sumOfCoins] / 100;
+    if(_willGetDrink){   //if customer will get drink
+        float numChange =(float)[_change sumOfCoins] / 100;
         if(numChange != 0){
             self.changeLbl.text = [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
             self.changeLbl.backgroundColor = [UIColor blueColor];
         }else
         {self.changeImgView.hidden = YES;}
-        [coffeeMachineState.coins add:userCoins];
-        [coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:selectedDrink];
+        [_coffeeMachineState.coins add:_userCoins];
+        [_coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:_selectedDrink];
     }
     else {  // if customer woun't get drink, he had cancelled the order
         self.readyDrinkImg.hidden = YES;
         self.infoDrinkLbl.hidden = YES;
-        float numChange =(float)[userCoins sumOfCoins] / 100;
+        float numChange =(float)[_userCoins sumOfCoins] / 100;
         self.changeLbl.text =  [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
         self.changeImgView.hidden = NO;
         self.changeLbl.backgroundColor = [UIColor blueColor];
@@ -107,9 +97,5 @@
 {
     [self.coffeeMachineState saveStateToFile];//saving coffeeMachinetate into file 
 }
-
-
-
-
 
 @end

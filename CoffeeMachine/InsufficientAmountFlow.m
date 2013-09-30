@@ -16,8 +16,6 @@
 
 @implementation InsufficientAmountFlow
 
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,8 +48,8 @@
     orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
-    orderFinalizeFlow.userCoins=self.userCoins;
-    orderFinalizeFlow.willGetDrink=YES;// shows to orderFinalizeFlow that the custumer woun't get drink
+    orderFinalizeFlow.userCoins = self.userCoins;
+    orderFinalizeFlow.willGetDrink = YES;// shows to orderFinalizeFlow that the custumer woun't get drink
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];
@@ -64,11 +62,11 @@
 //switch to finalize flow, type: "don't make drink, return my coins", the name of method is bad, must be changed
 - (IBAction)switchToDrinkListFlow:(id)sender {
     OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
-    orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
+    orderFinalizeFlow.coffeeMachineState = self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
-    orderFinalizeFlow.userCoins=self.userCoins;
-    orderFinalizeFlow.willGetDrink=NO; // shows to orderFinalizeFlow that the custumer woun't get drink
+    orderFinalizeFlow.userCoins = self.userCoins;
+    orderFinalizeFlow.willGetDrink = NO; // shows to orderFinalizeFlow that the custumer woun't get drink
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];
