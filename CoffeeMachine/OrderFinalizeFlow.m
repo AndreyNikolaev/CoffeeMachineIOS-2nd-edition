@@ -30,6 +30,7 @@
 @synthesize changeImgView;
 @synthesize readyDrinkImg;
 @synthesize changeLbl;
+@synthesize infoDrinkLbl;
 
 
 
@@ -48,6 +49,9 @@
     [super viewDidLoad];
     [self updateCoffeeMachineState]; // updates coffeeMachineState
     [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]]; //SUM label with digital style
+    [self.infoDrinkLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
+    self.infoDrinkLbl.text = self.selectedDrink.name.uppercaseString;
+    self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
     self.navigationItem.leftBarButtonItem = backButton;
 }
@@ -73,6 +77,7 @@
     }
     else {  // if customer woun't get drink, he had cancelled the order
         self.readyDrinkImg.hidden = YES;
+        self.infoDrinkLbl.hidden = YES;
         float numChange =(float)[userCoins sumOfCoins] / 100;
         self.changeLbl.text =  [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
         self.changeImgView.hidden = NO;

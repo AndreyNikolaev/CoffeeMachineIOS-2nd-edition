@@ -10,8 +10,8 @@
 @class CoffeeMachineState;
 
 @interface AdministrationFlow : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property(strong) NSMutableArray *drinksStringArray;
 @property(strong) NSMutableArray *moneyAmount;
 @property CoffeeMachineState* coffeeMachineState;

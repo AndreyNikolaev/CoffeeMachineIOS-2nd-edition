@@ -14,11 +14,11 @@ NSInteger globalPrice;
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
 @property(strong, nonatomic) NSMutableArray *itemsArrayDrinks;
 @property(strong,nonatomic) NSMutableArray *itemsArayDrinkPrices;
 @property(strong) CoffeeMachineState *coffeeMachineState;
 @property(strong, nonatomic) UIAlertView *alertView;
+
 -(IBAction)goToAdministrationFlow:(id)sender;
 
 @end

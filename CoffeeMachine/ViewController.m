@@ -23,11 +23,6 @@
 
 @implementation ViewController
 
-@synthesize itemsArrayDrinks = _itemsArrayDrinks;
-@synthesize tableView = _tableView;
-@synthesize coffeeMachineState=_coffeeMachineState;
-@synthesize alertView=_alertView;
-@synthesize itemsArayDrinkPrices = _itemsArayDrinkPrices;
 
 #pragma mark -
 
@@ -100,7 +95,6 @@
             NSString *currentDrink = [_itemsArrayDrinks objectAtIndex: i];
             currentDrinkPrice = [_itemsArayDrinkPrices objectAtIndex: i];
             cell.textLabel.text=currentDrink;
-         //   cell.detailTextLabel.text = currentDrinkPrice;
             cell.textLabel.backgroundColor = [UIColor clearColor];
             cell.backgroundView = av;
 
@@ -187,8 +181,12 @@
 }
 - (void) viewDidUnload{
     [self.coffeeMachineState saveStateToFile];
-    NSLog(@"application enter background");
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinks]];
+    _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState getCurrentDrinks] getStringDrinkPrices]];
+    [self.tableView reloadData];
+}
 
 @end
