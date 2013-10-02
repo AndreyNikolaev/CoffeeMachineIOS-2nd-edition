@@ -12,6 +12,7 @@
 
 @property(strong) NSString *fileName;
 
+- (id)initWithFileName:(NSString *)filename;
 -(void)saveToPlist : (NSArray *)arrayToSave ;
 
 @end
