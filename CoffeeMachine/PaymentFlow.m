@@ -80,6 +80,7 @@
     _sumLbl.text = [NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
     [_sumLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
 }
+
 // switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 
 - (void) switchMenu
 {
@@ -173,7 +174,6 @@
     }
 }
 
-
 //animated rotation of image
 -(void)rotateImage: (UIImageView*) image 
 {
@@ -202,6 +202,7 @@
         }
     }];
 }
+
 //moving image back to original position
 -(void)moveImageBack :(UIImageView*)image
 {
@@ -211,6 +212,7 @@
     [image.layer setValue:@0.9 forKeyPath:@"transform.scale.y"];
     } completion:nil];
 }
+
 // creating a new subview of a coin image
 -(void)addImageSubView: (UIImageView*) image
 {
@@ -222,4 +224,5 @@
     [[image superview] addSubview:iv];
    }
 }
+
 @end

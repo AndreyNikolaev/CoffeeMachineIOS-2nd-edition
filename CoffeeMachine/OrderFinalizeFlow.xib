@@ -126,14 +126,14 @@
 						<string key="NSFrame">{{11, 20}, {180, 69}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="950033116"/>
+						<reference key="NSNextKeyView" ref="521139977"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">readyDrinkImg.jpg</string>
+							<string key="NSResourceName">readyDrinImg1.jpg</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="521139977">
@@ -142,6 +142,7 @@
 						<string key="NSFrame">{{199, 29}, {42, 52}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="950033116"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -952,7 +953,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="backImg.jpg">{1728, 2060}</string>
-			<string key="readyDrinkImg.jpg">{16, 16}</string>
+			<string key="readyDrinImg1.jpg">{817, 272}</string>
 			<string key="yourChange.jpg">{860, 264}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>

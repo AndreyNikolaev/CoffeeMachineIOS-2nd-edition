@@ -38,4 +38,5 @@
 -(void)moveImageBack :(UIImageView*)image;
 -(void)rotateImageBack: (UIImageView*) image;
 -(void)animatedSwitchMenu: (id)flow;
+
 @end

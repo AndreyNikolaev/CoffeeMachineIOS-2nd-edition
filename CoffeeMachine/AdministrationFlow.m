@@ -9,14 +9,14 @@
 #import "AdministrationFlow.h"
 #import "ViewController.h"
 
-
 #define PLIST_URL       @"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"
 #define PLIST_FILENAME  @"writedFile.plist"
 
 @interface AdministrationFlow ()
-@end
-@implementation AdministrationFlow
 
+@end
+
+@implementation AdministrationFlow
 
 - (void)viewDidLoad
 {
@@ -29,7 +29,6 @@
     self.drinksStringArray = [[NSMutableArray alloc] initWithArray:self.coffeeMachineState.currentDrinksAmount.drinkNameAndQuantity];
     
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -108,13 +107,12 @@
     [self.coffeeMachineState.currentDrinksAmount loadDrinksFromPlist];
     [self.coffeeMachineState.coins loadCoinsFromPlist];
     MoneyAmount *mAmount = [[MoneyAmount alloc]init];
-    mAmount=self.coffeeMachineState.coins;
+    mAmount = self.coffeeMachineState.coins;
     _moneyAmount = [[NSMutableArray alloc]initWithArray:mAmount.coinsAmountToString];
     DrinksContainer *soldDrinks =[[ DrinksContainer alloc]init ];
-    soldDrinks=self.coffeeMachineState.currentDrinksAmount;
+    soldDrinks = self.coffeeMachineState.currentDrinksAmount;
     self.drinksStringArray = [[NSMutableArray alloc]initWithArray:soldDrinks.drinkNameAndQuantity];
     [self.tableView reloadData];
 }
-
 
 @end

@@ -8,7 +8,6 @@
 
 #import "SoundPlayer.h"
 
-
 @implementation SoundPlayer
 
 -(void)play
@@ -18,4 +17,5 @@
 	AudioServicesCreateSystemSoundID((__bridge CFURLRef) [NSURL fileURLWithPath:soundFile], &SoundID);
 	AudioServicesPlaySystemSound(SoundID);
 }
+
 @end

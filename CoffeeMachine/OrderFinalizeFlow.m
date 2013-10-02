@@ -74,7 +74,6 @@
         self.changeImgView.hidden = NO;
         self.changeLbl.backgroundColor = [UIColor blueColor];
          }
-    
 }
 
 //switching back to DrinkListFlow with animations

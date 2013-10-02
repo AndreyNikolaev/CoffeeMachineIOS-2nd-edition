@@ -14,7 +14,6 @@
 #import "MoneyAmount.h"
 #import "AdministrationFlow.h"
 
-
 @interface ViewController ()
 
 @end
@@ -43,6 +42,7 @@
     _itemsArrayDrinks = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
     _itemsArayDrinkPrices = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
 }
+
 -(void)cleanCurrentDrinks
 {
     for (Drink *storedDrink in [self.coffeeMachineState.currentDrinks.drinks allKeys]) {
@@ -56,7 +56,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark -
 #pragma mark === UITableView data source & delegate ===
@@ -96,7 +95,6 @@
     }
     return cell;
 }
-
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
