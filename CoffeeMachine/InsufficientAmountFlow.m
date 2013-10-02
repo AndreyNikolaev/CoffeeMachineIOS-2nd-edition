@@ -44,29 +44,22 @@
 
 //switch to finalize flow, type: "make drink, don't return coins
 - (IBAction)switchToFinalizeFlow:(id)sender {     
+    [self switchMenu:YES];
+}
+
+//switch to finalize flow, type: "don't make drink, return my coins", the name of method is bad, must be changed
+- (IBAction)switchToDrinkListFlow:(id)sender {
+    [self switchMenu:NO];
+}
+
+-(void)switchMenu: (BOOL)getableDrink
+{
     OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
     orderFinalizeFlow.coffeeMachineState =self.coffeeMachineState;
     orderFinalizeFlow.selectedDrink = self.selectedDrink;
     orderFinalizeFlow.change = self.change;
     orderFinalizeFlow.userCoins = self.userCoins;
-    orderFinalizeFlow.willGetDrink = YES;// shows to orderFinalizeFlow that the custumer woun't get drink
-    [UIView  beginAnimations:nil context:NULL];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.75];
-    [self.navigationController pushViewController:orderFinalizeFlow animated:YES];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
-    [UIView commitAnimations];
-
-}
-
-//switch to finalize flow, type: "don't make drink, return my coins", the name of method is bad, must be changed
-- (IBAction)switchToDrinkListFlow:(id)sender {
-    OrderFinalizeFlow *orderFinalizeFlow = [[OrderFinalizeFlow alloc]initWithNibName:@"OrderFinalizeFlow" bundle:nil];
-    orderFinalizeFlow.coffeeMachineState = self.coffeeMachineState;
-    orderFinalizeFlow.selectedDrink = self.selectedDrink;
-    orderFinalizeFlow.change = self.change;
-    orderFinalizeFlow.userCoins = self.userCoins;
-    orderFinalizeFlow.willGetDrink = NO; // shows to orderFinalizeFlow that the custumer woun't get drink
+    orderFinalizeFlow.willGetDrink = getableDrink;// shows to orderFinalizeFlow that the custumer woun't get drink
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];

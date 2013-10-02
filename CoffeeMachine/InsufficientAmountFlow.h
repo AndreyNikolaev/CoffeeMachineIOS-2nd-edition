@@ -24,5 +24,6 @@
 
 - (IBAction)switchToFinalizeFlow:(id)sender;
 - (IBAction)switchToDrinkListFlow:(id)sender;
+-(void)switchMenu: (BOOL)getableDrink;
 
 @end

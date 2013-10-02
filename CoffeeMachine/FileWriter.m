@@ -10,6 +10,15 @@
 
 @implementation FileWriter
 
+- (id)initWithFileName:(NSString *)filename
+{
+    self = [super init];
+    if (self) {
+        self.fileName = filename;
+    }
+    return self;
+}
+
 -(void)saveToPlist:(NSArray *)arrayToSave
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

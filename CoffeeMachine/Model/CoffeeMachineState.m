@@ -53,8 +53,7 @@
 
 -(void)saveStateToFile //may be better in FileWriter.m
 {
-    FileWriter* fileWriter = [[FileWriter alloc] init];
-    fileWriter.fileName = @"writedFile.plist";
+    FileWriter*  fileWriter = [[FileWriter alloc] initWithFileName:@"writedFile.plist"];
     [fileWriter saveToPlist:[self getStateInArray]];
 }
 

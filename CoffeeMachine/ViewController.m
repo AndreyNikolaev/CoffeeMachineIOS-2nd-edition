@@ -157,7 +157,7 @@
 - (void) viewDidUnload
 {
     [self.coffeeMachineState saveStateToFile];
-}
+}		
 
 -(void)viewDidAppear:(BOOL)animated
 {
