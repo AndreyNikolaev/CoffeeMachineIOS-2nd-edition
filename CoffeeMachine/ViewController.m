@@ -26,15 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
+
     
 //    self.tableView.dataSource = self;
 //    self.tableView.delegate = self;
     
-    self.title = @"Coffee";
-=======
+    
     self.title = @"Coffee Machine";
->>>>>>> ed6563618c5c56e3185eb141f34276c889542cfd
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test.jpg"]];
     UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
     self.navigationItem.rightBarButtonItem = adminButton;
@@ -165,16 +163,15 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-<<<<<<< HEAD
-    _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
-    _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
-   [self.tableView reloadData];
-=======
+
+   // _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
+  //  _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
+ //  [self.tableView reloadData];
+
     [self cleanCurrentDrinks];
     _itemsArrayDrinks = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
     _itemsArayDrinkPrices = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
     [self.tableView reloadData];
->>>>>>> ed6563618c5c56e3185eb141f34276c889542cfd
 }
 
 @end

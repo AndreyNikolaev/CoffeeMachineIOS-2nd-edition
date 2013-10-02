@@ -91,11 +91,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "85"
          endingLineNumber = "85"
-<<<<<<< HEAD
-         landmarkName = "-updateCoffeeMachineState"
-=======
          landmarkName = "-backToDrinkListFlow:"
->>>>>>> ed6563618c5c56e3185eb141f34276c889542cfd
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
