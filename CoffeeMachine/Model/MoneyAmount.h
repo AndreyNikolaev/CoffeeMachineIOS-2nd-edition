@@ -20,7 +20,7 @@
 -(MoneyAmount *)add:(MoneyAmount*)mAmount;
 -(Withdraw *)withdraw:(int)amount;
 -(NSArray *)sortedCoinTypes;
--(void)getOutCoins:(Coin *)coin : (int)count;
+-(void)outCoins:(Coin *)coin : (int)count;
 -(int)sumOfCoins;
 - (void)addCoin:(Coin *)coin amount:(NSUInteger)amount;
 -(NSMutableArray *)coinsAmountToString;

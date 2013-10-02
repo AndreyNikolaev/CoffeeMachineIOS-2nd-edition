@@ -18,6 +18,9 @@
 #import "OrderFinalizeFlow.h"
 #import "InsufficientAmountFlow.h"
 #import "SoundPlayer.h"
+
+static NSString *fontName = @"DBLCDTempBlack";
+
 @interface PaymentFlow ()
 
 @end
@@ -78,7 +81,7 @@
     userCoin.value = coinValue;
     [self.userCoins addCoin:userCoin amount:1];
     _sumLbl.text = [NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
-    [_sumLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
+    [_sumLbl setFont:[UIFont fontWithName:fontName size:20]];
 }
 
 // switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 

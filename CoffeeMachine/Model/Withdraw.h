@@ -20,6 +20,6 @@ typedef enum
 @property WithdrawRequestResultStatus status;
 @property MoneyAmount *change;
 
--(Withdraw *) StatusAndChange:(WithdrawRequestResultStatus) status : (MoneyAmount *)change;
+-(Withdraw *) statusAndChange:(WithdrawRequestResultStatus) status : (MoneyAmount *)change;
 
 @end
