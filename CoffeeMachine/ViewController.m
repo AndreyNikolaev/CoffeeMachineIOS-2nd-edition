@@ -25,6 +25,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    
+//    self.tableView.dataSource = self;
+//    self.tableView.delegate = self;
+    
+    
     self.title = @"Coffee Machine";
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test.jpg"]];
     UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
@@ -155,6 +161,11 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+
+   // _itemsArrayDrinks=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
+  //  _itemsArayDrinkPrices=[[NSMutableArray alloc]initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
+ //  [self.tableView reloadData];
+
     [self cleanCurrentDrinks];
     _itemsArrayDrinks = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
     _itemsArayDrinkPrices = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];

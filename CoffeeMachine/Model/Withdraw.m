@@ -23,7 +23,7 @@
     return self;
 }
 
--(Withdraw *) StatusAndChange:(WithdrawRequestResultStatus) newStatus : (MoneyAmount *)newChange
+-(Withdraw *) statusAndChange:(WithdrawRequestResultStatus) newStatus : (MoneyAmount *)newChange
 {
     _status  = newStatus;
     _change = newChange;

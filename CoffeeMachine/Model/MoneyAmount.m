@@ -92,7 +92,7 @@
     if (amount == 0) {
         WithdrawRequestResultStatus req = SUCCESSFUL;
         Withdraw *withdraw = [[Withdraw alloc] init] ;
-        [ withdraw StatusAndChange:req : requestedCoins];
+        [ withdraw statusAndChange:req : requestedCoins];
         return withdraw;
     }
     Coin* coin = [[Coin alloc] init];
@@ -107,26 +107,26 @@
              totalAvailFromThisType = [self.coins[coin] intValue];
                if (totalAvailFromThisType >= possibleCoinsToGet) {
                 [requestedCoins add:coin :possibleCoinsToGet];
-                [self getOutCoins:coin :possibleCoinsToGet];
+                [self outCoins:coin :possibleCoinsToGet];
                 amount -= coin.value*possibleCoinsToGet;
             } else if(totalAvailFromThisType < possibleCoinsToGet){
                 [requestedCoins add:coin :totalAvailFromThisType];
-                [self getOutCoins:coin :totalAvailFromThisType];
+                [self outCoins:coin :totalAvailFromThisType];
                 amount -= coin.value * totalAvailFromThisType;
             }
         }
     }        
     if (amount == 0) {
         Withdraw* withdraw = [[Withdraw alloc] init];
-        withdraw = [withdraw StatusAndChange:SUCCESSFUL:requestedCoins ];
+        withdraw = [withdraw statusAndChange:SUCCESSFUL:requestedCoins ];
         return withdraw;
     }
     Withdraw* withdraw = [[Withdraw alloc] init];
-    withdraw = [withdraw StatusAndChange:INSUFFICIENT_AMOUNT:requestedCoins ];
+    withdraw = [withdraw statusAndChange:INSUFFICIENT_AMOUNT:requestedCoins ];
     return withdraw;
 }
 
--(void)getOutCoins:(Coin *)coin :(int)count
+-(void)outCoins:(Coin *)coin :(int)count
 {
     int availableCoins=[self.coins[coin] intValue];
     if(availableCoins >= count){

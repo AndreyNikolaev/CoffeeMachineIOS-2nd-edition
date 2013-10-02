@@ -14,6 +14,7 @@
 #import "ViewController.h"
 
 
+static NSString *fontName = @"DBLCDTempBlack";
 
 @interface OrderFinalizeFlow ()
 
@@ -48,8 +49,8 @@
 
 -(void)formatLabels
 {
-    [self.changeLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]]; //SUM label with digital style
-    [self.infoDrinkLbl setFont:[UIFont fontWithName:@"DBLCDTempBlack" size:20]];
+    [self.changeLbl setFont:[UIFont fontWithName:fontName size:20]]; //SUM label with digital style
+    [self.infoDrinkLbl setFont:[UIFont fontWithName:fontName size:20]];
     self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
 }
 
