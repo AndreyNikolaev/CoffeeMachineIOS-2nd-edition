@@ -21,9 +21,6 @@
 
 @implementation OrderFinalizeFlow
 
-
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -77,7 +74,6 @@
         self.changeImgView.hidden = NO;
         self.changeLbl.backgroundColor = [UIColor blueColor];
          }
-    
 }
 
 //switching back to DrinkListFlow with animations

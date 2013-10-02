@@ -25,7 +25,4 @@
 - (IBAction)switchToFinalizeFlow:(id)sender;
 - (IBAction)switchToDrinkListFlow:(id)sender;
 
-
-
-
 @end
