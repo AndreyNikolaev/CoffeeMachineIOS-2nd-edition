@@ -23,7 +23,7 @@
 //static NSString *fontName = @"DBLCDTempBlack";
 
 @interface PaymentFlow ()
-
+@property (strong) UIImageView *movingCoin;
 @end
 
 @implementation PaymentFlow
@@ -127,7 +127,11 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
+<<<<<<< HEAD
     SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
+=======
+    /*SoundPlayer* sound = [[SoundPlayer alloc]init];
+>>>>>>> 15e718bcdba24b31f625b7506b9b7c9f88716bd6
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
@@ -149,32 +153,51 @@
            // sound.fileType = @"mp3";
             [sound play];
         }
+    }*/
+    UIGestureRecognizerState state = [recognizer state];
+    UIImageView *iv = (UIImageView *)recognizer.view;
+    if (state == UIGestureRecognizerStateBegan) {
+        self.movingCoin = [[UIImageView alloc] initWithFrame:iv.frame];
+        _movingCoin.image = iv.image;
+        [self.view addSubview:_movingCoin]; // adding on top, no need to call bringSubviewToFront
+    }
+    else if (state == UIGestureRecognizerStateChanged) {
+        CGPoint translation = [recognizer translationInView:_movingCoin.superview];
+        
+		CGPoint p = CGPointMake(_movingCoin.center.x + translation.x, _movingCoin.center.y + translation.y);
+        _movingCoin.center = p;
+        [recognizer setTranslation:CGPointZero inView:_movingCoin.superview];
+    }
+    else {
+        [self rotateImage:_movingCoin];
+        [_movingCoin removeFromSuperview];
+        self.movingCoin = nil;
     }
      
    }
 
 //updating sum of inserted coins
 -(void)updateSum: (UIImageView*) image {
-    if (image == _fiveImg){
+    if (image.image == _fiveImg.image){
         [self setCoinInUserCoins:5];
         [self switchMenu];
     }
-    if (image == _tenImg)
+    if (image.image == _tenImg.image)
     {
         [self setCoinInUserCoins:10];
         [self switchMenu];
     }
-    if (image == _twentyImg)
+    if (image.image == _twentyImg.image)
     {
         [self setCoinInUserCoins:20];
         [self switchMenu];
     }
-    if (image == _fiftyImg)
+    if (image.image == _fiftyImg.image)
     {
         [self setCoinInUserCoins:50];
         [self switchMenu];
     }
-    if (image== _levImg)
+    if (image.image == _levImg.image)
     {
         [self setCoinInUserCoins:100];
         [self switchMenu];
@@ -184,43 +207,17 @@
 //animated rotation of image
 -(void)rotateImage: (UIImageView*) image 
 {
-        [UIView animateWithDuration:0.5 animations:^{
-            [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-            [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-                                                    } completion:^(BOOL finished){
-            if (finished) {
-                [self moveImageBack:image];
-                [self rotateImageBack:image];
-                [self updateSum:image];
+    [UIView animateWithDuration:0.5 animations:^{
+    [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
+    [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
+        } completion:^(BOOL finished){
+    if (finished) {
+        [self updateSum:image];
             }
+            
         }];
 }
 
-//rotate image back to original position 
--(void)rotateImageBack: (UIView*) image
-{
-    [UIView animateWithDuration:0.0 animations:^{
-       [image.layer setValue:@0.0 forKeyPath:@"transform.rotation"];
-        CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y+1, image.frame.size.width,image.frame.size.height);
-        image.frame = imageframe;
-                 } completion:^(BOOL finished){
-        if (finished) {
-            
-        }
-    }];
-}
-
-//moving image back to original position
--(void)moveImageBack :(UIImageView*)image
-{
-    image.center = self.oldCoinPosition;
-    [UIView animateWithDuration:0 animations:^{
-    [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
-    [image.layer setValue:@0.9 forKeyPath:@"transform.scale.y"];
-    } completion:nil];
-}
-
-// creating a new subview of a coin image
 -(void)addImageSubView: (UIImageView*) image
 {
     if(image == _fiveImg || image == _tenImg || image == _twentyImg || image == _fiftyImg || image == _levImg) {

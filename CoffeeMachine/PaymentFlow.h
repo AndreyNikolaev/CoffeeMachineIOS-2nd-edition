@@ -35,8 +35,6 @@
 -(void)addImageSubView: (UIImageView*) image;
 -(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage : (int) pixSensitivity;
 -(void)updateSum: (UIImageView*) image;
--(void)moveImageBack :(UIImageView*)image;
--(void)rotateImageBack: (UIImageView*) image;
 -(void)animatedSwitchMenu: (id)flow;
 
 @end
