@@ -127,29 +127,6 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-    /*SoundPlayer* sound = [[SoundPlayer alloc]init];
-    if([recognizer state] == UIGestureRecognizerStateBegan){
-        [self moveCoin:recognizer.view];
-        [self.view bringSubviewToFront:recognizer.view];
-    }
-    if(recognizer.view == _fiveImg || recognizer.view == _tenImg || recognizer.view == _twentyImg || recognizer.view == _fiftyImg || recognizer.view == _levImg) {
-        CGPoint translation = [recognizer translationInView:recognizer.view];
-        recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-        [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-        if([recognizer state] == UIGestureRecognizerStateEnded){
-            if([self didCoinImageIsInSlotImg:recognizer.view slotImage:_slotImg : 20]){ // when the coin is near the slot
-                recognizer.view.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
-                [self rotateImage:recognizer.view];
-                sound.fileName = @"dropCoin";
-                sound.fileType = @"mp3";
-                [sound play];
-            }
-            else  recognizer.view.center = _oldCoinPosition;
-            sound.fileName = @"coinBack";
-            sound.fileType = @"mp3";
-            [sound play];
-        }
-    }*/
     UIGestureRecognizerState state = [recognizer state];
     UIImageView *iv = (UIImageView *)recognizer.view;
     if (state == UIGestureRecognizerStateBegan) {
@@ -165,9 +142,14 @@
         [recognizer setTranslation:CGPointZero inView:_movingCoin.superview];
     }
     else {
-        [self rotateImage:_movingCoin];
+        if([self didCoinImageIsInSlotImg:_movingCoin slotImage:_slotImg : 20]){ // when the coin is near the slot
+            _movingCoin.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
+            [self rotateImage:_movingCoin];
+            _movingCoin = nil;
+            
+        }
         [_movingCoin removeFromSuperview];
-        self.movingCoin = nil;
+        _movingCoin = nil;
     }
 }
 
@@ -208,6 +190,7 @@
         } completion:^(BOOL finished){
     if (finished) {
         [self updateSum:image];
+        [_movingCoin removeFromSuperview];
             }
             
         }];
