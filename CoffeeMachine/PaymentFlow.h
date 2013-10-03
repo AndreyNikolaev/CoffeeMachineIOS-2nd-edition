@@ -32,7 +32,6 @@
 -(void)rotateImage: (UIView*) image;
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 -(void) moveCoin: (UIView*) image;
--(void)addImageSubView: (UIImageView*) image;
 -(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage : (int) pixSensitivity;
 -(void)updateSum: (UIImageView*) image;
 -(void)animatedSwitchMenu: (id)flow;

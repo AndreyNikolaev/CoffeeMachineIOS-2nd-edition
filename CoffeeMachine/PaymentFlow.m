@@ -47,7 +47,6 @@
 -(void) moveCoin: (UIImageView *) image
 {   
     self.oldCoinPosition = image.center;
-    [self addImageSubView:image];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGesture setMaximumNumberOfTouches:1];
     [image addGestureRecognizer:panGesture];
@@ -146,7 +145,6 @@
             _movingCoin.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
             [self rotateImage:_movingCoin];
             _movingCoin = nil;
-            
         }
         [_movingCoin removeFromSuperview];
         _movingCoin = nil;
@@ -194,17 +192,6 @@
             }
             
         }];
-}
-
--(void)addImageSubView: (UIImageView*) image
-{
-    if(image == _fiveImg || image == _tenImg || image == _twentyImg || image == _fiftyImg || image == _levImg) {
-    UIView *iv = [[UIImageView alloc] initWithImage:image.image];
-    CGRect imageframe = CGRectMake(image.frame.origin.x, image.frame.origin.y-7, image.frame.size.width,image.frame.size.height+15);                        //we have questions about positioning new image view
-    iv.center = image.center;
-    iv.frame = imageframe;
-    [[image superview] addSubview:iv];
-   }
 }
 
 @end
