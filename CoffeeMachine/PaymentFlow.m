@@ -127,7 +127,7 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-    SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"coinBack"];
+    SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
     if([recognizer state] == UIGestureRecognizerStateBegan){
         [self moveCoin:recognizer.view];
         [self.view bringSubviewToFront:recognizer.view];
@@ -146,7 +146,7 @@
             }
             else  recognizer.view.center = _oldCoinPosition;
             sound.fileName = @"coinBack";
-            sound.fileType = @"mp3";
+           // sound.fileType = @"mp3";
             [sound play];
         }
     }
