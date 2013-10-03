@@ -127,6 +127,7 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
+<<<<<<< HEAD
 
    // SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
     /*SoundPlayer* sound = [[SoundPlayer alloc]init];
@@ -153,6 +154,8 @@
             [sound play];
         }
     }*/
+=======
+>>>>>>> f262f4df2615fd46d9b2e24fb52e6fc5385fa92c
     UIGestureRecognizerState state = [recognizer state];
     UIImageView *iv = (UIImageView *)recognizer.view;
     if (state == UIGestureRecognizerStateBegan) {
@@ -168,10 +171,19 @@
         [recognizer setTranslation:CGPointZero inView:_movingCoin.superview];
     }
     else {
-        [self rotateImage:_movingCoin];
+        if([self didCoinImageIsInSlotImg:_movingCoin slotImage:_slotImg : 20]){ // when the coin is near the slot
+            _movingCoin.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
+            [self rotateImage:_movingCoin];
+            _movingCoin = nil;
+            
+        }
         [_movingCoin removeFromSuperview];
+<<<<<<< HEAD
         self.movingCoin = nil;
         
+=======
+        _movingCoin = nil;
+>>>>>>> f262f4df2615fd46d9b2e24fb52e6fc5385fa92c
     }
      
    }
@@ -214,6 +226,7 @@
      /*^(BOOL finished){
     if (finished) {
         [self updateSum:image];
+        [_movingCoin removeFromSuperview];
             }
             
         }
