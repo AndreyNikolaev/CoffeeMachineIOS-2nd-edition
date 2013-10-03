@@ -127,9 +127,8 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-<<<<<<< HEAD
-    SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
-=======
+
+   // SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
     /*SoundPlayer* sound = [[SoundPlayer alloc]init];
 >>>>>>> 15e718bcdba24b31f625b7506b9b7c9f88716bd6
     if([recognizer state] == UIGestureRecognizerStateBegan){
@@ -172,6 +171,7 @@
         [self rotateImage:_movingCoin];
         [_movingCoin removeFromSuperview];
         self.movingCoin = nil;
+        
     }
      
    }
@@ -210,12 +210,15 @@
     [UIView animateWithDuration:0.5 animations:^{
     [image.layer setValue:@-1.5707 forKeyPath:@"transform.rotation"];
     [image.layer setValue:@0 forKeyPath:@"transform.scale.y"];
-        } completion:^(BOOL finished){
+        } completion: nil
+     /*^(BOOL finished){
     if (finished) {
         [self updateSum:image];
             }
             
-        }];
+        }
+      */
+      ];
 }
 
 -(void)addImageSubView: (UIImageView*) image
