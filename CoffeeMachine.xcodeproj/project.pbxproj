@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C75960A17C4D42C0013211A /* CoffeeMachine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADBFE3C17B11A77005B7B91 /* CoffeeMachine-Info.plist */; };
+		5A06955717FD6F1E009DD218 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A06955617FD6F1E009DD218 /* Theme.m */; };
 		5A0A86D517DF3CF0002972A1 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A86D017DF3CF0002972A1 /* 5.gif */; };
 		5A0A86D617DF3CF0002972A1 /* 10.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A86D117DF3CF0002972A1 /* 10.gif */; };
 		5A0A86D717DF3CF0002972A1 /* 20.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A86D217DF3CF0002972A1 /* 20.gif */; };
@@ -76,6 +77,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A06955517FD6F1E009DD218 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		5A06955617FD6F1E009DD218 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		5A0A86D017DF3CF0002972A1 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
 		5A0A86D117DF3CF0002972A1 /* 10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 10.gif; sourceTree = "<group>"; };
 		5A0A86D217DF3CF0002972A1 /* 20.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 20.gif; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 				5AD3361817C4A665001F65DE /* OrderFinalizeFlow.h */,
 				5AD3361917C4A666001F65DE /* OrderFinalizeFlow.m */,
 				5AD3361A17C4A669001F65DE /* OrderFinalizeFlow.xib */,
+				5A06955517FD6F1E009DD218 /* Theme.h */,
+				5A06955617FD6F1E009DD218 /* Theme.m */,
 				5ADBFE3B17B11A77005B7B91 /* Supporting Files */,
 			);
 			path = CoffeeMachine;
@@ -428,6 +433,7 @@
 				5AD799A317D0C090007E5EB7 /* FileReader.m in Sources */,
 				5AD794FC17D5D26D003A639A /* FileWriter.m in Sources */,
 				5A4FD4D817EB26E7006F65DE /* SoundPlayer.m in Sources */,
+				5A06955717FD6F1E009DD218 /* Theme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

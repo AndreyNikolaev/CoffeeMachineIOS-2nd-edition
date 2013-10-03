@@ -12,9 +12,10 @@
 #import "MoneyAmount.h"
 #import "InsufficientAmountFlow.h"
 #import "ViewController.h"
+#import "Theme.h"
 
 
-static NSString *fontName = @"DBLCDTempBlack";
+//static NSString *fontName = @"DBLCDTempBlack";
 
 @interface OrderFinalizeFlow ()
 
@@ -49,8 +50,9 @@ static NSString *fontName = @"DBLCDTempBlack";
 
 -(void)formatLabels
 {
-    [self.changeLbl setFont:[UIFont fontWithName:fontName size:20]]; //SUM label with digital style
-    [self.infoDrinkLbl setFont:[UIFont fontWithName:fontName size:20]];
+    Theme *theme = [Theme sharedTheme];
+    [self.changeLbl setFont:[theme coffeeFontWithSize:20]]; //SUM label with digital style
+    [self.infoDrinkLbl setFont:[theme coffeeFontWithSize:20]];
     self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
 }
 
