@@ -22,12 +22,14 @@ static Theme *sharedInstance = nil;
     return sharedInstance;
 }
 
-
-
 - (UIFont *)coffeeFontWithSize:(CGFloat)size
 {
     return [UIFont fontWithName:@"Arial" size:size];
 }
 
+-(UIColor *)lblBackColor
+{
+    return [UIColor redColor];
+}
 
 @end

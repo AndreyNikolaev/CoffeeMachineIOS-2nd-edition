@@ -10,6 +10,16 @@
 
 @implementation SoundPlayer
 
+- (id)initWithFileName: (NSString *)theFileName andFileType: (NSString *) TheFileType
+{
+    self = [super init];
+    if (self) {
+        self.fileName = theFileName;
+        self.fileType = TheFileType;
+    }
+    return self;
+}
+
 -(void)play
 {
 	SystemSoundID SoundID;

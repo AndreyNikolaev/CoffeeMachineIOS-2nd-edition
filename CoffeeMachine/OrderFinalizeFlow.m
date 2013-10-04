@@ -15,8 +15,6 @@
 #import "Theme.h"
 
 
-//static NSString *fontName = @"DBLCDTempBlack";
-
 @interface OrderFinalizeFlow ()
 
 @end
@@ -31,7 +29,6 @@
     return self;
 }
  
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,7 +50,8 @@
     Theme *theme = [Theme sharedTheme];
     [self.changeLbl setFont:[theme coffeeFontWithSize:20]]; //SUM label with digital style
     [self.infoDrinkLbl setFont:[theme coffeeFontWithSize:20]];
-    self.infoDrinkLbl.backgroundColor = [UIColor blueColor];
+    self.infoDrinkLbl.backgroundColor = [theme lblBackColor];
+    self.changeLbl.backgroundColor = [theme lblBackColor];
 }
 
 //updates coffeeMachineState and set Sum label and change Image 
@@ -63,9 +61,9 @@
         float numChange =(float)[_change sumOfCoins] / 100;
         if(numChange != 0){
             self.changeLbl.text = [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
-            self.changeLbl.backgroundColor = [UIColor blueColor];
         }else
-        {self.changeImgView.hidden = YES;}
+        {self.changeImgView.hidden = YES;
+            self.changeLbl.hidden = YES;}
         [_coffeeMachineState.coins add:_userCoins];
         [_coffeeMachineState.currentDrinksAmount decreaseDrinkAmount:_selectedDrink];
     }
@@ -75,8 +73,7 @@
         float numChange =(float)[_userCoins sumOfCoins] / 100;
         self.changeLbl.text =  [NSString stringWithFormat:@"%.2f %@",numChange , @"lv"];
         self.changeImgView.hidden = NO;
-        self.changeLbl.backgroundColor = [UIColor blueColor];
-         }
+        }
 }
 
 //switching back to DrinkListFlow with animations

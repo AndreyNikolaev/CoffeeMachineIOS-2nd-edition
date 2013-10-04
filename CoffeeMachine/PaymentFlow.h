@@ -35,5 +35,6 @@
 -(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage : (int) pixSensitivity;
 -(void)updateSum: (UIImageView*) image;
 -(void)animatedSwitchMenu: (id)flow;
+-(void)formatLabels;
 
 @end

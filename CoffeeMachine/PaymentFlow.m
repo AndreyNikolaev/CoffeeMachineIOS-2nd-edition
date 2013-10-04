@@ -39,6 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self formatLabels];
      _userCoins = [[MoneyAmount alloc] init];
    
 }
@@ -86,6 +87,13 @@
 
 }
 
+-(void)formatLabels
+{
+    Theme* theme = [Theme sharedTheme];
+    [_sumLbl setFont:[theme coffeeFontWithSize:20]];
+    _sumLbl.backgroundColor = [theme lblBackColor];
+}
+
 // switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 
 - (void) switchMenu
 {
@@ -126,9 +134,12 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
+    SoundPlayer* soundDropCoin = [[SoundPlayer alloc]initWithFileName:@"dropCoin" andFileType:@"mp3"];
+    SoundPlayer* soundCoinBack = [[SoundPlayer alloc]initWithFileName:@"coinBack" andFileType:@"mp3"];
     UIGestureRecognizerState state = [recognizer state];
     UIImageView *iv = (UIImageView *)recognizer.view;
     if (state == UIGestureRecognizerStateBegan) {
+        [soundCoinBack play];
         self.movingCoin = [[UIImageView alloc] initWithFrame:iv.frame];
         _movingCoin.image = iv.image;
         [self.view addSubview:_movingCoin]; // adding on top, no need to call bringSubviewToFront
@@ -145,6 +156,7 @@
             _movingCoin.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
             [self rotateImage:_movingCoin];
             _movingCoin = nil;
+            [soundDropCoin play];
         }
         [_movingCoin removeFromSuperview];
         _movingCoin = nil;

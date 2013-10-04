@@ -12,6 +12,6 @@
 + (Theme *)sharedTheme;
 
 - (UIFont *)coffeeFontWithSize:(CGFloat)size;
-
+-(UIColor *)lblBackColor;
 
 @end
