@@ -134,41 +134,10 @@
 
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-<<<<<<< HEAD
     SoundPlayer* soundDropCoin = [[SoundPlayer alloc]initWithFileName:@"dropCoin" andFileType:@"mp3"];
     SoundPlayer* soundCoinBack = [[SoundPlayer alloc]initWithFileName:@"coinBack" andFileType:@"mp3"];
-=======
-
-   // SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
-    /*SoundPlayer* sound = [[SoundPlayer alloc]init];
->>>>>>> 15e718bcdba24b31f625b7506b9b7c9f88716bd6
-    if([recognizer state] == UIGestureRecognizerStateBegan){
-        [self moveCoin:recognizer.view];
-        [self.view bringSubviewToFront:recognizer.view];
-    }
-    if(recognizer.view == _fiveImg || recognizer.view == _tenImg || recognizer.view == _twentyImg || recognizer.view == _fiftyImg || recognizer.view == _levImg) {
-        CGPoint translation = [recognizer translationInView:recognizer.view];
-        recognizer.view.center=CGPointMake(recognizer.view.center.x+translation.x, recognizer.view.center.y+ translation.y);
-        [recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
-        if([recognizer state] == UIGestureRecognizerStateEnded){
-            if([self didCoinImageIsInSlotImg:recognizer.view slotImage:_slotImg : 20]){ // when the coin is near the slot
-                recognizer.view.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
-                [self rotateImage:recognizer.view];
-               // sound.fileName = @"dropCoin";
-               // sound.fileType = @"mp3";
-                [sound play];
-            }
-            else  recognizer.view.center = _oldCoinPosition;
-            sound.fileName = @"coinBack";
-           sound.fileType = @"mp3";
-            [sound play];
-        }
-    }*/
-
->>>>>>> 884ed34fb99eed0df139c201e5359f79c4d9ed9a
     UIGestureRecognizerState state = [recognizer state];
     UIImageView *iv = (UIImageView *)recognizer.view;
-    SoundPlayer* sound = [[SoundPlayer alloc]initWithFileNameAndType:@"dropCoin"filetype:@"mp3"];
     if (state == UIGestureRecognizerStateBegan) {
         [soundCoinBack play];
         self.movingCoin = [[UIImageView alloc] initWithFrame:iv.frame];
@@ -186,14 +155,8 @@
         if([self didCoinImageIsInSlotImg:_movingCoin slotImage:_slotImg : 20]){ // when the coin is near the slot
             _movingCoin.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
             [self rotateImage:_movingCoin];
-            [sound play];
             _movingCoin = nil;
-<<<<<<< HEAD
             [soundDropCoin play];
-=======
-        }else {
-            sound.fileName = @"coinBack";
->>>>>>> 884ed34fb99eed0df139c201e5359f79c4d9ed9a
         }
         [_movingCoin removeFromSuperview];
         _movingCoin = nil;
