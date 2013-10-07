@@ -10,12 +10,12 @@
 
 @implementation SoundPlayer
 
-- (id)initWithFileName: (NSString *)theFileName andFileType: (NSString *) TheFileType
+- (id)initWithFileName: (NSString *)theFileName andFileType: (NSString *) theFileType
 {
     self = [super init];
     if (self) {
         self.fileName = theFileName;
-        self.fileType = TheFileType;
+        self.fileType = theFileType;
     }
     return self;
 }

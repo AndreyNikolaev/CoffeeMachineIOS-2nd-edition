@@ -152,11 +152,13 @@
         [recognizer setTranslation:CGPointZero inView:_movingCoin.superview];
     }
     else {
-        if([self didCoinImageIsInSlotImg:_movingCoin slotImage:_slotImg : 20]){ // when the coin is near the slot
+        if([self didCoinImageIsInSlotImg:_movingCoin slotImage:_slotImg : 20]){ // when the coin is droped in slot
             _movingCoin.center = CGPointMake(_slotImg.center.x,_slotImg.center.y);
             [self rotateImage:_movingCoin];
             _movingCoin = nil;
             [soundDropCoin play];
+        } else{ //when the coin is droped not in the slot
+            [UIView animateWithDuration:2.0 animations:^{_movingCoin.center = recognizer.view.center;}];
         }
         [_movingCoin removeFromSuperview];
         _movingCoin = nil;

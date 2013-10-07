@@ -13,6 +13,6 @@
 @property NSString* fileName;
 @property NSString* fileType;
 
-- (id)initWithFileName: (NSString *)theFileName andFileType: (NSString *) TheFileType;
+- (id)initWithFileName: (NSString *)theFileName andFileType: (NSString *) theFileType;
 -(void)play;
 @end
