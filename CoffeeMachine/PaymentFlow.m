@@ -158,10 +158,15 @@
             _movingCoin = nil;
             [soundDropCoin play];
         } else{ //when the coin is droped not in the slot
-            [UIView animateWithDuration:2.0 animations:^{_movingCoin.center = recognizer.view.center;}];
+            [UIView animateWithDuration:0.5 animations:^{_movingCoin.center = recognizer.view.center;} completion:
+             ^(BOOL finished){
+                 if (finished) {
+                     [_movingCoin removeFromSuperview];
+                      _movingCoin = nil;
+                 }
+                 
+             }];
         }
-        [_movingCoin removeFromSuperview];
-        _movingCoin = nil;
     }
      
    }
