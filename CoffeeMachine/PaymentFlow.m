@@ -139,7 +139,6 @@
     UIGestureRecognizerState state = [recognizer state];
     UIImageView *iv = (UIImageView *)recognizer.view;
     if (state == UIGestureRecognizerStateBegan) {
-        [soundCoinBack play];
         self.movingCoin = [[UIImageView alloc] initWithFrame:iv.frame];
         _movingCoin.image = iv.image;
         [self.view addSubview:_movingCoin]; // adding on top, no need to call bringSubviewToFront
@@ -158,13 +157,13 @@
             _movingCoin = nil;
             [soundDropCoin play];
         } else{ //when the coin is droped not in the slot
-            [UIView animateWithDuration:0.5 animations:^{_movingCoin.center = recognizer.view.center;} completion:
+            [UIView animateWithDuration:0.2 animations:^{_movingCoin.center = recognizer.view.center;} completion:
              ^(BOOL finished){
                  if (finished) {
+                     [soundCoinBack play];
                      [_movingCoin removeFromSuperview];
                       _movingCoin = nil;
                  }
-                 
              }];
         }
     }
