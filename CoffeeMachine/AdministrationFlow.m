@@ -21,7 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"admCoffee.jpg"]];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back.png"]];
     self.title = @"Reports";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Load from URL" style:UIBarButtonItemStyleBordered target:self action:@selector(loadPlistFromURL:)];
     self.navigationItem.rightBarButtonItem = backButton;
