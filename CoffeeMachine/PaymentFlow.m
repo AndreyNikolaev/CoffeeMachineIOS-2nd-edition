@@ -81,7 +81,7 @@
     Coin *userCoin = [[Coin alloc] init];
     userCoin.value = coinValue;
     [self.userCoins addCoin:userCoin amount:1];
-    _sumLbl.text = [NSString stringWithFormat:@"%d",[self.userCoins sumOfCoins]];
+    _sumLbl.text = [NSString stringWithFormat:@"Sum: %d",[self.userCoins sumOfCoins]];
     //[_sumLbl setFont:[UIFont fontWithName:fontName size:20]];
     [_sumLbl setFont:[[Theme sharedTheme] coffeeFontWithSize:20]];
 
@@ -92,6 +92,10 @@
     Theme* theme = [Theme sharedTheme];
     [_sumLbl setFont:[theme coffeeFontWithSize:20]];
     _sumLbl.backgroundColor = [theme lblBackColor];
+    _sumLbl.text = @"Sum: 0";
+    [_remainingSum setFont:[theme coffeeFontWithSize:20]];
+    _remainingSum.backgroundColor = [theme lblBackColor];
+    _remainingSum.text = [NSString stringWithFormat:@"Remaining: %d", _selectedDrink.price];
 }
 
 // switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 
@@ -220,9 +224,10 @@
       
       ];
 }
--(void)remainingSumOfCoins {
+-(void)remainingSumOfCoins
+{
     int remainingSum = _selectedDrink.price - self.userCoins.sumOfCoins;
-    self.remainingSum.text = [NSString stringWithFormat:@"%d", remainingSum];
+    self.remainingSum.text = [NSString stringWithFormat:@"Remaining: %d", remainingSum];
 
 }
 
