@@ -32,7 +32,7 @@
     
     
     self.title = @"Coffee Machine";
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test.jpg"]];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back.png"]];
     UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
     self.navigationItem.rightBarButtonItem = adminButton;
     DrinksContainer *drinks = [[ DrinksContainer alloc] init ];
