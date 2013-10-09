@@ -174,26 +174,31 @@
 -(void)updateSum: (UIImageView*) image {
     if (image.image == _fiveImg.image){
         [self setCoinInUserCoins:5];
+        [self remainingSumOfCoins];
         [self switchMenu];
     }
     if (image.image == _tenImg.image)
     {
         [self setCoinInUserCoins:10];
+        [self remainingSumOfCoins];
         [self switchMenu];
     }
     if (image.image == _twentyImg.image)
     {
         [self setCoinInUserCoins:20];
+        [self remainingSumOfCoins];
         [self switchMenu];
     }
     if (image.image == _fiftyImg.image)
     {
         [self setCoinInUserCoins:50];
+        [self remainingSumOfCoins];
         [self switchMenu];
     }
     if (image.image == _levImg.image)
     {
         [self setCoinInUserCoins:100];
+        [self remainingSumOfCoins];
         [self switchMenu];
     }
 }
@@ -214,6 +219,11 @@
         }
       
       ];
+}
+-(void)remainingSumOfCoins {
+    int remainingSum = _selectedDrink.price - self.userCoins.sumOfCoins;
+    self.remainingSum.text = [NSString stringWithFormat:@"%d", remainingSum];
+
 }
 
 @end
