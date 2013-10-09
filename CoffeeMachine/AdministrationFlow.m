@@ -8,6 +8,7 @@
 
 #import "AdministrationFlow.h"
 #import "ViewController.h"
+#import "Theme.h"
 
 #define PLIST_URL       @"https://raw.github.com/AndreyNikolaev/CoffeeMachineIOS/master/CoffeeMachine/sourceFile.plist"
 #define PLIST_FILENAME  @"writedFile.plist"
@@ -21,13 +22,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back.png"]];
-    self.title = @"Reports";
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Load from URL" style:UIBarButtonItemStyleBordered target:self action:@selector(loadPlistFromURL:)];
-    self.navigationItem.rightBarButtonItem = backButton;
+    [self formatView];
     _moneyAmount = [[NSMutableArray alloc] initWithArray:self.coffeeMachineState.coins.coinsAmountToString];
     self.drinksStringArray = [[NSMutableArray alloc] initWithArray:self.coffeeMachineState.currentDrinksAmount.drinkNameAndQuantity];
     
+}
+
+-(void)formatView
+{
+    Theme *theme = [Theme sharedTheme];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[theme backGroudImage]];
+    self.tableView.contentMode = UIViewContentModeScaleAspectFill;
+    self.title = @"Reports";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Load from URL" style:UIBarButtonItemStyleBordered target:self action:@selector(loadPlistFromURL:)];
+    self.navigationItem.rightBarButtonItem = backButton;
 }
 
 - (void)didReceiveMemoryWarning

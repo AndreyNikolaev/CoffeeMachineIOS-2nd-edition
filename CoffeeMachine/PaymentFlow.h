@@ -19,6 +19,7 @@
 
 @property (strong) CoffeeMachineState *coffeeMachineState;
 @property (strong) Drink *selectedDrink;
+@property (strong, nonatomic) IBOutlet UIImageView *backImageView;
 @property (strong) MoneyAmount *userCoins;
 @property (strong, nonatomic) IBOutlet UIImageView *coinImg;
 @property (strong, nonatomic) IBOutlet UIImageView *tenImg;
@@ -37,6 +38,6 @@
 -(BOOL)didCoinImageIsInSlotImg: (UIView*)coinImage slotImage: (UIView*)slotImage : (int) pixSensitivity;
 -(void)updateSum: (UIImageView*) image;
 -(void)animatedSwitchMenu: (id)flow;
--(void)formatLabels;
+-(void)formatView;
 -(void)remainingSumOfCoins;
 @end

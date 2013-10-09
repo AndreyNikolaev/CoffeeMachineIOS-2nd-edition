@@ -18,5 +18,5 @@
 @property NSIndexPath* tableIndexPath;
 
 - (IBAction)loadPlistFromURL:(id)sender;
-
+-(void)formatView;
 @end

@@ -14,6 +14,7 @@
 
 @interface InsufficientAmountFlow : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *backImageView;
 @property (strong, nonatomic) IBOutlet UIButton *makeDrinkBtn;
 @property (strong, nonatomic) IBOutlet UIButton *cancelOrderBtn;
 @property (strong, nonatomic) IBOutlet UILabel *notEnCoins;
@@ -25,5 +26,6 @@
 - (IBAction)switchToFinalizeFlow:(id)sender;
 - (IBAction)switchToDrinkListFlow:(id)sender;
 -(void)switchMenu: (BOOL)getableDrink;
+-(void)formatView;
 
 @end

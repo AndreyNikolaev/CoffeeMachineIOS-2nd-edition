@@ -9,7 +9,7 @@
 #import "InsufficientAmountFlow.h"
 #import "OrderFinalizeFlow.h"
 #import "ViewController.h"
-
+#import "Theme.h"
 @interface InsufficientAmountFlow ()
 
 @end
@@ -20,8 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
- 
+        
     }
     return self;
 }
@@ -29,10 +28,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self formatView];
+}
+
+-(void)formatView
+{
+    Theme *theme = [Theme sharedTheme];
+    self.backImageView.backgroundColor = [UIColor colorWithPatternImage:[theme backGroudImage]];
+    self.backImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.notEnCoins.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]; // changing style of label
     self.notEnCoins.shadowColor = [UIColor blackColor];
     [self.navigationItem.leftBarButtonItem setEnabled:NO];
     self.navigationItem.hidesBackButton = YES;
+
 }
 
 - (void)didReceiveMemoryWarning

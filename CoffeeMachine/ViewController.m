@@ -13,6 +13,7 @@
 #import "CoffeeMachineState.h"
 #import "MoneyAmount.h"
 #import "AdministrationFlow.h"
+#import "Theme.h"
 
 @interface ViewController ()
 
@@ -25,16 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
-//    self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
-    
-    
-    self.title = @"Coffee Machine";
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back.png"]];
-    UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
-    self.navigationItem.rightBarButtonItem = adminButton;
+    [self formatView];
     DrinksContainer *drinks = [[ DrinksContainer alloc] init ];
     [drinks loadDrinksFromPlist];
     MoneyAmount *moneyAmount = [[MoneyAmount alloc] init];
@@ -47,6 +39,16 @@
     }
     _itemsArrayDrinks = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinksString]];
     _itemsArayDrinkPrices = [[NSMutableArray alloc] initWithArray:[[_coffeeMachineState currentDrinks] drinkPricesString]];
+}
+
+-(void)formatView
+{
+    Theme *theme = [Theme sharedTheme];
+    self.title = @"Coffee Machine";
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[theme backGroudImage]];
+    self.tableView.contentMode = UIViewContentModeScaleAspectFill;
+    UIBarButtonItem *adminButton = [[UIBarButtonItem alloc] initWithTitle:@"Admin" style:UIBarButtonItemStyleBordered target:self action:@selector(goToAdministrationFlow:)];
+    self.navigationItem.rightBarButtonItem = adminButton;
 }
 
 -(void)cleanCurrentDrinks

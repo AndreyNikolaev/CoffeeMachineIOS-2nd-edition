@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self formatLabels];
+    [self formatView];
     [self updateCoffeeMachineState]; // updates coffeeMachineState
     self.infoDrinkLbl.text = self.selectedDrink.name.uppercaseString;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backToDrinkListFlow:)];
@@ -45,13 +45,15 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)formatLabels
+-(void)formatView
 {
     Theme *theme = [Theme sharedTheme];
     [self.changeLbl setFont:[theme coffeeFontWithSize:20]]; //SUM label with digital style
     [self.infoDrinkLbl setFont:[theme coffeeFontWithSize:20]];
     self.infoDrinkLbl.backgroundColor = [theme lblBackColor];
     self.changeLbl.backgroundColor = [theme lblBackColor];
+    self.backImageView.image = [theme backGroudImage];
+    self.backImageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 //updates coffeeMachineState and set Sum label and change Image 

@@ -39,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self formatLabels];
+    [self formatView];
      _userCoins = [[MoneyAmount alloc] init];
    
 }
@@ -87,7 +87,7 @@
 
 }
 
--(void)formatLabels
+-(void)formatView
 {
     Theme* theme = [Theme sharedTheme];
     [_sumLbl setFont:[theme coffeeFontWithSize:20]];
@@ -96,6 +96,8 @@
     [_remainingSum setFont:[theme coffeeFontWithSize:20]];
     _remainingSum.backgroundColor = [theme lblBackColor];
     _remainingSum.text = [NSString stringWithFormat:@"Remaining: %d", _selectedDrink.price];
+    _backImageView.image = [theme backGroudImage];
+    _backImageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 // switching to OrderFinalizeFlow or InsufficientAmountFlow when inserted coins are enough 
