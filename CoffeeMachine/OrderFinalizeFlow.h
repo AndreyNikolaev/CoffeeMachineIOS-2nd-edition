@@ -15,6 +15,7 @@
 @interface OrderFinalizeFlow : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *changeLbl;
+@property (strong, nonatomic) IBOutlet UIImageView *backImageView;
 @property (strong, nonatomic) IBOutlet UIButton *backToDrinkList;
 @property (strong, nonatomic) IBOutlet UIImageView *backImg;
 @property UIImageView* explosion;
@@ -29,7 +30,7 @@
 
 -(void)updateCoffeeMachineState;
 - (IBAction)backToDrinkListFlow:(id)sender;
--(void)formatLabels;
+-(void)formatView;
 
 
 @end

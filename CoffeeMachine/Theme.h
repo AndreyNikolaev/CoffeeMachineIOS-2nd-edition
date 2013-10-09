@@ -13,5 +13,5 @@
 
 - (UIFont *)coffeeFontWithSize:(CGFloat)size;
 -(UIColor *)lblBackColor;
-
+-(UIImage *) backGroudImage;
 @end

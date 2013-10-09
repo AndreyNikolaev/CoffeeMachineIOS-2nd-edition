@@ -21,5 +21,6 @@ NSInteger globalPrice;
 
 -(IBAction)goToAdministrationFlow:(id)sender;
 -(void)cleanCurrentDrinks;
+-(void)formatView;
 
 @end

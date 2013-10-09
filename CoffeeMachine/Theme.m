@@ -32,4 +32,9 @@ static Theme *sharedInstance = nil;
     return [UIColor redColor];
 }
 
+-(UIImage *) backGroudImage
+{
+    return [UIImage imageNamed:@"back.png"];
+}
+
 @end
