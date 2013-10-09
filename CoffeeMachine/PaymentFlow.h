@@ -28,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sumLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *fiveImg;
 @property (strong, nonatomic) IBOutlet UIImageView *slotImg;
+@property (strong, nonatomic) IBOutlet UILabel *remainingMoney;
 
 -(void)rotateImage: (UIView*) image;
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
@@ -36,5 +37,5 @@
 -(void)updateSum: (UIImageView*) image;
 -(void)animatedSwitchMenu: (id)flow;
 -(void)formatLabels;
-
+-(void)remainingSum;
 @end
