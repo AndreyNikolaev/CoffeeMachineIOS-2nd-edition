@@ -34,7 +34,7 @@ static Theme *sharedInstance = nil;
 
 -(UIImage *) backGroudImage
 {
-    return [UIImage imageNamed:@"back.png"];
+    return [UIImage imageNamed:@"back.png"];//
 }
 
 @end
