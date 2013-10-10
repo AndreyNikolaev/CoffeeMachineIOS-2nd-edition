@@ -2,7 +2,6 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12F37</string>
 		<string key="IBDocument.SystemVersion">12E55</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.39</string>
@@ -40,7 +39,6 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="284157347">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 548}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -54,8 +52,6 @@
 					</object>
 					<object class="IBUILabel" id="57486566">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 447}, {165, 35}}</string>
 						<int key="NSvFlags">303</int>
 						<string key="NSFrame">{{20, 394}, {165, 35}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -89,7 +85,6 @@
 					<object class="IBUIImageView" id="183891734">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 28}, {72, 72}}</string>
 						<string key="NSFrame">{{20, 13}, {72, 72}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -105,7 +100,6 @@
 					</object>
 					<object class="IBUIImageView" id="611279430">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{208, 407}, {108, 127}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -121,7 +115,6 @@
 					<object class="IBUIImageView" id="869077966">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{120, 28}, {72, 72}}</string>
 						<string key="NSFrame">{{118, 13}, {72, 72}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -138,7 +131,6 @@
 					<object class="IBUIImageView" id="215495970">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{221, 25}, {72, 72}}</string>
 						<string key="NSFrame">{{220, 13}, {72, 72}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -155,7 +147,6 @@
 					<object class="IBUIImageView" id="338524721">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{71, 113}, {72, 72}}</string>
 						<string key="NSFrame">{{66, 93}, {72, 72}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -172,7 +163,6 @@
 					<object class="IBUIImageView" id="68642116">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{186, 113}, {72, 72}}</string>
 						<string key="NSFrame">{{181, 93}, {72, 72}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -188,7 +178,6 @@
 					</object>
 					<object class="IBUILabel" id="211542797">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
 						<int key="NSvFlags">303</int>
 						<string key="NSFrame">{{20, 499}, {165, 35}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -439,9 +428,6 @@
 							<reference ref="215495970"/>
 							<reference ref="338524721"/>
 							<reference ref="68642116"/>
-							<reference ref="284157347"/>
-							<reference ref="57486566"/>
-							<reference ref="211542797"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -569,20 +555,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">PaymentFlow</string>
 					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="handlePan:">UIPanGestureRecognizer</string>
-						<string key="switchBack:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="handlePan:">
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">handlePan:</string>
+						<string key="NS.object.0">UIPanGestureRecognizer</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">handlePan:</string>
+						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">handlePan:</string>
 							<string key="candidateClassName">UIPanGestureRecognizer</string>
 						</object>
-						<object class="IBActionInfo" key="switchBack:">
-							<string key="name">switchBack:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="backImageView">UIImageView</string>
 						<string key="coinImg">UIImageView</string>
